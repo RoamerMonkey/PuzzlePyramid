@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://eimbuhmox0bo"
+path="res://.godot/imported/Target.png-2259312a96cec745420594415754d925.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO1/Bitmap/Target.png"
+dest_files=["res://.godot/imported/Target.png-2259312a96cec745420594415754d925.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

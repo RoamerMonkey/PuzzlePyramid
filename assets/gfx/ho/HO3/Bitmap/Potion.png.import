@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://xfpjp2bi6vdr"
+path="res://.godot/imported/Potion.png-21d2fbcf5fbff520675f1dc370719d29.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Potion.png"
+dest_files=["res://.godot/imported/Potion.png-21d2fbcf5fbff520675f1dc370719d29.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

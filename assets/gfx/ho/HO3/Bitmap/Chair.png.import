@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bjgu5c3kvg6vu"
+path="res://.godot/imported/Chair.png-abc6af8ee9119c1376a520380351c9ae.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Chair.png"
+dest_files=["res://.godot/imported/Chair.png-abc6af8ee9119c1376a520380351c9ae.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

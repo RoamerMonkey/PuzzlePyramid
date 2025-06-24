@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://c0awxd6vh1a14"
+path="res://.godot/imported/Pinecone.png-e0b84b91e05ea4b6a90899fbb448471b.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Pinecone.png"
+dest_files=["res://.godot/imported/Pinecone.png-e0b84b91e05ea4b6a90899fbb448471b.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

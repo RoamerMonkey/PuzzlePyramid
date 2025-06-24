@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://d14r2hix2fgb8"
+path="res://.godot/imported/Hookah.png-9f716d35604b47e09ed296e38a2b0abe.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Hookah.png"
+dest_files=["res://.godot/imported/Hookah.png-9f716d35604b47e09ed296e38a2b0abe.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

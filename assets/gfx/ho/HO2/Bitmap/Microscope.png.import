@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://b5esiblrq3ddn"
+path="res://.godot/imported/Microscope.png-a70d6cd3a44cf6b1d5f82ad5b8870d0d.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Microscope.png"
+dest_files=["res://.godot/imported/Microscope.png-a70d6cd3a44cf6b1d5f82ad5b8870d0d.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

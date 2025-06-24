@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cy2gn7ehwxp3b"
+path="res://.godot/imported/Lightbulb.png-3a3923a3a6dd54f1c505b7be71e64bdf.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Lightbulb.png"
+dest_files=["res://.godot/imported/Lightbulb.png-3a3923a3a6dd54f1c505b7be71e64bdf.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

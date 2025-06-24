@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://wj7ydq5arxl8"
+path="res://.godot/imported/Trash.png-062cfaec173ab6423ba1297440502440.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO1/Bitmap/Trash.png"
+dest_files=["res://.godot/imported/Trash.png-062cfaec173ab6423ba1297440502440.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://c3uj5xny67pln"
+path="res://.godot/imported/Eraser.png-70c4d215293a20a9af4993a2c90d6272.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO1/Bitmap/Eraser.png"
+dest_files=["res://.godot/imported/Eraser.png-70c4d215293a20a9af4993a2c90d6272.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

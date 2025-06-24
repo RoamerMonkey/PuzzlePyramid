@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://ckhf4ewgqhutc"
+path="res://.godot/imported/Orb.png-e1a4c559b5fc30708ea0212b6ebace68.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Orb.png"
+dest_files=["res://.godot/imported/Orb.png-e1a4c559b5fc30708ea0212b6ebace68.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

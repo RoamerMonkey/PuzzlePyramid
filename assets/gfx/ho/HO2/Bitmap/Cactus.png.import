@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://de7ecp5ks4rj1"
+path="res://.godot/imported/Cactus.png-b8db812ad99ebde137cf0e1b6ef89a0d.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Cactus.png"
+dest_files=["res://.godot/imported/Cactus.png-b8db812ad99ebde137cf0e1b6ef89a0d.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

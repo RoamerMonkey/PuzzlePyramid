@@ -1,0 +1,445 @@
+[gd_scene load_steps=74 format=3 uid="uid://dfalxptkkipl7"]
+
+[ext_resource type="Script" uid="uid://d23qrqhxebyfq" path="res://scripts/ho_3.gd" id="1_j3xmg"]
+[ext_resource type="Shader" uid="uid://cv3c5nreevpcc" path="res://scripts/scroll.gdshader" id="1_rqktj"]
+[ext_resource type="Texture2D" uid="uid://bo0axjv7pn6u6" path="res://assets/gfx/pyramid/BG.png" id="2_ul6ss"]
+[ext_resource type="AudioStream" uid="uid://beke84l5myprk" path="res://assets/snd/ho/hodone.wav" id="2_yy41d"]
+[ext_resource type="Texture2D" uid="uid://q6iyy5ur6teg" path="res://assets/gfx/ho/HO3/TunnelBG.PNG" id="3_wvywf"]
+[ext_resource type="AudioStream" uid="uid://wcvad4u6amd5" path="res://assets/snd/ho/itemget1.mp3" id="3_x0i0l"]
+[ext_resource type="Texture2D" uid="uid://b6fmnsaopj2pp" path="res://assets/gfx/ho/HO3/Crutch.PNG" id="4_bln23"]
+[ext_resource type="AudioStream" uid="uid://bncg2lp21sqni" path="res://assets/snd/ho/itemget2.mp3" id="4_hon5b"]
+[ext_resource type="Texture2D" uid="uid://bh6xdvu00hsc2" path="res://assets/gfx/ho/HO3/Toothbrush.PNG" id="5_h8v6v"]
+[ext_resource type="AudioStream" uid="uid://ds53uslp6xara" path="res://assets/snd/ho/itemget3.mp3" id="5_v0orr"]
+[ext_resource type="AudioStream" uid="uid://cyfjnd873ib0m" path="res://assets/snd/ho/misclick.mp3" id="6_4djdq"]
+[ext_resource type="Texture2D" uid="uid://c4ygul316lgjl" path="res://assets/gfx/ho/HO3/Skull.PNG" id="6_gvc5p"]
+[ext_resource type="AudioStream" uid="uid://c66lw4ro4j88f" path="res://assets/snd/ho/gemget.wav" id="6_na37u"]
+[ext_resource type="Texture2D" uid="uid://c4xuip3kjn4ca" path="res://assets/gfx/ho/HO3/Arrow.PNG" id="7_vfegy"]
+[ext_resource type="AudioStream" uid="uid://diqvpmnypd08q" path="res://assets/snd/misc/timegodown.wav" id="8_6yo0p"]
+[ext_resource type="Texture2D" uid="uid://bboo4kx6swl8a" path="res://assets/gfx/ho/HO3/Calculator.PNG" id="8_lep5x"]
+[ext_resource type="Texture2D" uid="uid://bb2j4lf4kpfbw" path="res://assets/gfx/ho/HO3/Plushie.PNG" id="9_olkei"]
+[ext_resource type="Texture2D" uid="uid://u0scsu2mtgbm" path="res://assets/gfx/ho/HO3/Cat.PNG" id="10_rrjgj"]
+[ext_resource type="Texture2D" uid="uid://vo4xmnglwnlp" path="res://assets/gfx/ho/HO3/Rat.PNG" id="11_wy746"]
+[ext_resource type="BitMap" uid="uid://bfs0i8oeuxd7o" path="res://assets/gfx/ho/HO3/Bitmap/Crutch.png" id="12_27ao5"]
+[ext_resource type="Texture2D" uid="uid://dfrfwq2jkgxik" path="res://assets/gfx/ho/HO3/Ruler.PNG" id="12_fhqog"]
+[ext_resource type="Texture2D" uid="uid://cauw16tms28nx" path="res://assets/gfx/ho/HO3/Tie.PNG" id="13_ufjpg"]
+[ext_resource type="BitMap" uid="uid://dtp17n6o6qo7f" path="res://assets/gfx/ho/HO3/Bitmap/Toothbrush.png" id="14_ib6sg"]
+[ext_resource type="Texture2D" uid="uid://cix3p4pqw5g86" path="res://assets/gfx/ho/HO3/Chair.PNG" id="14_qyhuh"]
+[ext_resource type="Texture2D" uid="uid://dh8f0k6sr2wq4" path="res://assets/gfx/ho/HO3/Controller.PNG" id="15_y3o6b"]
+[ext_resource type="BitMap" uid="uid://dm0ghryvuo44p" path="res://assets/gfx/ho/HO3/Bitmap/Skull.png" id="16_4ka2t"]
+[ext_resource type="Texture2D" uid="uid://cukqkio5mgho8" path="res://assets/gfx/ho/HO3/Leaf.PNG" id="16_vymig"]
+[ext_resource type="Texture2D" uid="uid://5sockht41ils" path="res://assets/gfx/ho/HO3/Pump.PNG" id="17_diy00"]
+[ext_resource type="BitMap" uid="uid://cmpq6q0irpd6d" path="res://assets/gfx/ho/HO3/Bitmap/Arrow.png" id="18_06ls3"]
+[ext_resource type="Texture2D" uid="uid://bflwcalg5dio" path="res://assets/gfx/ho/HO3/Plunger.PNG" id="18_qa01j"]
+[ext_resource type="Texture2D" uid="uid://ckoqanppc1irq" path="res://assets/gfx/ho/HO3/Saw.PNG" id="19_audcg"]
+[ext_resource type="BitMap" uid="uid://6silchynpqrv" path="res://assets/gfx/ho/HO3/Bitmap/Calculator.png" id="20_q0fgv"]
+[ext_resource type="Texture2D" uid="uid://bpw32bi2uplpo" path="res://assets/gfx/ho/HO3/Bowl.PNG" id="20_sjy5w"]
+[ext_resource type="Texture2D" uid="uid://btfbfrmqgaswt" path="res://assets/gfx/ho/HO3/Potion.PNG" id="21_4a6p8"]
+[ext_resource type="Texture2D" uid="uid://d2dx8i17606lx" path="res://assets/gfx/ho/HO3/Tablet.PNG" id="22_av0uv"]
+[ext_resource type="BitMap" uid="uid://c7y3davl4lm55" path="res://assets/gfx/ho/HO3/Bitmap/Plushie.png" id="22_vcrcr"]
+[ext_resource type="Texture2D" uid="uid://cvmrch2vrnqpr" path="res://assets/gfx/ho/HO3/Glasses.PNG" id="23_pi308"]
+[ext_resource type="Texture2D" uid="uid://cu7164d6jel34" path="res://assets/gfx/ho/HO3/Mace.PNG" id="24_08lyo"]
+[ext_resource type="BitMap" uid="uid://byjyeouc8irxf" path="res://assets/gfx/ho/HO3/Bitmap/Cat.png" id="24_n4cbw"]
+[ext_resource type="Texture2D" uid="uid://dkpip37egpes6" path="res://assets/gfx/ho/HO3/Sock.PNG" id="25_ql2w7"]
+[ext_resource type="Texture2D" uid="uid://gexb0daemh60" path="res://assets/gfx/ho/HO3/Bell.PNG" id="26_hf7l6"]
+[ext_resource type="BitMap" uid="uid://b7oed8hciqem5" path="res://assets/gfx/ho/HO3/Bitmap/Rat.png" id="26_rqkxh"]
+[ext_resource type="Texture2D" uid="uid://bpqjcv0ttppfx" path="res://assets/gfx/ho/HO3/Magnet.PNG" id="27_c66vj"]
+[ext_resource type="BitMap" uid="uid://cxwro64kyw7ik" path="res://assets/gfx/ho/HO3/Bitmap/Ruler.png" id="28_b68o8"]
+[ext_resource type="Texture2D" uid="uid://cj1esxxvfk1fm" path="res://assets/gfx/ho/HO3/Umbrella.PNG" id="28_y5mwl"]
+[ext_resource type="Texture2D" uid="uid://dcmetreadmvns" path="res://assets/gfx/ho/HO3/Puppet.PNG" id="29_2y36d"]
+[ext_resource type="Texture2D" uid="uid://d1utdhcc0wnsd" path="res://assets/gfx/ho/HO3/Frisbee.PNG" id="30_3g7md"]
+[ext_resource type="BitMap" uid="uid://cqnqlnwd36u0w" path="res://assets/gfx/ho/HO3/Bitmap/Tie.png" id="30_8nllp"]
+[ext_resource type="Texture2D" uid="uid://btv0djf785a1k" path="res://assets/gfx/ho/HO3/Angry.PNG" id="31_w4hlc"]
+[ext_resource type="Texture2D" uid="uid://yumhybk22w7n" path="res://assets/gfx/ho/HO3/Hat.PNG" id="32_h3ua6"]
+[ext_resource type="BitMap" uid="uid://bjgu5c3kvg6vu" path="res://assets/gfx/ho/HO3/Bitmap/Chair.png" id="32_mwwm7"]
+[ext_resource type="Texture2D" uid="uid://lqf2cl7mgqov" path="res://assets/gfx/ho/HO3/Gem.PNG" id="33_i1yyy"]
+[ext_resource type="BitMap" uid="uid://cs6k4xo6k7jep" path="res://assets/gfx/ho/HO3/Bitmap/Controller.png" id="34_nei1o"]
+[ext_resource type="BitMap" uid="uid://g25hj6gndhka" path="res://assets/gfx/ho/HO3/Bitmap/Leaf.png" id="36_50htv"]
+[ext_resource type="BitMap" uid="uid://btlb7d8nieqyx" path="res://assets/gfx/ho/HO3/Bitmap/Pump.png" id="38_4b6mp"]
+[ext_resource type="BitMap" uid="uid://c4lrh01ue8pa8" path="res://assets/gfx/ho/HO3/Bitmap/Plunger.png" id="40_oqen7"]
+[ext_resource type="BitMap" uid="uid://crfrlujtbjnc4" path="res://assets/gfx/ho/HO3/Bitmap/Saw.png" id="42_1epnb"]
+[ext_resource type="BitMap" uid="uid://kbg0kmgp05uj" path="res://assets/gfx/ho/HO3/Bitmap/Bowl.png" id="44_y2own"]
+[ext_resource type="BitMap" uid="uid://xfpjp2bi6vdr" path="res://assets/gfx/ho/HO3/Bitmap/Potion.png" id="46_lgghn"]
+[ext_resource type="BitMap" uid="uid://da03ivonvevfo" path="res://assets/gfx/ho/HO3/Bitmap/Tablet.png" id="48_no05l"]
+[ext_resource type="BitMap" uid="uid://drn0j665iotto" path="res://assets/gfx/ho/HO3/Bitmap/Glasses.png" id="50_qpe06"]
+[ext_resource type="BitMap" uid="uid://c3qrkaehgqlwq" path="res://assets/gfx/ho/HO3/Bitmap/Mace.png" id="52_vrduy"]
+[ext_resource type="BitMap" uid="uid://doyb251hoyi27" path="res://assets/gfx/ho/HO3/Bitmap/Sock.png" id="54_y32cn"]
+[ext_resource type="BitMap" uid="uid://b627ayan4072a" path="res://assets/gfx/ho/HO3/Bitmap/Bell.png" id="56_rwik7"]
+[ext_resource type="BitMap" uid="uid://d1eke5saxt2x0" path="res://assets/gfx/ho/HO3/Bitmap/Magnet.png" id="58_u6srs"]
+[ext_resource type="BitMap" uid="uid://bgjh0cj1a3l4q" path="res://assets/gfx/ho/HO3/Bitmap/Umbrella.png" id="60_07ybg"]
+[ext_resource type="BitMap" uid="uid://eo0mtkbmuryq" path="res://assets/gfx/ho/HO3/Bitmap/Puppet.png" id="62_skyfv"]
+[ext_resource type="BitMap" uid="uid://1ysvbw2aslfb" path="res://assets/gfx/ho/HO3/Bitmap/Frisbee.png" id="64_3kc4b"]
+[ext_resource type="BitMap" uid="uid://bsljvpmuq8anw" path="res://assets/gfx/ho/HO3/Bitmap/Angry.png" id="66_nchf8"]
+[ext_resource type="BitMap" uid="uid://d0u17308futpe" path="res://assets/gfx/ho/HO3/Bitmap/Hat.png" id="68_0d2cf"]
+[ext_resource type="BitMap" uid="uid://bl547vgojn5ln" path="res://assets/gfx/ho/HO3/Bitmap/Gem.png" id="70_ujplh"]
+[ext_resource type="PackedScene" uid="uid://c33lm8gnvbwru" path="res://scripts/UI/hud.tscn" id="71_gia4q"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_00woo"]
+shader = ExtResource("1_rqktj")
+shader_parameter/speed = 0.025
+
+[node name="ho_3" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_j3xmg")
+
+[node name="Hodone" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_yy41d")
+bus = &"SFX"
+
+[node name="Itemget1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_x0i0l")
+bus = &"SFX"
+
+[node name="Itemget2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_hon5b")
+bus = &"SFX"
+
+[node name="Itemget3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_v0orr")
+bus = &"SFX"
+
+[node name="Misclick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_4djdq")
+bus = &"SFX"
+
+[node name="Gemget" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_na37u")
+volume_db = 7.0
+bus = &"SFX"
+
+[node name="Timegodown" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_6yo0p")
+bus = &"SFX"
+
+[node name="BGColor" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1440.0
+offset_bottom = 1080.0
+color = Color(0.00784314, 0.0588235, 0.14902, 1)
+
+[node name="BGStars" type="TextureRect" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_00woo")
+layout_mode = 0
+offset_right = 1440.0
+offset_bottom = 1080.0
+texture = ExtResource("2_ul6ss")
+stretch_mode = 1
+
+[node name="BG" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 360.0
+offset_right = 1440.0
+offset_bottom = 1080.0
+texture_normal = ExtResource("3_wvywf")
+
+[node name="Crutch" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 405.0
+offset_top = 26.0
+offset_right = 791.0
+offset_bottom = 410.0
+texture_normal = ExtResource("4_bln23")
+texture_click_mask = ExtResource("12_27ao5")
+
+[node name="Toothbrush" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1193.0
+offset_top = 41.0
+offset_right = 1396.0
+offset_bottom = 238.0
+texture_normal = ExtResource("5_h8v6v")
+texture_click_mask = ExtResource("14_ib6sg")
+
+[node name="Skull" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 848.0
+offset_top = 717.0
+offset_right = 997.0
+offset_bottom = 826.0
+texture_normal = ExtResource("6_gvc5p")
+texture_click_mask = ExtResource("16_4ka2t")
+
+[node name="Arrow" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 360.0
+offset_top = 389.0
+offset_right = 702.0
+offset_bottom = 687.0
+texture_normal = ExtResource("7_vfegy")
+texture_click_mask = ExtResource("18_06ls3")
+
+[node name="Calculator" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1147.0
+offset_top = 241.0
+offset_right = 1285.0
+offset_bottom = 424.0
+texture_normal = ExtResource("8_lep5x")
+texture_click_mask = ExtResource("20_q0fgv")
+
+[node name="Plushie" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 887.0
+offset_top = 743.0
+offset_right = 1281.0
+offset_bottom = 975.0
+texture_normal = ExtResource("9_olkei")
+texture_click_mask = ExtResource("22_vcrcr")
+
+[node name="Cat" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1137.0
+offset_top = 856.0
+offset_right = 1377.0
+offset_bottom = 1064.0
+texture_normal = ExtResource("10_rrjgj")
+texture_click_mask = ExtResource("24_n4cbw")
+
+[node name="Rat" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1212.0
+offset_top = 670.0
+offset_right = 1408.0
+offset_bottom = 862.0
+texture_normal = ExtResource("11_wy746")
+texture_click_mask = ExtResource("26_rqkxh")
+
+[node name="Ruler" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1230.0
+offset_top = 563.0
+offset_right = 1420.0
+offset_bottom = 660.0
+texture_normal = ExtResource("12_fhqog")
+texture_click_mask = ExtResource("28_b68o8")
+
+[node name="Tie" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1006.0
+offset_top = 559.0
+offset_right = 1214.0
+offset_bottom = 694.0
+texture_normal = ExtResource("13_ufjpg")
+texture_click_mask = ExtResource("30_8nllp")
+
+[node name="Chair" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1247.0
+offset_top = 299.0
+offset_right = 1446.0
+offset_bottom = 596.0
+texture_normal = ExtResource("14_qyhuh")
+texture_click_mask = ExtResource("32_mwwm7")
+
+[node name="Controller" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1045.0
+offset_top = 370.0
+offset_right = 1248.0
+offset_bottom = 550.0
+texture_normal = ExtResource("15_y3o6b")
+texture_click_mask = ExtResource("34_nei1o")
+
+[node name="Leaf" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 624.0
+offset_top = 30.0
+offset_right = 832.0
+offset_bottom = 231.0
+texture_normal = ExtResource("16_vymig")
+texture_click_mask = ExtResource("36_50htv")
+
+[node name="Pump" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1264.0
+offset_top = 121.0
+offset_right = 1433.0
+offset_bottom = 284.0
+texture_normal = ExtResource("17_diy00")
+texture_click_mask = ExtResource("38_4b6mp")
+
+[node name="Plunger" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 763.0
+offset_top = 6.0
+offset_right = 962.0
+offset_bottom = 408.0
+texture_normal = ExtResource("18_qa01j")
+texture_click_mask = ExtResource("40_oqen7")
+
+[node name="Saw" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 975.0
+offset_top = 2.0
+offset_right = 1209.0
+offset_bottom = 254.0
+texture_normal = ExtResource("19_audcg")
+texture_click_mask = ExtResource("42_1epnb")
+
+[node name="Bowl" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 967.0
+offset_top = 209.0
+offset_right = 1110.0
+offset_bottom = 382.0
+texture_normal = ExtResource("20_sjy5w")
+texture_click_mask = ExtResource("44_y2own")
+
+[node name="Potion" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 770.0
+offset_top = 921.0
+offset_right = 979.0
+offset_bottom = 1063.0
+texture_normal = ExtResource("21_4a6p8")
+texture_click_mask = ExtResource("46_lgghn")
+
+[node name="Tablet" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 371.0
+offset_top = 213.0
+offset_right = 630.0
+offset_bottom = 424.0
+texture_normal = ExtResource("22_av0uv")
+texture_click_mask = ExtResource("48_no05l")
+
+[node name="Glasses" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 940.0
+offset_right = 616.0
+offset_bottom = 1077.0
+texture_normal = ExtResource("23_pi308")
+texture_click_mask = ExtResource("50_qpe06")
+
+[node name="Mace" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 994.0
+offset_top = 638.0
+offset_right = 1156.0
+offset_bottom = 925.0
+texture_normal = ExtResource("24_08lyo")
+texture_click_mask = ExtResource("52_vrduy")
+
+[node name="Sock" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 372.0
+offset_top = 837.0
+offset_right = 538.0
+offset_bottom = 1010.0
+texture_normal = ExtResource("25_ql2w7")
+texture_click_mask = ExtResource("54_y32cn")
+
+[node name="Bell" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 577.0
+offset_top = 621.0
+offset_right = 764.0
+offset_bottom = 822.0
+texture_normal = ExtResource("26_hf7l6")
+texture_click_mask = ExtResource("56_rwik7")
+
+[node name="Magnet" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 641.0
+offset_top = 544.0
+offset_right = 783.0
+offset_bottom = 693.0
+texture_normal = ExtResource("27_c66vj")
+texture_click_mask = ExtResource("58_u6srs")
+
+[node name="Umbrella" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 521.0
+offset_top = 760.0
+offset_right = 847.0
+offset_bottom = 1075.0
+texture_normal = ExtResource("28_y5mwl")
+texture_click_mask = ExtResource("60_07ybg")
+
+[node name="Puppet" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 369.0
+offset_top = 327.0
+offset_right = 595.0
+offset_bottom = 623.0
+texture_normal = ExtResource("29_2y36d")
+texture_click_mask = ExtResource("62_skyfv")
+
+[node name="Frisbee" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 707.0
+offset_right = 588.0
+offset_bottom = 817.0
+texture_normal = ExtResource("30_3g7md")
+texture_click_mask = ExtResource("64_3kc4b")
+
+[node name="Angry" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 551.0
+offset_right = 518.0
+offset_bottom = 716.0
+texture_normal = ExtResource("31_w4hlc")
+texture_click_mask = ExtResource("66_nchf8")
+
+[node name="Hat" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 389.0
+offset_top = 502.0
+offset_right = 545.0
+offset_bottom = 616.0
+texture_normal = ExtResource("32_h3ua6")
+texture_click_mask = ExtResource("68_0d2cf")
+
+[node name="Gem" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 861.0
+offset_top = 472.0
+offset_right = 941.0
+offset_bottom = 585.0
+texture_normal = ExtResource("33_i1yyy")
+texture_click_mask = ExtResource("70_ujplh")
+
+[node name="BGColor2" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 360.0
+offset_bottom = 1080.0
+color = Color(0.00784314, 0.0588235, 0.14902, 1)
+
+[node name="HUD" parent="." instance=ExtResource("71_gia4q")]
+layout_mode = 1
+
+[connection signal="button_down" from="BG" to="." method="_on_bg_button_down"]
+[connection signal="button_down" from="Crutch" to="." method="_on_crutch_button_down"]
+[connection signal="button_down" from="Toothbrush" to="." method="_on_toothbrush_button_down"]
+[connection signal="button_down" from="Skull" to="." method="_on_skull_button_down"]
+[connection signal="button_down" from="Arrow" to="." method="_on_arrow_button_down"]
+[connection signal="button_down" from="Calculator" to="." method="_on_calculator_button_down"]
+[connection signal="button_down" from="Plushie" to="." method="_on_plushie_button_down"]
+[connection signal="button_down" from="Cat" to="." method="_on_cat_button_down"]
+[connection signal="button_down" from="Rat" to="." method="_on_rat_button_down"]
+[connection signal="button_down" from="Ruler" to="." method="_on_ruler_button_down"]
+[connection signal="button_down" from="Tie" to="." method="_on_tie_button_down"]
+[connection signal="button_down" from="Chair" to="." method="_on_chair_button_down"]
+[connection signal="button_down" from="Controller" to="." method="_on_controller_button_down"]
+[connection signal="button_down" from="Leaf" to="." method="_on_leaf_button_down"]
+[connection signal="button_down" from="Pump" to="." method="_on_pump_button_down"]
+[connection signal="button_down" from="Plunger" to="." method="_on_plunger_button_down"]
+[connection signal="button_down" from="Saw" to="." method="_on_saw_button_down"]
+[connection signal="button_down" from="Bowl" to="." method="_on_bowl_button_down"]
+[connection signal="button_down" from="Potion" to="." method="_on_potion_button_down"]
+[connection signal="button_down" from="Tablet" to="." method="_on_tablet_button_down"]
+[connection signal="button_down" from="Glasses" to="." method="_on_glasses_button_down"]
+[connection signal="button_down" from="Mace" to="." method="_on_mace_button_down"]
+[connection signal="button_down" from="Sock" to="." method="_on_sock_button_down"]
+[connection signal="button_down" from="Bell" to="." method="_on_bell_button_down"]
+[connection signal="button_down" from="Magnet" to="." method="_on_magnet_button_down"]
+[connection signal="button_down" from="Umbrella" to="." method="_on_umbrella_button_down"]
+[connection signal="button_down" from="Puppet" to="." method="_on_puppet_button_down"]
+[connection signal="button_down" from="Frisbee" to="." method="_on_frisbee_button_down"]
+[connection signal="button_down" from="Angry" to="." method="_on_angry_button_down"]
+[connection signal="button_down" from="Hat" to="." method="_on_hat_button_down"]
+[connection signal="button_down" from="Gem" to="." method="_on_gem_button_down"]

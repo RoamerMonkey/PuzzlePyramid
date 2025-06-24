@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bsb0pskx5qw23"
+path="res://.godot/imported/Crack.png-70176e18dcebba84b99540f73db75ac1.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Crack.png"
+dest_files=["res://.godot/imported/Crack.png-70176e18dcebba84b99540f73db75ac1.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

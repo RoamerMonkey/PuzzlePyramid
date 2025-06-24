@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bsljvpmuq8anw"
+path="res://.godot/imported/Angry.png-01ed239d44629ded7f6ca998e48b7312.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Angry.png"
+dest_files=["res://.godot/imported/Angry.png-01ed239d44629ded7f6ca998e48b7312.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://y1hmxbgutolr"
+path="res://.godot/imported/Sticker.png-322922f1389911af2e313f0f3601cd27.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Sticker.png"
+dest_files=["res://.godot/imported/Sticker.png-322922f1389911af2e313f0f3601cd27.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

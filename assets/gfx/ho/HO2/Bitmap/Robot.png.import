@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://di74kkb63li7c"
+path="res://.godot/imported/Robot.png-55bcc2dc1e9606331c7d6a2e4b001352.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Robot.png"
+dest_files=["res://.godot/imported/Robot.png-55bcc2dc1e9606331c7d6a2e4b001352.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

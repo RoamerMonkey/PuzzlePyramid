@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://6silchynpqrv"
+path="res://.godot/imported/Calculator.png-bc62e27a3eea237645a43909456f2d11.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Calculator.png"
+dest_files=["res://.godot/imported/Calculator.png-bc62e27a3eea237645a43909456f2d11.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

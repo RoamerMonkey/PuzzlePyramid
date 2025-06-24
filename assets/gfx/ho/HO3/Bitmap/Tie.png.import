@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cqnqlnwd36u0w"
+path="res://.godot/imported/Tie.png-78c8c9ea05f8d36ae4e1b25fc38082b4.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Tie.png"
+dest_files=["res://.godot/imported/Tie.png-78c8c9ea05f8d36ae4e1b25fc38082b4.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://ctu60l5loxwvt"
+path="res://.godot/imported/Queen.png-c574328954646a58cec9b7d4db9d2a93.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Queen.png"
+dest_files=["res://.godot/imported/Queen.png-c574328954646a58cec9b7d4db9d2a93.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

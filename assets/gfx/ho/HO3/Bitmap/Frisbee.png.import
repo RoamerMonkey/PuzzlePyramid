@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://1ysvbw2aslfb"
+path="res://.godot/imported/Frisbee.png-60dc4d56456c2f72647351b972692d2c.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Frisbee.png"
+dest_files=["res://.godot/imported/Frisbee.png-60dc4d56456c2f72647351b972692d2c.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

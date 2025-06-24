@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cmpq6q0irpd6d"
+path="res://.godot/imported/Arrow.png-55070f26a995de295d5f20b94c890067.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Arrow.png"
+dest_files=["res://.godot/imported/Arrow.png-55070f26a995de295d5f20b94c890067.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

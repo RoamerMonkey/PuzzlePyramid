@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bfv1ji4s1nahb"
+path="res://.godot/imported/Tear.png-07b7aa07fff08c7f0cbd9aff5efd8364.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO1/Bitmap/Tear.png"
+dest_files=["res://.godot/imported/Tear.png-07b7aa07fff08c7f0cbd9aff5efd8364.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

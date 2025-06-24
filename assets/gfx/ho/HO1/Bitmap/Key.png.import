@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://4a81d27lht05"
+path="res://.godot/imported/Key.png-5114e513c2047e6ce2045cab2b1d88cb.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO1/Bitmap/Key.png"
+dest_files=["res://.godot/imported/Key.png-5114e513c2047e6ce2045cab2b1d88cb.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

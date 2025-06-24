@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://b6krpe76tvksd"
+path="res://.godot/imported/Pie.png-856d7e6601634b3e28b1b1a79637aa61.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO1/Bitmap/Pie.png"
+dest_files=["res://.godot/imported/Pie.png-856d7e6601634b3e28b1b1a79637aa61.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

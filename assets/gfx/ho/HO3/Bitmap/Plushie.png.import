@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://c7y3davl4lm55"
+path="res://.godot/imported/Plushie.png-66626565f84d137315cacde9d87e6481.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Plushie.png"
+dest_files=["res://.godot/imported/Plushie.png-66626565f84d137315cacde9d87e6481.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://eo0mtkbmuryq"
+path="res://.godot/imported/Puppet.png-71d50212c6092a5021c5deaaf0eede5c.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Puppet.png"
+dest_files=["res://.godot/imported/Puppet.png-71d50212c6092a5021c5deaaf0eede5c.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

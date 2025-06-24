@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://by38ubpu3fhaa"
+path="res://.godot/imported/Mirror.png-c17261ece7a27597f1bf38e59d8776c2.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Mirror.png"
+dest_files=["res://.godot/imported/Mirror.png-c17261ece7a27597f1bf38e59d8776c2.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

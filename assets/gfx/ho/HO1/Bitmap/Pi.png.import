@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://c0famsgdfjxt6"
+path="res://.godot/imported/Pi.png-c26b6ea237da9d31552dffadb9f666e0.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO1/Bitmap/Pi.png"
+dest_files=["res://.godot/imported/Pi.png-c26b6ea237da9d31552dffadb9f666e0.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

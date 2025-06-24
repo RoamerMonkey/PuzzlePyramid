@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://b0crvf0ryyo88"
+path="res://.godot/imported/Battery.png-cf3856a6bcea46e65c79419c35a56f09.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Battery.png"
+dest_files=["res://.godot/imported/Battery.png-cf3856a6bcea46e65c79419c35a56f09.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

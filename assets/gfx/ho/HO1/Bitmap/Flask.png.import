@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dkb20xr4e7ojp"
+path="res://.godot/imported/Flask.png-8bb553d4d85dc98f6c7d059b4a9ab75d.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO1/Bitmap/Flask.png"
+dest_files=["res://.godot/imported/Flask.png-8bb553d4d85dc98f6c7d059b4a9ab75d.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

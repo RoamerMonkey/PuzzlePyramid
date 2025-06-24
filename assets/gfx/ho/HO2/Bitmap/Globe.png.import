@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cdy14dyv8tvhx"
+path="res://.godot/imported/Globe.png-2699b8ff8b0281c99a9975ab4c8bd497.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Globe.png"
+dest_files=["res://.godot/imported/Globe.png-2699b8ff8b0281c99a9975ab4c8bd497.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

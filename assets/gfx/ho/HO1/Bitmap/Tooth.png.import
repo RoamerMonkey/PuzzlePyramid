@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bgvavyqpqpmkq"
+path="res://.godot/imported/Tooth.png-0ab54dda0885f529578641195f9f285b.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO1/Bitmap/Tooth.png"
+dest_files=["res://.godot/imported/Tooth.png-0ab54dda0885f529578641195f9f285b.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

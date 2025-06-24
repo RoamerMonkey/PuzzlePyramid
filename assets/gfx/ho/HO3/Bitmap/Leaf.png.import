@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://g25hj6gndhka"
+path="res://.godot/imported/Leaf.png-95998f56b75cdfcc9e6a2b43e941ca88.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Leaf.png"
+dest_files=["res://.godot/imported/Leaf.png-95998f56b75cdfcc9e6a2b43e941ca88.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

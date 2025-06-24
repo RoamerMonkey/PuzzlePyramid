@@ -1,0 +1,173 @@
+[gd_scene load_steps=14 format=3 uid="uid://hsilxb5ldajn"]
+
+[ext_resource type="Texture2D" uid="uid://dk5xrp2jhr7vl" path="res://assets/gfx/ui/GameLogo.png" id="1_j8icg"]
+[ext_resource type="Script" uid="uid://bn8tllawxs5wh" path="res://scripts/main_menu.gd" id="1_snv5s"]
+[ext_resource type="Texture2D" uid="uid://4dy14o5milo6" path="res://assets/gfx/pyramid/MenuBottom.png" id="2_6jofb"]
+[ext_resource type="Shader" uid="uid://cv3c5nreevpcc" path="res://scripts/scroll.gdshader" id="2_kpi6m"]
+[ext_resource type="Texture2D" uid="uid://bo0axjv7pn6u6" path="res://assets/gfx/pyramid/BG.png" id="3_3ejt2"]
+[ext_resource type="FontFile" uid="uid://cd8ioofmybjqo" path="res://assets/fonts/CascadiaMono-Bold.otf" id="4_kw46n"]
+[ext_resource type="PackedScene" uid="uid://bunuwcv6a47d7" path="res://scripts/UI/popup.tscn" id="8_bg07a"]
+[ext_resource type="AudioStream" uid="uid://dbi7bdwigvyr5" path="res://assets/snd/ui/buttonplay.wav" id="9_7dukd"]
+[ext_resource type="AudioStream" uid="uid://bd6prdkn3hw7i" path="res://assets/snd/ui/buttonclick.mp3" id="10_ltpjf"]
+[ext_resource type="AudioStream" uid="uid://cu2ddppdklsyy" path="res://assets/snd/ui/buttonhover.wav" id="11_5fmww"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wi3a0"]
+shader = ExtResource("2_kpi6m")
+shader_parameter/speed = 0.025
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xtuy4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pxe2p"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_snv5s")
+metadata/_edit_vertical_guides_ = [720.0]
+metadata/_edit_horizontal_guides_ = [885.0]
+
+[node name="SFXPlay" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_7dukd")
+bus = &"SFX"
+
+[node name="SFXButton" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_ltpjf")
+bus = &"SFX"
+
+[node name="SFXHover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_5fmww")
+bus = &"SFX"
+
+[node name="BGColor" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1440.0
+offset_bottom = 1080.0
+color = Color(0.00784314, 0.0588235, 0.14902, 1)
+
+[node name="BGStars" type="TextureRect" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_wi3a0")
+layout_mode = 0
+offset_right = 1440.0
+offset_bottom = 1080.0
+texture = ExtResource("3_3ejt2")
+stretch_mode = 1
+
+[node name="Logo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 321.0
+offset_top = 103.0
+offset_right = 1124.0
+offset_bottom = 572.0
+texture = ExtResource("1_j8icg")
+expand_mode = 1
+
+[node name="ButtonsBG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1440.0
+offset_bottom = 1080.0
+texture = ExtResource("2_6jofb")
+
+[node name="WelcomeText" type="Label" parent="."]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 974.0
+offset_right = 720.0
+offset_bottom = 1022.0
+theme_override_fonts/font = ExtResource("4_kw46n")
+theme_override_font_sizes/font_size = 40
+text = "Click on Progress to load/reset your progress!"
+vertical_alignment = 1
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 621.0
+offset_top = 835.0
+offset_right = 822.0
+offset_bottom = 931.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_hover_color = Color(0.252547, 0.760022, 0.463246, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.393086, 0.393086, 0.393085, 1)
+theme_override_fonts/font = ExtResource("4_kw46n")
+theme_override_font_sizes/font_size = 75
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xtuy4")
+text = "PLAY"
+
+[node name="OptionsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 346.0
+offset_top = 835.0
+offset_right = 559.0
+offset_bottom = 931.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_hover_color = Color(0.120377, 0.740277, 0.740395, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.393086, 0.393086, 0.393085, 1)
+theme_override_fonts/font = ExtResource("4_kw46n")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xtuy4")
+text = "Options"
+
+[node name="CreditsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 835.0
+offset_right = 279.0
+offset_bottom = 931.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_hover_color = Color(0.120377, 0.740277, 0.740395, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.393086, 0.393086, 0.393085, 1)
+theme_override_fonts/font = ExtResource("4_kw46n")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xtuy4")
+text = "Credits"
+
+[node name="ProgressButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 885.0
+offset_top = 835.0
+offset_right = 1098.0
+offset_bottom = 931.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_hover_color = Color(0.120377, 0.740277, 0.740395, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.393086, 0.393086, 0.393085, 1)
+theme_override_fonts/font = ExtResource("4_kw46n")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xtuy4")
+text = "Progress"
+
+[node name="ExitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1168.0
+offset_top = 835.0
+offset_right = 1381.0
+offset_bottom = 931.0
+theme_type_variation = &"FlatButton"
+theme_override_colors/font_hover_color = Color(0.789629, 0.14947, 0.348303, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.393086, 0.393086, 0.393085, 1)
+theme_override_fonts/font = ExtResource("4_kw46n")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pxe2p")
+text = "Exit"
+
+[node name="Popup" parent="." instance=ExtResource("8_bg07a")]
+layout_mode = 1
+
+[connection signal="button_down" from="PlayButton" to="." method="_on_play_button_button_down"]
+[connection signal="mouse_entered" from="PlayButton" to="." method="_on_play_button_mouse_entered"]
+[connection signal="button_down" from="OptionsButton" to="." method="_on_options_button_button_down"]
+[connection signal="mouse_entered" from="OptionsButton" to="." method="_on_options_button_mouse_entered"]
+[connection signal="button_down" from="CreditsButton" to="." method="_on_credits_button_button_down"]
+[connection signal="mouse_entered" from="CreditsButton" to="." method="_on_credits_button_mouse_entered"]
+[connection signal="button_down" from="ProgressButton" to="." method="_on_progress_button_button_down"]
+[connection signal="mouse_entered" from="ProgressButton" to="." method="_on_progress_button_mouse_entered"]
+[connection signal="button_down" from="ExitButton" to="." method="_on_exit_button_button_down"]
+[connection signal="mouse_entered" from="ExitButton" to="." method="_on_exit_button_mouse_entered"]

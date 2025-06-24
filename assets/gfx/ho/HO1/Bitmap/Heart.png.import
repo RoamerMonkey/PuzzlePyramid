@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://qry4e4phtaka"
+path="res://.godot/imported/Heart.png-6ecc7eb4b43a770cb58c5a433c01353f.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO1/Bitmap/Heart.png"
+dest_files=["res://.godot/imported/Heart.png-6ecc7eb4b43a770cb58c5a433c01353f.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

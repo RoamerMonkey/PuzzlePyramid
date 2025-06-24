@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://btlb7d8nieqyx"
+path="res://.godot/imported/Pump.png-e5f4203c481a651483479c62c0f90669.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Pump.png"
+dest_files=["res://.godot/imported/Pump.png-e5f4203c481a651483479c62c0f90669.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

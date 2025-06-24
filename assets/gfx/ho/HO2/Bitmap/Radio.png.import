@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://c0rcjwgwh4d0e"
+path="res://.godot/imported/Radio.png-38a2f1febe617ee983ee23e6df6e5af7.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Radio.png"
+dest_files=["res://.godot/imported/Radio.png-38a2f1febe617ee983ee23e6df6e5af7.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cxwro64kyw7ik"
+path="res://.godot/imported/Ruler.png-db2a831d060f50c1d388d13662c112df.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Ruler.png"
+dest_files=["res://.godot/imported/Ruler.png-db2a831d060f50c1d388d13662c112df.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

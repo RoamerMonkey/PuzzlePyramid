@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dm0ghryvuo44p"
+path="res://.godot/imported/Skull.png-244d257199ebe464bec1994166be99a3.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Skull.png"
+dest_files=["res://.godot/imported/Skull.png-244d257199ebe464bec1994166be99a3.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

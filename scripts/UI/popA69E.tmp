@@ -1,0 +1,1191 @@
+[gd_scene load_steps=33 format=3 uid="uid://bunuwcv6a47d7"]
+
+[ext_resource type="Script" path="res://BTS/UI/popup.gd" id="1_5gb68"]
+[ext_resource type="Texture2D" uid="uid://cocy5ae0ibgic" path="res://PuzzlePyramid/gfx/ui/UIRectBox.png" id="2_7g2ig"]
+[ext_resource type="Texture2D" uid="uid://r5b3m83fwubi" path="res://PuzzlePyramid/gfx/ui/XButton.png" id="3_bxnk1"]
+[ext_resource type="FontFile" uid="uid://cd8ioofmybjqo" path="res://PuzzlePyramid/fonts/CascadiaMono-Bold.otf" id="4_ght4d"]
+[ext_resource type="Script" path="res://BTS/UI/player_type.gd" id="5_5w14f"]
+[ext_resource type="Texture2D" uid="uid://dfucruli33rhi" path="res://PuzzlePyramid/gfx/ui/ArrowButton.png" id="5_h6neb"]
+[ext_resource type="Texture2D" uid="uid://ceymrewcoye7" path="res://PuzzlePyramid/gfx/ui/UISquareBox.png" id="6_wy4j6"]
+[ext_resource type="Texture2D" uid="uid://2omi4vi6au12" path="res://PuzzlePyramid/gfx/ui/CheckBox.png" id="7_cis7w"]
+[ext_resource type="Texture2D" uid="uid://cuabkityx0gx" path="res://PuzzlePyramid/gfx/ui/SliderClick.png" id="7_wi4bb"]
+[ext_resource type="Texture2D" uid="uid://dorouiks3ps4w" path="res://PuzzlePyramid/gfx/ui/SliderBG.png" id="8_cptfi"]
+[ext_resource type="Script" path="res://BTS/UI/bgm_slider.gd" id="9_spqsp"]
+[ext_resource type="Script" path="res://BTS/UI/sfx.gd" id="10_as2hr"]
+[ext_resource type="Texture2D" uid="uid://d0tlenhwpt7jf" path="res://PuzzlePyramid/gfx/ui/SliderClick.2png.png" id="12_a4iwo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b88xv"]
+atlas = ExtResource("3_bxnk1")
+region = Rect2(4, 8, 146, 146)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msxvw"]
+atlas = ExtResource("3_bxnk1")
+region = Rect2(163, 8, 146, 146)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3timw"]
+atlas = ExtResource("5_h6neb")
+region = Rect2(25, 14, 88, 154)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2e08"]
+atlas = ExtResource("5_h6neb")
+region = Rect2(180, 14, 88, 154)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fk0s6"]
+atlas = ExtResource("3_bxnk1")
+region = Rect2(4, 8, 146, 146)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwloe"]
+atlas = ExtResource("3_bxnk1")
+region = Rect2(163, 8, 146, 146)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_evuol"]
+texture = ExtResource("8_cptfi")
+texture_margin_left = 20.0
+texture_margin_top = 20.0
+texture_margin_right = 20.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v37d"]
+atlas = ExtResource("7_cis7w")
+region = Rect2(9, 11, 120, 113)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0oic6"]
+atlas = ExtResource("7_cis7w")
+region = Rect2(147, 11, 120, 113)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_451yl"]
+atlas = ExtResource("3_bxnk1")
+region = Rect2(4, 8, 146, 146)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7q6m"]
+atlas = ExtResource("3_bxnk1")
+region = Rect2(163, 8, 146, 146)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8a2pn"]
+atlas = ExtResource("3_bxnk1")
+region = Rect2(4, 8, 146, 146)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbgff"]
+atlas = ExtResource("3_bxnk1")
+region = Rect2(163, 8, 146, 146)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qqaxi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e2kum"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xj4lr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aux1y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hb05"]
+atlas = ExtResource("3_bxnk1")
+region = Rect2(4, 8, 146, 146)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mefkt"]
+atlas = ExtResource("3_bxnk1")
+region = Rect2(163, 8, 146, 146)
+
+[node name="Popup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5gb68")
+metadata/_edit_horizontal_guides_ = [540.0]
+metadata/_edit_vertical_guides_ = [720.0]
+
+[node name="Pause" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Pause"]
+layout_mode = 0
+offset_right = 1440.0
+offset_bottom = 1080.0
+color = Color(0.545098, 0.698039, 0.917647, 0.137255)
+
+[node name="BG" type="TextureRect" parent="Pause"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 72.0
+offset_right = 1185.0
+offset_bottom = 1003.0
+texture = ExtResource("6_wy4j6")
+
+[node name="PauseResume" type="Button" parent="Pause"]
+offset_left = 593.0
+offset_top = 193.0
+offset_right = 846.0
+offset_bottom = 294.0
+theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 50
+text = "RESUME"
+
+[node name="PauseOption" type="Button" parent="Pause"]
+offset_left = 593.0
+offset_top = 389.0
+offset_right = 846.0
+offset_bottom = 490.0
+theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 50
+text = "OPTIONS"
+
+[node name="PauseMenu" type="Button" parent="Pause"]
+offset_left = 593.0
+offset_top = 599.0
+offset_right = 846.0
+offset_bottom = 700.0
+theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 50
+text = "MENU"
+
+[node name="PauseExit" type="Button" parent="Pause"]
+offset_left = 593.0
+offset_top = 801.0
+offset_right = 846.0
+offset_bottom = 902.0
+theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 50
+text = "EXIT"
+
+[node name="TypeName" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="TypeName"]
+layout_mode = 0
+offset_right = 1440.0
+offset_bottom = 1080.0
+color = Color(0.545098, 0.698039, 0.917647, 0.137255)
+
+[node name="BG" type="TextureRect" parent="TypeName"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 75.0
+offset_right = 1390.0
+offset_bottom = 1006.0
+texture = ExtResource("2_7g2ig")
+
+[node name="Done" type="Button" parent="TypeName"]
+offset_left = 593.0
+offset_top = 733.0
+offset_right = 846.0
+offset_bottom = 834.0
+theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 50
+text = "Done"
+
+[node name="TextEntry" type="Control" parent="TypeName"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_5w14f")
+
+[node name="PlayerType" type="LineEdit" parent="TypeName/TextEntry"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 166.0
+offset_top = 311.0
+offset_right = 1274.0
+offset_bottom = 390.0
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 60
+placeholder_text = "Enter a name"
+max_length = 15
+context_menu_enabled = false
+shortcut_keys_enabled = false
+middle_mouse_paste_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+caret_blink = true
+
+[node name="Credits" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Credits"]
+layout_mode = 0
+offset_right = 1440.0
+offset_bottom = 1080.0
+color = Color(0.545098, 0.698039, 0.917647, 0.137255)
+
+[node name="BG" type="TextureRect" parent="Credits"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 75.0
+offset_right = 1390.0
+offset_bottom = 1006.0
+texture = ExtResource("2_7g2ig")
+
+[node name="CreditsX" type="TextureButton" parent="Credits"]
+layout_mode = 0
+offset_left = 1275.0
+offset_top = 35.0
+offset_right = 1421.0
+offset_bottom = 181.0
+texture_normal = SubResource("AtlasTexture_b88xv")
+texture_pressed = SubResource("AtlasTexture_msxvw")
+texture_hover = SubResource("AtlasTexture_msxvw")
+
+[node name="Title" type="Label" parent="Credits"]
+layout_mode = 0
+offset_left = 502.0
+offset_top = 103.0
+offset_right = 942.0
+offset_bottom = 229.0
+theme_override_colors/font_color = Color(0.0932696, 0.161745, 0.249548, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 100
+text = "CREDITS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Page1" type="Control" parent="Credits"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="MeTitle" type="Label" parent="Credits/Page1"]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 229.0
+offset_right = 1291.0
+offset_bottom = 288.0
+theme_override_colors/font_color = Color(0.0932696, 0.161745, 0.249548, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 40
+text = "Game Design, Art, Writing, Original Programming:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MeCredit" type="Label" parent="Credits/Page1"]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 288.0
+offset_right = 1291.0
+offset_bottom = 347.0
+theme_override_colors/font_color = Color(0.714536, 0.801045, 0.91416, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 40
+text = "Roamer Monkey"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgramTitle" type="Label" parent="Credits/Page1"]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 389.0
+offset_right = 1291.0
+offset_bottom = 447.0
+theme_override_colors/font_color = Color(0.0932696, 0.161745, 0.249548, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 40
+text = "Used Programming (MIT-Licensed/Tutorials):"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgramCredit" type="Label" parent="Credits/Page1"]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 447.0
+offset_right = 1291.0
+offset_bottom = 512.0
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 40
+text = "jontopielski
+Soma Animus
+JumboGamedev
+The Shaggy Dev
+Kron
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BGMTitle" type="Label" parent="Credits/Page1"]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 714.0
+offset_right = 1291.0
+offset_bottom = 772.0
+theme_override_colors/font_color = Color(0.0932696, 0.161745, 0.249548, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 40
+text = "Background Music:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BGMCredit" type="Label" parent="Credits/Page1"]
+layout_mode = 0
+offset_left = 156.0
+offset_top = 772.0
+offset_right = 1291.0
+offset_bottom = 946.0
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 40
+text = "Awakening by Purple Planet Music
+Ethereal Eternity by Purple Planet Music
+Masquerade by Purple Planet Music"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RightArrow" type="TextureButton" parent="Credits/Page1"]
+layout_mode = 0
+offset_left = 1204.0
+offset_top = 466.0
+offset_right = 1292.0
+offset_bottom = 620.0
+texture_normal = SubResource("AtlasTexture_3timw")
+texture_pressed = SubResource("AtlasTexture_g2e08")
+texture_hover = SubResource("AtlasTexture_g2e08")
+flip_h = true
+
+[node name="Page2" type="Control" parent="Credits"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SFXTitle" type="Label" parent="Credits/Page2"]
+layout_mode = 0
+offset_left = 321.0
+offset_top = 193.0
+offset_right = 1122.0
+offset_bottom = 288.0
+theme_override_colors/font_color = Color(0.0932696, 0.161745, 0.249548, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 40
+text = "Sound Effects (all on Freesound):"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SFXCredit" type="Label" parent="Credits/Page2"]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 272.0
+offset_right = 1302.0
+offset_bottom = 965.0
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 25
+text = "Modern UI Hover by yuugfr1a
+Sci Fi Interface by Jofae
+btn006 by junggle
+Diamond Click by MATRIXXX_
+weird cowbell 1 by patchytherat
+Light ceramic cling by that_Finn
+Press_Button_01 by scholzi982
+Achievment Chimes by LaurenPonder
+24 - Coger botella by MichaelGillighan
+Putting down Glass of Water by MTJohnson
+Glass Slide 3 by WasabiWielder
+Balsa hit 2 by LloydEvans09
+Magic disappearing/appearing by Tetoszka
+Up Chime 1, Up Chime 2, Complete Chime, Mystery Peak2 + by FoolBoyMedia
+Magic Reveal by IENBA
+01905 space swoosh by Robinhood76
+Short electronic jingle 125 bpm by r3nzoll
+hint by dland
+Wrong Choice by unadamlar
+droplet_bad by willy_ineedthatapp_com
+Game Sound Wrong by Bertrof"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LeftArrow" type="TextureButton" parent="Credits/Page2"]
+layout_mode = 0
+offset_left = 143.0
+offset_top = 466.0
+offset_right = 231.0
+offset_bottom = 620.0
+texture_normal = SubResource("AtlasTexture_3timw")
+texture_pressed = SubResource("AtlasTexture_g2e08")
+texture_hover = SubResource("AtlasTexture_g2e08")
+
+[node name="Options" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Options"]
+layout_mode = 0
+offset_right = 1440.0
+offset_bottom = 1080.0
+color = Color(0.545098, 0.698039, 0.917647, 0.137255)
+
+[node name="BG" type="TextureRect" parent="Options"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 72.0
+offset_right = 1185.0
+offset_bottom = 1003.0
+texture = ExtResource("6_wy4j6")
+
+[node name="OptionsX" type="TextureButton" parent="Options"]
+layout_mode = 0
+offset_left = 1093.0
+offset_top = 31.0
+offset_right = 1239.0
+offset_bottom = 177.0
+texture_normal = SubResource("AtlasTexture_fk0s6")
+texture_pressed = SubResource("AtlasTexture_jwloe")
+
+[node name="Title" type="Label" parent="Options"]
+layout_mode = 0
+offset_left = 502.0
+offset_top = 177.0
+offset_right = 942.0
+offset_bottom = 303.0
+theme_override_colors/font_color = Color(0.0932696, 0.161745, 0.249548, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 100
+text = "OPTIONS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BGMLabel" type="Label" parent="Options"]
+layout_mode = 0
+offset_left = 321.0
+offset_top = 347.0
+offset_right = 1122.0
+offset_bottom = 406.0
+theme_override_colors/font_color = Color(0.714536, 0.801045, 0.91416, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 40
+text = "Music Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BGM" type="HSlider" parent="Options/BGMLabel"]
+layout_mode = 0
+offset_top = 59.0
+offset_right = 801.0
+offset_bottom = 150.0
+theme_override_icons/grabber = ExtResource("7_wi4bb")
+theme_override_icons/grabber_highlight = ExtResource("7_wi4bb")
+theme_override_icons/grabber_disabled = ExtResource("7_wi4bb")
+theme_override_styles/slider = SubResource("StyleBoxTexture_evuol")
+max_value = 1.0
+step = 0.001
+value = 1.0
+scrollable = false
+script = ExtResource("9_spqsp")
+bus_name = "BGM"
+
+[node name="SFXLabel" type="Label" parent="Options"]
+layout_mode = 0
+offset_left = 321.0
+offset_top = 507.0
+offset_right = 1122.0
+offset_bottom = 566.0
+theme_override_colors/font_color = Color(0.714536, 0.801045, 0.91416, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 40
+text = "Sound Volume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SFX" type="HSlider" parent="Options/SFXLabel"]
+layout_mode = 0
+offset_top = 59.0
+offset_right = 801.0
+offset_bottom = 150.0
+theme_override_icons/grabber = ExtResource("7_wi4bb")
+theme_override_icons/grabber_highlight = ExtResource("7_wi4bb")
+theme_override_icons/grabber_disabled = ExtResource("7_wi4bb")
+theme_override_styles/slider = SubResource("StyleBoxTexture_evuol")
+max_value = 1.0
+step = 0.001
+value = 1.0
+scrollable = false
+script = ExtResource("10_as2hr")
+bus_name = "SFX"
+
+[node name="Windowed" type="Label" parent="Options"]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 733.0
+offset_right = 684.0
+offset_bottom = 832.0
+theme_override_colors/font_color = Color(0.714536, 0.801045, 0.91416, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 40
+text = "Windowed"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WindowButton" type="TextureButton" parent="Options/Windowed"]
+layout_mode = 0
+offset_left = -126.0
+offset_top = -12.0
+offset_right = -6.0
+offset_bottom = 101.0
+toggle_mode = true
+texture_normal = SubResource("AtlasTexture_3v37d")
+texture_pressed = SubResource("AtlasTexture_0oic6")
+
+[node name="OptionDifficulty" type="Button" parent="Options"]
+layout_mode = 0
+offset_left = 738.0
+offset_top = 733.0
+offset_right = 1111.0
+offset_bottom = 834.0
+theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 50
+text = "Difficulty"
+
+[node name="Difficulty" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Difficulty"]
+layout_mode = 0
+offset_right = 1440.0
+offset_bottom = 1080.0
+color = Color(0.545098, 0.698039, 0.917647, 0.137255)
+
+[node name="BG" type="TextureRect" parent="Difficulty"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 75.0
+offset_right = 1390.0
+offset_bottom = 1006.0
+texture = ExtResource("2_7g2ig")
+
+[node name="DifficultyX" type="TextureButton" parent="Difficulty"]
+layout_mode = 0
+offset_left = 1275.0
+offset_top = 35.0
+offset_right = 1421.0
+offset_bottom = 181.0
+texture_normal = SubResource("AtlasTexture_451yl")
+texture_pressed = SubResource("AtlasTexture_a7q6m")
+
+[node name="Title" type="Label" parent="Difficulty"]
+offset_left = 427.0
+offset_top = 126.0
+offset_right = 1013.0
+offset_bottom = 252.0
+theme_override_colors/font_color = Color(0.0932696, 0.161745, 0.249548, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 100
+text = "DIFFICULTY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ItemTitle" type="Label" parent="Difficulty"]
+offset_left = 143.0
+offset_top = 252.0
+offset_right = 870.0
+offset_bottom = 311.0
+theme_override_colors/font_color = Color(0.714536, 0.801045, 0.91416, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 40
+text = "Number of Items To Collect (X):"
+vertical_alignment = 1
+
+[node name="ItemScale" type="HSlider" parent="Difficulty/ItemTitle"]
+layout_mode = 0
+offset_top = 59.0
+offset_right = 727.0
+offset_bottom = 150.0
+theme_override_icons/grabber = ExtResource("7_wi4bb")
+theme_override_icons/grabber_highlight = ExtResource("7_wi4bb")
+theme_override_icons/grabber_disabled = ExtResource("7_wi4bb")
+theme_override_styles/slider = SubResource("StyleBoxTexture_evuol")
+min_value = 12.0
+max_value = 30.0
+value = 12.0
+scrollable = false
+
+[node name="TimerTitle" type="Label" parent="Difficulty"]
+offset_left = 143.0
+offset_top = 423.0
+offset_right = 870.0
+offset_bottom = 482.0
+theme_override_colors/font_color = Color(0.714536, 0.801045, 0.91416, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 40
+text = "Timer (XX:XX):"
+vertical_alignment = 1
+
+[node name="TimeScale" type="HSlider" parent="Difficulty/TimerTitle"]
+layout_mode = 0
+offset_top = 59.0
+offset_right = 727.0
+offset_bottom = 150.0
+theme_override_icons/grabber = ExtResource("7_wi4bb")
+theme_override_icons/grabber_highlight = ExtResource("7_wi4bb")
+theme_override_icons/grabber_disabled = ExtResource("12_a4iwo")
+theme_override_styles/slider = SubResource("StyleBoxTexture_evuol")
+min_value = 5.0
+max_value = 20.0
+value = 12.0
+scrollable = false
+
+[node name="TimeButton" type="TextureButton" parent="Difficulty/TimerTitle"]
+offset_left = 763.0
+offset_top = 43.0
+offset_right = 883.0
+offset_bottom = 156.0
+toggle_mode = true
+texture_normal = SubResource("AtlasTexture_3v37d")
+texture_pressed = SubResource("AtlasTexture_0oic6")
+
+[node name="TimerText" type="Label" parent="Difficulty/TimerTitle"]
+offset_left = 904.0
+offset_top = 43.0
+offset_right = 1090.0
+offset_bottom = 142.0
+theme_override_colors/font_color = Color(0.714536, 0.801045, 0.91416, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 40
+text = "Disable
+Timer"
+vertical_alignment = 1
+
+[node name="HintTitle" type="Label" parent="Difficulty"]
+offset_left = 143.0
+offset_top = 599.0
+offset_right = 870.0
+offset_bottom = 658.0
+theme_override_colors/font_color = Color(0.714536, 0.801045, 0.91416, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 40
+text = "Hint Recharge Time: (X s)"
+vertical_alignment = 1
+
+[node name="HintScale" type="HSlider" parent="Difficulty/HintTitle"]
+layout_mode = 0
+offset_top = 59.0
+offset_right = 727.0
+offset_bottom = 150.0
+theme_override_icons/grabber = ExtResource("7_wi4bb")
+theme_override_icons/grabber_highlight = ExtResource("7_wi4bb")
+theme_override_icons/grabber_disabled = ExtResource("7_wi4bb")
+theme_override_styles/slider = SubResource("StyleBoxTexture_evuol")
+max_value = 120.0
+value = 60.0
+scrollable = false
+
+[node name="SkipTitle" type="Label" parent="Difficulty"]
+offset_left = 143.0
+offset_top = 772.0
+offset_right = 870.0
+offset_bottom = 831.0
+theme_override_colors/font_color = Color(0.714536, 0.801045, 0.91416, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 40
+text = "Skip Recharge Time: (X s)"
+vertical_alignment = 1
+
+[node name="SkipScale" type="HSlider" parent="Difficulty/SkipTitle"]
+layout_mode = 0
+offset_top = 59.0
+offset_right = 727.0
+offset_bottom = 150.0
+theme_override_icons/grabber = ExtResource("7_wi4bb")
+theme_override_icons/grabber_highlight = ExtResource("7_wi4bb")
+theme_override_icons/grabber_disabled = ExtResource("7_wi4bb")
+theme_override_styles/slider = SubResource("StyleBoxTexture_evuol")
+max_value = 120.0
+value = 60.0
+scrollable = false
+
+[node name="Players" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Players"]
+layout_mode = 0
+offset_right = 1440.0
+offset_bottom = 1080.0
+color = Color(0.545098, 0.698039, 0.917647, 0.137255)
+
+[node name="BG" type="TextureRect" parent="Players"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 72.0
+offset_right = 1185.0
+offset_bottom = 1003.0
+texture = ExtResource("6_wy4j6")
+
+[node name="PlayerX" type="TextureButton" parent="Players"]
+layout_mode = 0
+offset_left = 1093.0
+offset_top = 31.0
+offset_right = 1239.0
+offset_bottom = 177.0
+texture_normal = SubResource("AtlasTexture_8a2pn")
+texture_pressed = SubResource("AtlasTexture_dbgff")
+
+[node name="New" type="Button" parent="Players"]
+offset_left = 331.0
+offset_top = 831.0
+offset_right = 527.0
+offset_bottom = 932.0
+theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 50
+text = "New"
+
+[node name="Delete" type="Button" parent="Players"]
+offset_left = 623.0
+offset_top = 834.0
+offset_right = 819.0
+offset_bottom = 935.0
+theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 50
+text = "Rename"
+
+[node name="Rename" type="Button" parent="Players"]
+offset_left = 906.0
+offset_top = 831.0
+offset_right = 1102.0
+offset_bottom = 932.0
+theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 50
+text = "Delete"
+
+[node name="Player1" type="Button" parent="Players"]
+offset_left = 331.0
+offset_top = 177.0
+offset_right = 1093.0
+offset_bottom = 278.0
+theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qqaxi")
+disabled = true
+toggle_mode = true
+text = "[Player1]"
+
+[node name="Player2" type="Button" parent="Players"]
+offset_left = 331.0
+offset_top = 329.0
+offset_right = 1093.0
+offset_bottom = 430.0
+theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_e2kum")
+disabled = true
+text = "[Player2]"
+
+[node name="Player3" type="Button" parent="Players"]
+offset_left = 331.0
+offset_top = 482.0
+offset_right = 1093.0
+offset_bottom = 583.0
+theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xj4lr")
+disabled = true
+text = "[Player3]"
+
+[node name="Player4" type="Button" parent="Players"]
+offset_left = 331.0
+offset_top = 646.0
+offset_right = 1093.0
+offset_bottom = 747.0
+theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxEmpty_aux1y")
+disabled = true
+text = "[Player4]"
+
+[node name="Exit" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Exit"]
+layout_mode = 0
+offset_right = 1440.0
+offset_bottom = 1080.0
+color = Color(0.545098, 0.698039, 0.917647, 0.137255)
+
+[node name="BG" type="TextureRect" parent="Exit"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 72.0
+offset_right = 1185.0
+offset_bottom = 1003.0
+texture = ExtResource("6_wy4j6")
+
+[node name="Title" type="Label" parent="Exit"]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 278.0
+offset_right = 1147.0
+offset_bottom = 423.0
+theme_override_colors/font_color = Color(0.0932696, 0.161745, 0.249548, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 60
+text = "Are you sure you want
+to quit?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitYes" type="Button" parent="Exit"]
+layout_mode = 0
+offset_left = 427.0
+offset_top = 632.0
+offset_right = 623.0
+offset_bottom = 733.0
+theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 50
+text = "Yes"
+
+[node name="ExitNo" type="Button" parent="Exit"]
+layout_mode = 0
+offset_left = 815.0
+offset_top = 632.0
+offset_right = 1011.0
+offset_bottom = 733.0
+theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 50
+text = "No"
+
+[node name="Info" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Info"]
+layout_mode = 0
+offset_right = 1440.0
+offset_bottom = 1080.0
+color = Color(0.545098, 0.698039, 0.917647, 0.137255)
+
+[node name="BG" type="TextureRect" parent="Info"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 75.0
+offset_right = 1390.0
+offset_bottom = 1006.0
+texture = ExtResource("2_7g2ig")
+
+[node name="XButton" type="TextureButton" parent="Info"]
+layout_mode = 0
+offset_left = 1275.0
+offset_top = 35.0
+offset_right = 1421.0
+offset_bottom = 181.0
+texture_normal = SubResource("AtlasTexture_5hb05")
+texture_pressed = SubResource("AtlasTexture_mefkt")
+
+[node name="InfoXButton" type="TextureButton" parent="Info"]
+layout_mode = 0
+offset_left = 1275.0
+offset_top = 35.0
+offset_right = 1421.0
+offset_bottom = 181.0
+texture_normal = SubResource("AtlasTexture_b88xv")
+texture_pressed = SubResource("AtlasTexture_msxvw")
+texture_hover = SubResource("AtlasTexture_msxvw")
+
+[node name="InfoAsk" type="Control" parent="Info"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title" type="Label" parent="Info/InfoAsk"]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 278.0
+offset_right = 1147.0
+offset_bottom = 423.0
+theme_override_colors/font_color = Color(0.0932696, 0.161745, 0.249548, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 60
+text = "Do you want the puzzle
+instructions?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InfoYes" type="Button" parent="Info/InfoAsk"]
+layout_mode = 0
+offset_left = 427.0
+offset_top = 632.0
+offset_right = 623.0
+offset_bottom = 733.0
+theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 50
+text = "Yes"
+
+[node name="InfoNo" type="Button" parent="Info/InfoAsk"]
+layout_mode = 0
+offset_left = 815.0
+offset_top = 632.0
+offset_right = 1011.0
+offset_bottom = 733.0
+theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 50
+text = "No"
+
+[node name="Puzzle1" type="Control" parent="Info"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Text" type="Label" parent="Info/Puzzle1"]
+layout_mode = 0
+offset_left = 194.0
+offset_top = 229.0
+offset_right = 1248.0
+offset_bottom = 899.0
+theme_override_colors/font_color = Color(0.0932696, 0.161745, 0.249548, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 50
+text = "Guide the marble through the blind maze using the on-screen arrows or your keyboard’s WASD or arrow keys. The marble icon lights up when it has moved. The blue pieces will light up to indicate which side the marble collided with. If the marble reaches a checkpoint square, it will light up."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Puzzle2" type="Control" parent="Info"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Text" type="Label" parent="Info/Puzzle2"]
+layout_mode = 0
+offset_left = 194.0
+offset_top = 229.0
+offset_right = 1248.0
+offset_bottom = 899.0
+theme_override_colors/font_color = Color(0.0932696, 0.161745, 0.249548, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 50
+text = "Click and drag each circle into the correct square based on matching colors and the row and column’s species features documented by Aster. To know what species a circle represents, place it in the top device to read info about it. Slide the colored squares to get them to the right spots. A square cannot move if it has a circle on it."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Puzzle3" type="Control" parent="Info"]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Text" type="Label" parent="Info/Puzzle3"]
+layout_mode = 0
+offset_left = 194.0
+offset_top = 229.0
+offset_right = 1248.0
+offset_bottom = 899.0
+theme_override_colors/font_color = Color(0.0932696, 0.161745, 0.249548, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 50
+text = "Complete five rounds of clicking and dragging each circle to each square to get a sum equal to the displayed goal sum. Each green circle represents a number that can be added to a square’s represented number. Each blue circle nullifies a square’s represented number from being used. When all circles are placed on a square, all the resulting numbers will be summed."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Skip" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Skip"]
+layout_mode = 0
+offset_right = 1440.0
+offset_bottom = 1080.0
+color = Color(0.545098, 0.698039, 0.917647, 0.137255)
+
+[node name="BG" type="TextureRect" parent="Skip"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 72.0
+offset_right = 1185.0
+offset_bottom = 1003.0
+texture = ExtResource("6_wy4j6")
+
+[node name="Title" type="Label" parent="Skip"]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 278.0
+offset_right = 1147.0
+offset_bottom = 423.0
+theme_override_colors/font_color = Color(0.0932696, 0.161745, 0.249548, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 60
+text = "Are you sure you want
+to skip the puzzle?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SkipYes" type="Button" parent="Skip"]
+layout_mode = 0
+offset_left = 427.0
+offset_top = 632.0
+offset_right = 623.0
+offset_bottom = 733.0
+theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 50
+text = "Yes"
+
+[node name="SkipNo" type="Button" parent="Skip"]
+layout_mode = 0
+offset_left = 815.0
+offset_top = 632.0
+offset_right = 1011.0
+offset_bottom = 733.0
+theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 50
+text = "No"
+
+[node name="TimeOut" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="TimeOut"]
+layout_mode = 0
+offset_right = 1440.0
+offset_bottom = 1080.0
+color = Color(0.545098, 0.698039, 0.917647, 0.137255)
+
+[node name="BG" type="TextureRect" parent="TimeOut"]
+layout_mode = 0
+offset_left = 248.0
+offset_top = 72.0
+offset_right = 1185.0
+offset_bottom = 1003.0
+texture = ExtResource("6_wy4j6")
+
+[node name="Title" type="Label" parent="TimeOut"]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 278.0
+offset_right = 1147.0
+offset_bottom = 423.0
+theme_override_colors/font_color = Color(0.0932696, 0.161745, 0.249548, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 60
+text = "You ran out of time!
+Try again?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimeYup" type="Button" parent="TimeOut"]
+layout_mode = 0
+offset_left = 623.0
+offset_top = 666.0
+offset_right = 819.0
+offset_bottom = 767.0
+theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_fonts/font = ExtResource("4_ght4d")
+theme_override_font_sizes/font_size = 50
+text = "Yup"
+
+[connection signal="button_down" from="Pause/PauseResume" to="." method="_on_pause_resume_button_down"]
+[connection signal="button_down" from="Pause/PauseOption" to="." method="_on_pause_option_button_down"]
+[connection signal="button_down" from="Pause/PauseMenu" to="." method="_on_pause_menu_button_down"]
+[connection signal="button_down" from="Pause/PauseExit" to="." method="_on_pause_exit_button_down"]
+[connection signal="button_down" from="TypeName/Done" to="." method="_on_done_button_down"]
+[connection signal="button_down" from="Credits/CreditsX" to="." method="_on_credits_x_button_down"]
+[connection signal="button_down" from="Credits/Page1/RightArrow" to="." method="_on_right_arrow_button_down"]
+[connection signal="button_down" from="Credits/Page2/LeftArrow" to="." method="_on_left_arrow_button_down"]
+[connection signal="button_down" from="Options/OptionsX" to="." method="_on_options_x_button_down"]
+[connection signal="drag_started" from="Options/BGMLabel/BGM" to="." method="_on_bgm_slider_drag_started"]
+[connection signal="drag_started" from="Options/SFXLabel/SFX" to="." method="_on_sfx_slider_drag_started"]
+[connection signal="toggled" from="Options/Windowed/WindowButton" to="." method="_on_window_button_toggled"]
+[connection signal="button_down" from="Options/OptionDifficulty" to="." method="_on_option_difficulty_button_down"]
+[connection signal="button_down" from="Difficulty/DifficultyX" to="." method="_on_difficulty_x_button_down"]
+[connection signal="value_changed" from="Difficulty/ItemTitle/ItemScale" to="." method="_on_item_scale_value_changed"]
+[connection signal="value_changed" from="Difficulty/TimerTitle/TimeScale" to="." method="_on_time_scale_value_changed"]
+[connection signal="toggled" from="Difficulty/TimerTitle/TimeButton" to="." method="_on_time_button_toggled"]
+[connection signal="value_changed" from="Difficulty/HintTitle/HintScale" to="." method="_on_hint_scale_value_changed"]
+[connection signal="value_changed" from="Difficulty/SkipTitle/SkipScale" to="." method="_on_skip_scale_value_changed"]
+[connection signal="button_down" from="Players/PlayerX" to="." method="_on_player_x_button_down"]
+[connection signal="button_down" from="Players/New" to="." method="_on_new_button_down"]
+[connection signal="button_down" from="Players/Delete" to="." method="_on_delete_button_down"]
+[connection signal="button_down" from="Players/Rename" to="." method="_on_rename_button_down"]
+[connection signal="toggled" from="Players/Player1" to="." method="_on_player_1_toggled"]
+[connection signal="toggled" from="Players/Player2" to="." method="_on_player_2_toggled"]
+[connection signal="toggled" from="Players/Player3" to="." method="_on_player_3_toggled"]
+[connection signal="toggled" from="Players/Player4" to="." method="_on_player_4_toggled"]
+[connection signal="button_down" from="Exit/ExitYes" to="." method="_on_exit_yes_button_down"]
+[connection signal="button_down" from="Exit/ExitNo" to="." method="_on_exit_no_button_down"]
+[connection signal="button_down" from="Info/InfoXButton" to="." method="_on_info_x_button_button_down"]
+[connection signal="button_down" from="Info/InfoAsk/InfoYes" to="." method="_on_info_yes_button_down"]
+[connection signal="button_down" from="Info/InfoAsk/InfoNo" to="." method="_on_info_no_button_down"]
+[connection signal="button_down" from="Skip/SkipYes" to="." method="_on_skip_yes_button_down"]
+[connection signal="button_down" from="Skip/SkipNo" to="." method="_on_skip_no_button_down"]
+[connection signal="button_down" from="TimeOut/TimeYup" to="." method="_on_time_yup_button_down"]

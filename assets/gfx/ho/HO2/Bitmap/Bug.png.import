@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bh88i5lmj6uyw"
+path="res://.godot/imported/Bug.png-081495b1cb54a2f248a7f7a2f18e19bc.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Bug.png"
+dest_files=["res://.godot/imported/Bug.png-081495b1cb54a2f248a7f7a2f18e19bc.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

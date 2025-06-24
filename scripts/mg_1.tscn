@@ -1,0 +1,307 @@
+[gd_scene load_steps=32 format=3 uid="uid://bea8hv8ji7q5r"]
+
+[ext_resource type="Texture2D" uid="uid://npdltpm8aphb" path="res://assets/gfx/mg/BG.PNG" id="1_e57af"]
+[ext_resource type="Script" uid="uid://hv4vj341c24q" path="res://scripts/mg_1.gd" id="1_njonw"]
+[ext_resource type="Texture2D" uid="uid://cuybahnhslwlw" path="res://assets/gfx/mg/puzzle1/MazeBG.PNG" id="2_50r7r"]
+[ext_resource type="AudioStream" uid="uid://b6vmis24qt8qh" path="res://assets/snd/mg/buttonrelease.wav" id="2_c6si7"]
+[ext_resource type="AudioStream" uid="uid://dxe5ca22rlxyr" path="res://assets/snd/mg/lightcheckpoint.wav" id="3_1ova4"]
+[ext_resource type="Texture2D" uid="uid://cc2kwfu3y2xwj" path="res://assets/gfx/mg/puzzle1/Grate.PNG" id="3_lwkj1"]
+[ext_resource type="Texture2D" uid="uid://do741h44bwjee" path="res://assets/gfx/mg/puzzle1/Checkpoint.png" id="4_5vdpr"]
+[ext_resource type="AudioStream" uid="uid://bd3itqo0ksgre" path="res://assets/snd/mg/lightcollide.wav" id="4_ng2g8"]
+[ext_resource type="Texture2D" uid="uid://8xxlh7kb1fhu" path="res://assets/gfx/mg/puzzle1/Marble.png" id="5_517q4"]
+[ext_resource type="AudioStream" uid="uid://iq7ewcbw7wu" path="res://assets/snd/mg/mgdone.wav" id="5_ciplr"]
+[ext_resource type="Texture2D" uid="uid://c7jryuxjmgbtv" path="res://assets/gfx/mg/puzzle1/WallIndicator.png" id="6_q7avb"]
+[ext_resource type="Texture2D" uid="uid://bsejtnihipbj" path="res://assets/gfx/mg/puzzle1/ControlArrow.png" id="7_obwl3"]
+[ext_resource type="PackedScene" uid="uid://c33lm8gnvbwru" path="res://scripts/UI/hud.tscn" id="9_x35oo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aj02f"]
+atlas = ExtResource("5_517q4")
+region = Rect2(9, 9, 63, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l71ky"]
+atlas = ExtResource("5_517q4")
+region = Rect2(91, 9, 63, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oogc6"]
+atlas = ExtResource("4_5vdpr")
+region = Rect2(10, 8, 70, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wcmj5"]
+atlas = ExtResource("4_5vdpr")
+region = Rect2(99, 8, 70, 70)
+
+[sub_resource type="InputEventKey" id="InputEventKey_xbfd4"]
+device = -1
+keycode = 4194319
+
+[sub_resource type="InputEventKey" id="InputEventKey_p8l3x"]
+device = -1
+keycode = 65
+unicode = 97
+
+[sub_resource type="Shortcut" id="Shortcut_pyvto"]
+events = [SubResource("InputEventKey_xbfd4"), SubResource("InputEventKey_p8l3x")]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vrql"]
+atlas = ExtResource("7_obwl3")
+region = Rect2(8, 3, 70, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p73an"]
+atlas = ExtResource("7_obwl3")
+region = Rect2(108, 3, 70, 90)
+
+[sub_resource type="InputEventKey" id="InputEventKey_to626"]
+device = -1
+keycode = 4194322
+
+[sub_resource type="InputEventKey" id="InputEventKey_orlkv"]
+device = -1
+keycode = 83
+unicode = 115
+
+[sub_resource type="Shortcut" id="Shortcut_isgbm"]
+events = [SubResource("InputEventKey_to626"), SubResource("InputEventKey_orlkv")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_pdqcv"]
+device = -1
+keycode = 4194321
+
+[sub_resource type="InputEventKey" id="InputEventKey_5lhf2"]
+device = -1
+keycode = 68
+unicode = 100
+
+[sub_resource type="Shortcut" id="Shortcut_yc6a3"]
+events = [SubResource("InputEventKey_pdqcv"), SubResource("InputEventKey_5lhf2")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_cvlr6"]
+device = -1
+keycode = 4194320
+
+[sub_resource type="InputEventKey" id="InputEventKey_wyg88"]
+device = -1
+keycode = 87
+unicode = 119
+
+[sub_resource type="Shortcut" id="Shortcut_8o1vu"]
+events = [SubResource("InputEventKey_cvlr6"), SubResource("InputEventKey_wyg88")]
+
+[node name="mg1" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_njonw")
+
+[node name="Buttonrelease" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_c6si7")
+volume_db = 10.0
+bus = &"SFX"
+
+[node name="Lightcheckpoint" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1ova4")
+bus = &"SFX"
+
+[node name="Lightcollide" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ng2g8")
+bus = &"SFX"
+
+[node name="Mgdone" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_ciplr")
+bus = &"SFX"
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 360.0
+offset_right = 1440.0
+offset_bottom = 1080.0
+texture = ExtResource("1_e57af")
+
+[node name="Maze" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 466.0
+offset_top = 294.0
+offset_right = 506.0
+offset_bottom = 334.0
+
+[node name="MazeBG" type="TextureRect" parent="Maze"]
+layout_mode = 0
+offset_right = 839.0
+offset_bottom = 700.0
+texture = ExtResource("2_50r7r")
+
+[node name="MarbleMove" type="TextureButton" parent="Maze"]
+layout_mode = 0
+offset_left = 3.5
+offset_top = 4.0
+offset_right = 66.5
+offset_bottom = 66.0
+texture_normal = SubResource("AtlasTexture_aj02f")
+texture_disabled = SubResource("AtlasTexture_l71ky")
+
+[node name="Grate" type="Sprite2D" parent="Maze"]
+position = Vector2(425, 306)
+texture = ExtResource("3_lwkj1")
+
+[node name="Checkpoint1" type="TextureButton" parent="Maze"]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 210.0
+offset_right = 280.0
+offset_bottom = 280.0
+toggle_mode = true
+texture_normal = SubResource("AtlasTexture_oogc6")
+texture_disabled = SubResource("AtlasTexture_wcmj5")
+
+[node name="Checkpoint2" type="TextureButton" parent="Maze"]
+layout_mode = 0
+offset_left = 630.0
+offset_top = 70.0
+offset_right = 700.0
+offset_bottom = 140.0
+toggle_mode = true
+texture_normal = SubResource("AtlasTexture_oogc6")
+texture_disabled = SubResource("AtlasTexture_wcmj5")
+
+[node name="Checkpoint3" type="TextureButton" parent="Maze"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 560.0
+offset_right = 420.0
+offset_bottom = 630.0
+toggle_mode = true
+texture_normal = SubResource("AtlasTexture_oogc6")
+texture_disabled = SubResource("AtlasTexture_wcmj5")
+
+[node name="Checkpoint4" type="TextureButton" parent="Maze"]
+layout_mode = 0
+offset_left = 140.0
+offset_right = 210.0
+offset_bottom = 70.0
+toggle_mode = true
+texture_normal = SubResource("AtlasTexture_oogc6")
+texture_disabled = SubResource("AtlasTexture_wcmj5")
+
+[node name="Checkpoint5" type="TextureButton" parent="Maze"]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 140.0
+offset_right = 490.0
+offset_bottom = 210.0
+toggle_mode = true
+texture_normal = SubResource("AtlasTexture_oogc6")
+texture_disabled = SubResource("AtlasTexture_wcmj5")
+
+[node name="Checkpoint6" type="TextureButton" parent="Maze"]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 350.0
+offset_right = 420.0
+offset_bottom = 420.0
+toggle_mode = true
+texture_normal = SubResource("AtlasTexture_oogc6")
+texture_disabled = SubResource("AtlasTexture_wcmj5")
+
+[node name="Checkpoint7" type="TextureButton" parent="Maze"]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 420.0
+offset_right = 210.0
+offset_bottom = 490.0
+toggle_mode = true
+texture_normal = SubResource("AtlasTexture_oogc6")
+texture_disabled = SubResource("AtlasTexture_wcmj5")
+
+[node name="Checkpoint8" type="TextureButton" parent="Maze"]
+layout_mode = 0
+offset_left = 560.0
+offset_top = 420.0
+offset_right = 630.0
+offset_bottom = 490.0
+toggle_mode = true
+texture_normal = SubResource("AtlasTexture_oogc6")
+texture_disabled = SubResource("AtlasTexture_wcmj5")
+
+[node name="Indicator" type="Node2D" parent="."]
+position = Vector2(690, 170)
+
+[node name="MarbleEx" type="Sprite2D" parent="Indicator"]
+texture = ExtResource("5_517q4")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="WallIndicatorTop" type="Sprite2D" parent="Indicator"]
+position = Vector2(0, -50)
+texture = ExtResource("6_q7avb")
+hframes = 2
+
+[node name="WallIndicatorLeft" type="Sprite2D" parent="Indicator"]
+position = Vector2(-50, 0)
+rotation = -1.57079
+texture = ExtResource("6_q7avb")
+hframes = 2
+
+[node name="WallIndicatorRight" type="Sprite2D" parent="Indicator"]
+position = Vector2(50, 0)
+rotation = -1.57079
+texture = ExtResource("6_q7avb")
+hframes = 2
+
+[node name="WallIndicatorBottom" type="Sprite2D" parent="Indicator"]
+position = Vector2(0, 50)
+texture = ExtResource("6_q7avb")
+hframes = 2
+
+[node name="LeftArrow" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 944.0
+offset_top = 127.0
+offset_right = 1014.0
+offset_bottom = 217.0
+toggle_mode = true
+shortcut = SubResource("Shortcut_pyvto")
+texture_normal = SubResource("AtlasTexture_7vrql")
+texture_pressed = SubResource("AtlasTexture_p73an")
+
+[node name="BottomArrow" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1013.0
+offset_top = 287.0
+offset_right = 1083.0
+offset_bottom = 377.0
+rotation = -1.57079
+toggle_mode = true
+shortcut = SubResource("Shortcut_isgbm")
+texture_normal = SubResource("AtlasTexture_7vrql")
+texture_pressed = SubResource("AtlasTexture_p73an")
+
+[node name="RightArrow" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1103.0
+offset_top = 122.0
+offset_right = 1173.0
+offset_bottom = 212.0
+toggle_mode = true
+shortcut = SubResource("Shortcut_yc6a3")
+texture_normal = SubResource("AtlasTexture_7vrql")
+texture_pressed = SubResource("AtlasTexture_p73an")
+flip_h = true
+
+[node name="TopArrow" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1103.0
+offset_top = 52.0
+offset_right = 1173.0
+offset_bottom = 142.0
+rotation = 1.57079
+toggle_mode = true
+shortcut = SubResource("Shortcut_8o1vu")
+texture_normal = SubResource("AtlasTexture_7vrql")
+texture_pressed = SubResource("AtlasTexture_p73an")
+
+[node name="HUD" parent="." instance=ExtResource("9_x35oo")]
+layout_mode = 1
+
+[connection signal="pressed" from="LeftArrow" to="." method="_on_left_arrow_pressed"]
+[connection signal="pressed" from="BottomArrow" to="." method="_on_bottom_arrow_pressed"]
+[connection signal="pressed" from="RightArrow" to="." method="_on_right_arrow_pressed"]
+[connection signal="pressed" from="TopArrow" to="." method="_on_top_arrow_pressed"]

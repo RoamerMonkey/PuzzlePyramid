@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bnknl8u8cjumw"
+path="res://.godot/imported/Lightswitch.png-6ce80e1bdabe6a3712479cb195163457.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Lightswitch.png"
+dest_files=["res://.godot/imported/Lightswitch.png-6ce80e1bdabe6a3712479cb195163457.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

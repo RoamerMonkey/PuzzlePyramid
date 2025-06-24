@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dsbhbsny7jhfn"
+path="res://.godot/imported/Sword.png-42a97b296eef04376b67d22e75dabd06.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO1/Bitmap/Sword.png"
+dest_files=["res://.godot/imported/Sword.png-42a97b296eef04376b67d22e75dabd06.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

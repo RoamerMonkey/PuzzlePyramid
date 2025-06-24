@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bfs0i8oeuxd7o"
+path="res://.godot/imported/Crutch.png-e857dc0a9ca23528e906b6b103ec0e68.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Crutch.png"
+dest_files=["res://.godot/imported/Crutch.png-e857dc0a9ca23528e906b6b103ec0e68.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

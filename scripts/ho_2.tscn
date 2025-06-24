@@ -1,0 +1,440 @@
+[gd_scene load_steps=76 format=3 uid="uid://bunec7tbdp45y"]
+
+[ext_resource type="Texture2D" uid="uid://dgve80buwekii" path="res://assets/gfx/ho/HO2/ShelfBG.PNG" id="1_2n3rr"]
+[ext_resource type="Script" uid="uid://iwksh4wpejs6" path="res://scripts/ho_2.gd" id="1_px5l0"]
+[ext_resource type="Texture2D" uid="uid://c3nij2pimum7b" path="res://assets/gfx/ho/HO2/Battery.PNG" id="2_1w2ho"]
+[ext_resource type="AudioStream" uid="uid://bkhyjqm7olxkk" path="res://assets/snd/ui/slidedrop.ogg" id="2_4kkga"]
+[ext_resource type="AudioStream" uid="uid://beke84l5myprk" path="res://assets/snd/ho/hodone.wav" id="2_cxebe"]
+[ext_resource type="AudioStream" uid="uid://wcvad4u6amd5" path="res://assets/snd/ho/itemget1.mp3" id="3_6s7l8"]
+[ext_resource type="Texture2D" uid="uid://cdsndod6blslw" path="res://assets/gfx/ho/HO2/Binoculars.PNG" id="3_gxoqq"]
+[ext_resource type="Texture2D" uid="uid://cg0uh6bewij72" path="res://assets/gfx/ho/HO2/Bottle.PNG" id="4_by25i"]
+[ext_resource type="AudioStream" uid="uid://bncg2lp21sqni" path="res://assets/snd/ho/itemget2.mp3" id="4_r6qnx"]
+[ext_resource type="AudioStream" uid="uid://ds53uslp6xara" path="res://assets/snd/ho/itemget3.mp3" id="5_euayx"]
+[ext_resource type="Texture2D" uid="uid://dm8m5nsng67xj" path="res://assets/gfx/ho/HO2/Bug.PNG" id="5_lr3ao"]
+[ext_resource type="AudioStream" uid="uid://cyfjnd873ib0m" path="res://assets/snd/ho/misclick.mp3" id="6_qs4xm"]
+[ext_resource type="Texture2D" uid="uid://c5k3v20sa45ac" path="res://assets/gfx/ho/HO2/Cactus.PNG" id="6_tcc0u"]
+[ext_resource type="Texture2D" uid="uid://de5ixltk8nt32" path="res://assets/gfx/ho/HO2/Camera.PNG" id="7_v4yet"]
+[ext_resource type="AudioStream" uid="uid://diqvpmnypd08q" path="res://assets/snd/misc/timegodown.wav" id="8_c8m4v"]
+[ext_resource type="Texture2D" uid="uid://cf2xof125w4dp" path="res://assets/gfx/ho/HO2/Candlestick.PNG" id="8_jpieh"]
+[ext_resource type="BitMap" uid="uid://bh88i5lmj6uyw" path="res://assets/gfx/ho/HO2/Bitmap/Bug.png" id="9_t8cue"]
+[ext_resource type="Texture2D" uid="uid://c637sc02vq4a2" path="res://assets/gfx/ho/HO2/Clock.PNG" id="9_vfbyv"]
+[ext_resource type="Texture2D" uid="uid://chsgjhay53g55" path="res://assets/gfx/ho/HO2/Crack.PNG" id="10_gpyks"]
+[ext_resource type="BitMap" uid="uid://cko5ksvjwnwsu" path="res://assets/gfx/ho/HO2/Bitmap/Tulip.png" id="11_81623"]
+[ext_resource type="Texture2D" uid="uid://bp8n2qa52ouqv" path="res://assets/gfx/ho/HO2/Duck.PNG" id="11_hejbu"]
+[ext_resource type="Texture2D" uid="uid://dt02dntxjjruw" path="res://assets/gfx/ho/HO2/Globe.PNG" id="12_31pgj"]
+[ext_resource type="Texture2D" uid="uid://m2hjtqp366cv" path="res://assets/gfx/ho/HO2/Hookah.PNG" id="13_ria7n"]
+[ext_resource type="BitMap" uid="uid://c0awxd6vh1a14" path="res://assets/gfx/ho/HO2/Bitmap/Pinecone.png" id="13_ubleh"]
+[ext_resource type="Texture2D" uid="uid://1tfxff5giifh" path="res://assets/gfx/ho/HO2/Hourglass.PNG" id="14_8jk1h"]
+[ext_resource type="BitMap" uid="uid://cy2gn7ehwxp3b" path="res://assets/gfx/ho/HO2/Bitmap/Lightbulb.png" id="15_37gay"]
+[ext_resource type="Texture2D" uid="uid://bu4v3bkvje60y" path="res://assets/gfx/ho/HO2/Lantern.PNG" id="15_bwlmm"]
+[ext_resource type="Texture2D" uid="uid://cxib3bsh2kf4l" path="res://assets/gfx/ho/HO2/LavaLamp.PNG" id="16_ps2a1"]
+[ext_resource type="BitMap" uid="uid://b4fx4l0byg4tn" path="res://assets/gfx/ho/HO2/Bitmap/Clock.png" id="17_ekb1d"]
+[ext_resource type="Texture2D" uid="uid://cb8pcvuw8l6m4" path="res://assets/gfx/ho/HO2/Lightbulb.png" id="17_u117u"]
+[ext_resource type="Texture2D" uid="uid://blegvbpkvg8x" path="res://assets/gfx/ho/HO2/Lightswitch.png" id="18_kgwnq"]
+[ext_resource type="Texture2D" uid="uid://caym0q2jtf1ds" path="res://assets/gfx/ho/HO2/Lock.PNG" id="19_8r15i"]
+[ext_resource type="BitMap" uid="uid://c0rcjwgwh4d0e" path="res://assets/gfx/ho/HO2/Bitmap/Radio.png" id="19_givxv"]
+[ext_resource type="Texture2D" uid="uid://bpaat1wd8fhkk" path="res://assets/gfx/ho/HO2/Microphone.PNG" id="20_70dg2"]
+[ext_resource type="BitMap" uid="uid://bwdct7w3dboae" path="res://assets/gfx/ho/HO2/Bitmap/Lock.png" id="21_1hwf0"]
+[ext_resource type="Texture2D" uid="uid://d1r1hlqaf1s0j" path="res://assets/gfx/ho/HO2/Microscope.PNG" id="21_cs40f"]
+[ext_resource type="Texture2D" uid="uid://c2j1w25ctlhpw" path="res://assets/gfx/ho/HO2/Mirror.PNG" id="22_qvo41"]
+[ext_resource type="Texture2D" uid="uid://vkk1uy6ogfge" path="res://assets/gfx/ho/HO2/Orb.PNG" id="23_k4nvh"]
+[ext_resource type="BitMap" uid="uid://cowbk137i4k7w" path="res://assets/gfx/ho/HO2/Bitmap/LavaLamp.png" id="23_vii4y"]
+[ext_resource type="Texture2D" uid="uid://b0nqstlah518t" path="res://assets/gfx/ho/HO2/Pinecone.PNG" id="24_7vnai"]
+[ext_resource type="Texture2D" uid="uid://b41g3fn726jqf" path="res://assets/gfx/ho/HO2/Queen.PNG" id="25_6im5s"]
+[ext_resource type="BitMap" uid="uid://di74kkb63li7c" path="res://assets/gfx/ho/HO2/Bitmap/Robot.png" id="25_eyh2r"]
+[ext_resource type="Texture2D" uid="uid://nonfutut7gva" path="res://assets/gfx/ho/HO2/Quill.PNG" id="26_nyyso"]
+[ext_resource type="Texture2D" uid="uid://dxq7r2674a8ce" path="res://assets/gfx/ho/HO2/Radio.PNG" id="27_bqnwj"]
+[ext_resource type="BitMap" uid="uid://b0crvf0ryyo88" path="res://assets/gfx/ho/HO2/Bitmap/Battery.png" id="27_vwlwr"]
+[ext_resource type="Texture2D" uid="uid://d0v0j877pk7fq" path="res://assets/gfx/ho/HO2/Robot.PNG" id="28_w6on1"]
+[ext_resource type="Texture2D" uid="uid://cp34t1d8pvk8q" path="res://assets/gfx/ho/HO2/Sticker.PNG" id="29_4kjdl"]
+[ext_resource type="BitMap" uid="uid://cdy14dyv8tvhx" path="res://assets/gfx/ho/HO2/Bitmap/Globe.png" id="29_gc07n"]
+[ext_resource type="Texture2D" uid="uid://mugmfkqugal4" path="res://assets/gfx/ho/HO2/Thirteen.PNG" id="30_byudj"]
+[ext_resource type="BitMap" uid="uid://ctu60l5loxwvt" path="res://assets/gfx/ho/HO2/Bitmap/Queen.png" id="31_4bdbn"]
+[ext_resource type="Texture2D" uid="uid://k5soa34i0c4n" path="res://assets/gfx/ho/HO2/Tulip.PNG" id="31_8fyf0"]
+[ext_resource type="BitMap" uid="uid://dqkw5cwja22im" path="res://assets/gfx/ho/HO2/Bitmap/Microphone.png" id="33_x4t5q"]
+[ext_resource type="BitMap" uid="uid://daexf5j1f2kx6" path="res://assets/gfx/ho/HO2/Bitmap/Duck.png" id="35_bwf2s"]
+[ext_resource type="BitMap" uid="uid://de7ecp5ks4rj1" path="res://assets/gfx/ho/HO2/Bitmap/Cactus.png" id="37_th8oc"]
+[ext_resource type="BitMap" uid="uid://y1hmxbgutolr" path="res://assets/gfx/ho/HO2/Bitmap/Sticker.png" id="39_xv045"]
+[ext_resource type="BitMap" uid="uid://fx2xrxqq8wrh" path="res://assets/gfx/ho/HO2/Bitmap/Hourglass.png" id="41_uqe2w"]
+[ext_resource type="BitMap" uid="uid://ckhf4ewgqhutc" path="res://assets/gfx/ho/HO2/Bitmap/Orb.png" id="43_m7mve"]
+[ext_resource type="BitMap" uid="uid://dgqc85u7f6ckp" path="res://assets/gfx/ho/HO2/Bitmap/Camera.png" id="45_fyplt"]
+[ext_resource type="BitMap" uid="uid://cnmrmeodcx2xp" path="res://assets/gfx/ho/HO2/Bitmap/Quill.png" id="47_ua1ll"]
+[ext_resource type="BitMap" uid="uid://ccdnguvdtxjel" path="res://assets/gfx/ho/HO2/Bitmap/Thirteen.png" id="49_nvhwt"]
+[ext_resource type="BitMap" uid="uid://p3tv7xjmn7iq" path="res://assets/gfx/ho/HO2/Bitmap/Bottle.png" id="51_3cxgv"]
+[ext_resource type="BitMap" uid="uid://dtemtxlobbko6" path="res://assets/gfx/ho/HO2/Bitmap/Candlestick.png" id="53_jmmw7"]
+[ext_resource type="BitMap" uid="uid://b5esiblrq3ddn" path="res://assets/gfx/ho/HO2/Bitmap/Microscope.png" id="55_i6ubm"]
+[ext_resource type="BitMap" uid="uid://by38ubpu3fhaa" path="res://assets/gfx/ho/HO2/Bitmap/Mirror.png" id="57_nvyba"]
+[ext_resource type="BitMap" uid="uid://tkihq0c883tf" path="res://assets/gfx/ho/HO2/Bitmap/Lantern.png" id="59_yw0wa"]
+[ext_resource type="BitMap" uid="uid://bx0x05tk2qy43" path="res://assets/gfx/ho/HO2/Bitmap/Binoculars.png" id="61_gb5f3"]
+[ext_resource type="BitMap" uid="uid://bsb0pskx5qw23" path="res://assets/gfx/ho/HO2/Bitmap/Crack.png" id="63_q2ko7"]
+[ext_resource type="BitMap" uid="uid://bnknl8u8cjumw" path="res://assets/gfx/ho/HO2/Bitmap/Lightswitch.png" id="65_uisio"]
+[ext_resource type="BitMap" uid="uid://d14r2hix2fgb8" path="res://assets/gfx/ho/HO2/Bitmap/Hookah.png" id="67_ieadr"]
+[ext_resource type="PackedScene" uid="uid://c33lm8gnvbwru" path="res://scripts/UI/hud.tscn" id="69_j7ibx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wnwrx"]
+atlas = ExtResource("17_u117u")
+region = Rect2(1, 0, 129, 159)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5kov"]
+atlas = ExtResource("17_u117u")
+region = Rect2(133, 0, 129, 159)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwyw6"]
+atlas = ExtResource("18_kgwnq")
+region = Rect2(0, 7, 99, 285)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o5kou"]
+atlas = ExtResource("18_kgwnq")
+region = Rect2(101, 7, 99, 285)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yel48"]
+atlas = ExtResource("18_kgwnq")
+region = Rect2(101, 7, 99, 285)
+
+[node name="ho_2" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_px5l0")
+
+[node name="Hodone" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_cxebe")
+bus = &"SFX"
+
+[node name="Itemget1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_6s7l8")
+bus = &"SFX"
+
+[node name="Itemget2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_r6qnx")
+bus = &"SFX"
+
+[node name="Itemget3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_euayx")
+bus = &"SFX"
+
+[node name="Misclick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_qs4xm")
+bus = &"SFX"
+
+[node name="Slidedrop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_4kkga")
+
+[node name="Timegodown" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_c8m4v")
+bus = &"SFX"
+
+[node name="BG" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 360.0
+offset_right = 1440.0
+offset_bottom = 1080.0
+texture_normal = ExtResource("1_2n3rr")
+
+[node name="Bug" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 615.0
+offset_top = 152.0
+offset_right = 849.0
+offset_bottom = 385.0
+texture_normal = ExtResource("5_lr3ao")
+texture_click_mask = ExtResource("9_t8cue")
+
+[node name="Tulip" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 993.0
+offset_top = 162.0
+offset_right = 1186.0
+offset_bottom = 386.0
+texture_normal = ExtResource("31_8fyf0")
+texture_click_mask = ExtResource("11_81623")
+
+[node name="Pinecone" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 397.0
+offset_top = 138.0
+offset_right = 549.0
+offset_bottom = 420.0
+texture_normal = ExtResource("24_7vnai")
+texture_click_mask = ExtResource("13_ubleh")
+
+[node name="Light Bulb" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 831.0
+offset_top = 46.0
+offset_right = 960.0
+offset_bottom = 205.0
+texture_normal = SubResource("AtlasTexture_wnwrx")
+texture_disabled = SubResource("AtlasTexture_q5kov")
+texture_click_mask = ExtResource("15_37gay")
+
+[node name="Clock" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 507.0
+offset_top = 277.0
+offset_right = 640.0
+offset_bottom = 505.0
+texture_normal = ExtResource("9_vfbyv")
+texture_click_mask = ExtResource("17_ekb1d")
+
+[node name="Radio" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 655.0
+offset_top = 301.0
+offset_right = 852.0
+offset_bottom = 469.0
+texture_normal = ExtResource("27_bqnwj")
+texture_click_mask = ExtResource("19_givxv")
+
+[node name="Lock" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 562.0
+offset_top = 341.0
+offset_right = 719.0
+offset_bottom = 519.0
+texture_normal = ExtResource("19_8r15i")
+texture_click_mask = ExtResource("21_1hwf0")
+
+[node name="Lava Lamp" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 840.0
+offset_top = 269.0
+offset_right = 933.0
+offset_bottom = 507.0
+texture_normal = ExtResource("16_ps2a1")
+texture_click_mask = ExtResource("23_vii4y")
+
+[node name="Robot" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 724.0
+offset_top = 304.0
+offset_right = 875.0
+offset_bottom = 522.0
+texture_normal = ExtResource("28_w6on1")
+texture_click_mask = ExtResource("25_eyh2r")
+
+[node name="Battery" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 477.0
+offset_top = 496.0
+offset_right = 561.0
+offset_bottom = 536.0
+texture_normal = ExtResource("2_1w2ho")
+texture_click_mask = ExtResource("27_vwlwr")
+
+[node name="Globe" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 942.0
+offset_top = 269.0
+offset_right = 1099.0
+offset_bottom = 517.0
+texture_normal = ExtResource("12_31pgj")
+texture_click_mask = ExtResource("29_gc07n")
+
+[node name="Queen" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 900.0
+offset_top = 323.0
+offset_right = 984.0
+offset_bottom = 529.0
+texture_normal = ExtResource("25_6im5s")
+texture_click_mask = ExtResource("31_4bdbn")
+
+[node name="Microphone" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1141.0
+offset_top = 269.0
+offset_right = 1269.0
+offset_bottom = 462.0
+texture_normal = ExtResource("20_70dg2")
+texture_click_mask = ExtResource("33_x4t5q")
+
+[node name="Duck" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1005.0
+offset_top = 355.0
+offset_right = 1191.0
+offset_bottom = 532.0
+texture_normal = ExtResource("11_hejbu")
+texture_click_mask = ExtResource("35_bwf2s")
+
+[node name="Cactus" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1201.0
+offset_top = 352.0
+offset_right = 1336.0
+offset_bottom = 527.0
+texture_normal = ExtResource("6_tcc0u")
+texture_click_mask = ExtResource("37_th8oc")
+
+[node name="Sticker" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1260.0
+offset_top = 682.0
+offset_right = 1390.0
+offset_bottom = 940.0
+texture_normal = ExtResource("29_4kjdl")
+texture_click_mask = ExtResource("39_xv045")
+
+[node name="Hourglass" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1243.0
+offset_top = 885.0
+offset_right = 1343.0
+offset_bottom = 1048.0
+texture_normal = ExtResource("14_8jk1h")
+texture_click_mask = ExtResource("41_uqe2w")
+
+[node name="Orb" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1140.0
+offset_top = 829.0
+offset_right = 1256.0
+offset_bottom = 987.0
+texture_normal = ExtResource("23_k4nvh")
+texture_click_mask = ExtResource("43_m7mve")
+
+[node name="Camera" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1137.0
+offset_top = 967.0
+offset_right = 1231.0
+offset_bottom = 1046.0
+texture_normal = ExtResource("7_v4yet")
+texture_click_mask = ExtResource("45_fyplt")
+
+[node name="Quill" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 648.0
+offset_top = 712.0
+offset_right = 783.0
+offset_bottom = 903.0
+texture_normal = ExtResource("26_nyyso")
+texture_click_mask = ExtResource("47_ua1ll")
+
+[node name="Thirteen" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 985.0
+offset_top = 793.0
+offset_right = 1099.0
+offset_bottom = 996.0
+texture_normal = ExtResource("30_byudj")
+texture_click_mask = ExtResource("49_nvhwt")
+
+[node name="Bottle" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1069.0
+offset_top = 839.0
+offset_right = 1142.0
+offset_bottom = 1044.0
+texture_normal = ExtResource("4_by25i")
+texture_click_mask = ExtResource("51_3cxgv")
+
+[node name="Candlestick" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 947.0
+offset_top = 758.0
+offset_right = 1023.0
+offset_bottom = 1021.0
+texture_normal = ExtResource("8_jpieh")
+texture_click_mask = ExtResource("53_jmmw7")
+
+[node name="Microscope" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 755.0
+offset_right = 727.0
+offset_bottom = 1008.0
+texture_normal = ExtResource("21_cs40f")
+texture_click_mask = ExtResource("55_i6ubm")
+
+[node name="Mirror" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 483.0
+offset_top = 753.0
+offset_right = 657.0
+offset_bottom = 1041.0
+texture_normal = ExtResource("22_qvo41")
+texture_click_mask = ExtResource("57_nvyba")
+
+[node name="Lantern" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 775.0
+offset_top = 808.0
+offset_right = 919.0
+offset_bottom = 1012.0
+texture_normal = ExtResource("15_bwlmm")
+texture_click_mask = ExtResource("59_yw0wa")
+
+[node name="Binoculars" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 651.0
+offset_top = 874.0
+offset_right = 841.0
+offset_bottom = 1036.0
+texture_normal = ExtResource("3_gxoqq")
+texture_click_mask = ExtResource("61_gb5f3")
+
+[node name="Crack" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 577.0
+offset_top = 711.0
+offset_right = 689.0
+offset_bottom = 792.0
+texture_normal = ExtResource("10_gpyks")
+texture_click_mask = ExtResource("63_q2ko7")
+
+[node name="Light Switch" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 411.0
+offset_top = 686.0
+offset_right = 510.0
+offset_bottom = 971.0
+toggle_mode = true
+texture_normal = SubResource("AtlasTexture_bwyw6")
+texture_pressed = SubResource("AtlasTexture_o5kou")
+texture_disabled = SubResource("AtlasTexture_yel48")
+texture_click_mask = ExtResource("65_uisio")
+
+[node name="Hookah" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 858.0
+offset_top = 831.0
+offset_right = 1000.0
+offset_bottom = 1044.0
+texture_normal = ExtResource("13_ria7n")
+texture_click_mask = ExtResource("67_ieadr")
+
+[node name="HUD" parent="." instance=ExtResource("69_j7ibx")]
+layout_mode = 1
+
+[connection signal="button_down" from="BG" to="." method="_on_bg_button_down"]
+[connection signal="button_down" from="Bug" to="." method="_on_bug_button_down"]
+[connection signal="button_down" from="Tulip" to="." method="_on_tulip_button_down"]
+[connection signal="button_down" from="Pinecone" to="." method="_on_pinecone_button_down"]
+[connection signal="button_down" from="Light Bulb" to="." method="_on_lightbulb_button_down"]
+[connection signal="button_down" from="Clock" to="." method="_on_clock_button_down"]
+[connection signal="button_down" from="Radio" to="." method="_on_radio_button_down"]
+[connection signal="button_down" from="Lock" to="." method="_on_lock_button_down"]
+[connection signal="button_down" from="Lava Lamp" to="." method="_on_lava_lamp_button_down"]
+[connection signal="button_down" from="Robot" to="." method="_on_robot_button_down"]
+[connection signal="button_down" from="Battery" to="." method="_on_battery_button_down"]
+[connection signal="button_down" from="Globe" to="." method="_on_globe_button_down"]
+[connection signal="button_down" from="Queen" to="." method="_on_queen_button_down"]
+[connection signal="button_down" from="Microphone" to="." method="_on_microphone_button_down"]
+[connection signal="button_down" from="Duck" to="." method="_on_duck_button_down"]
+[connection signal="button_down" from="Cactus" to="." method="_on_cactus_button_down"]
+[connection signal="button_down" from="Sticker" to="." method="_on_sticker_button_down"]
+[connection signal="button_down" from="Hourglass" to="." method="_on_hourglass_button_down"]
+[connection signal="button_down" from="Orb" to="." method="_on_orb_button_down"]
+[connection signal="button_down" from="Camera" to="." method="_on_camera_button_down"]
+[connection signal="button_down" from="Quill" to="." method="_on_quill_button_down"]
+[connection signal="button_down" from="Thirteen" to="." method="_on_thirteen_button_down"]
+[connection signal="button_down" from="Bottle" to="." method="_on_bottle_button_down"]
+[connection signal="button_down" from="Candlestick" to="." method="_on_candlestick_button_down"]
+[connection signal="button_down" from="Microscope" to="." method="_on_microscope_button_down"]
+[connection signal="button_down" from="Mirror" to="." method="_on_mirror_button_down"]
+[connection signal="button_down" from="Lantern" to="." method="_on_lantern_button_down"]
+[connection signal="button_down" from="Binoculars" to="." method="_on_binoculars_button_down"]
+[connection signal="button_down" from="Crack" to="." method="_on_crack_button_down"]
+[connection signal="button_down" from="Light Switch" to="." method="_on_lightswitch_button_down"]
+[connection signal="button_down" from="Hookah" to="." method="_on_hookah_button_down"]

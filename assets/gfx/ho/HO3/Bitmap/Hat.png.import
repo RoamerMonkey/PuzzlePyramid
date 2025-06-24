@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://d0u17308futpe"
+path="res://.godot/imported/Hat.png-cbd5c00812f0666eb3ee735c96e7b2f4.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Hat.png"
+dest_files=["res://.godot/imported/Hat.png-cbd5c00812f0666eb3ee735c96e7b2f4.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

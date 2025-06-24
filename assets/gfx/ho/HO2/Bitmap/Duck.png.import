@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://daexf5j1f2kx6"
+path="res://.godot/imported/Duck.png-b2387da98ff73fcdea251d447a39f69c.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Duck.png"
+dest_files=["res://.godot/imported/Duck.png-b2387da98ff73fcdea251d447a39f69c.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

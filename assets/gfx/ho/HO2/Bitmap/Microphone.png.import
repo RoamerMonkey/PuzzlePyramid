@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dqkw5cwja22im"
+path="res://.godot/imported/Microphone.png-2aa3eff11402bff59a40fe275b7d61b4.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Microphone.png"
+dest_files=["res://.godot/imported/Microphone.png-2aa3eff11402bff59a40fe275b7d61b4.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

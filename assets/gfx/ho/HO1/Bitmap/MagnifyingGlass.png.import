@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dlkmseeyt4asc"
+path="res://.godot/imported/MagnifyingGlass.png-2a8a4ede103178f38f821d5fa4540df1.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO1/Bitmap/MagnifyingGlass.png"
+dest_files=["res://.godot/imported/MagnifyingGlass.png-2a8a4ede103178f38f821d5fa4540df1.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cko5ksvjwnwsu"
+path="res://.godot/imported/Tulip.png-853c8ac0bfc9e5127e4e0f7fa553baeb.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Tulip.png"
+dest_files=["res://.godot/imported/Tulip.png-853c8ac0bfc9e5127e4e0f7fa553baeb.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

@@ -1,0 +1,274 @@
+[gd_scene load_steps=29 format=3 uid="uid://c33lm8gnvbwru"]
+
+[ext_resource type="Texture2D" uid="uid://bfjdgea1jgase" path="res://assets/gfx/ui/GameHUD.PNG" id="1_13j1p"]
+[ext_resource type="Script" uid="uid://o3ii3sh7pd55" path="res://scripts/UI/hud.gd" id="1_ljj0b"]
+[ext_resource type="AudioStream" uid="uid://diqvpmnypd08q" path="res://assets/snd/misc/timegodown.wav" id="2_ao6hk"]
+[ext_resource type="Texture2D" uid="uid://ce1dpr85hmsnt" path="res://assets/gfx/ui/Timer.PNG" id="2_qnu12"]
+[ext_resource type="Texture2D" uid="uid://clywis3iq603q" path="res://assets/gfx/ui/MenuButton.png" id="3_0c7cd"]
+[ext_resource type="AudioStream" uid="uid://bd6prdkn3hw7i" path="res://assets/snd/ui/buttonclick.mp3" id="3_osvu5"]
+[ext_resource type="AudioStream" uid="uid://dw53pa8jjh5ms" path="res://assets/snd/ui/buttonhintskip.wav" id="4_f7p33"]
+[ext_resource type="Texture2D" uid="uid://d2yrs0h05oj6j" path="res://assets/gfx/ui/Comment.PNG" id="4_ur0b8"]
+[ext_resource type="FontFile" uid="uid://cd8ioofmybjqo" path="res://assets/fonts/CascadiaMono-Bold.otf" id="5_0vrox"]
+[ext_resource type="AudioStream" uid="uid://cu2ddppdklsyy" path="res://assets/snd/ui/buttonhover.wav" id="5_7j4tb"]
+[ext_resource type="AudioStream" uid="uid://noy2cml4qmpl" path="res://assets/snd/ui/hintloading.wav" id="6_an07n"]
+[ext_resource type="Texture2D" uid="uid://qmw0u0vyq3g1" path="res://assets/gfx/ui/HintSkipButton.png" id="6_rmr8f"]
+[ext_resource type="AudioStream" uid="uid://ddvy0i5jpv61v" path="res://assets/snd/ui/hintrecharge.wav" id="7_fmabp"]
+[ext_resource type="Script" uid="uid://3k5wy4655qd0" path="res://scripts/UI/timer.gd" id="8_ljfnk"]
+[ext_resource type="Script" uid="uid://cj8ca5txxiynf" path="res://scripts/UI/help_button.gd" id="12_xo11o"]
+[ext_resource type="PackedScene" uid="uid://bunuwcv6a47d7" path="res://scripts/UI/popup.tscn" id="15_nh0vi"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6g2mw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrp4o"]
+atlas = ExtResource("6_rmr8f")
+region = Rect2(1, 1, 315, 92)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukhxh"]
+atlas = ExtResource("6_rmr8f")
+region = Rect2(0, 96, 318, 97)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smsa4"]
+atlas = ExtResource("6_rmr8f")
+region = Rect2(321, 0, 316, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvn0r"]
+atlas = ExtResource("6_rmr8f")
+region = Rect2(1, 1, 315, 92)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypljg"]
+atlas = ExtResource("6_rmr8f")
+region = Rect2(320, 96, 318, 97)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygok3"]
+atlas = ExtResource("6_rmr8f")
+region = Rect2(321, 0, 316, 93)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x21hp"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_k7cmj"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_xcmc3"]
+events = [SubResource("InputEventKey_k7cmj")]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dl7la"]
+atlas = ExtResource("3_0c7cd")
+region = Rect2(22, 31, 284, 106)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2uf7f"]
+atlas = ExtResource("3_0c7cd")
+region = Rect2(357, 31, 284, 106)
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ljj0b")
+
+[node name="Timegodown" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ao6hk")
+bus = &"SFX"
+
+[node name="Buttonclick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_osvu5")
+bus = &"SFX"
+
+[node name="Buttonhintskip" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_f7p33")
+bus = &"SFX"
+
+[node name="Buttonhover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_7j4tb")
+bus = &"SFX"
+
+[node name="Hintloading" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_an07n")
+bus = &"SFX"
+
+[node name="Hintrecharge" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_fmabp")
+bus = &"SFX"
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("1_13j1p")
+
+[node name="Timer" type="TextureRect" parent="BG"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 10.0
+offset_right = 332.0
+offset_bottom = 124.0
+texture = ExtResource("2_qnu12")
+
+[node name="Timer" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("8_ljfnk")
+
+[node name="TimerLabel" type="Label" parent="Timer"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 13.0
+offset_right = 329.0
+offset_bottom = 124.0
+theme_override_colors/font_color = Color(0.23973, 0.12516, 0.121577, 1)
+theme_override_fonts/font = ExtResource("5_0vrox")
+theme_override_font_sizes/font_size = 60
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="Timer"]
+
+[node name="HelpButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 156.0
+offset_right = 337.0
+offset_bottom = 263.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6g2mw")
+flat = true
+script = ExtResource("12_xo11o")
+
+[node name="HintButton" type="TextureProgressBar" parent="HelpButton"]
+visible = false
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 321.0
+offset_bottom = 98.0
+allow_greater = true
+texture_under = SubResource("AtlasTexture_jrp4o")
+texture_over = SubResource("AtlasTexture_ukhxh")
+texture_progress = SubResource("AtlasTexture_smsa4")
+
+[node name="HintTimer" type="Timer" parent="HelpButton"]
+
+[node name="SkipButton" type="TextureProgressBar" parent="HelpButton"]
+visible = false
+layout_mode = 0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 321.0
+offset_bottom = 98.0
+allow_greater = true
+texture_under = SubResource("AtlasTexture_kvn0r")
+texture_over = SubResource("AtlasTexture_ypljg")
+texture_progress = SubResource("AtlasTexture_ygok3")
+
+[node name="SkipTimer" type="Timer" parent="HelpButton"]
+
+[node name="DisabledButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 156.0
+offset_right = 337.0
+offset_bottom = 263.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_x21hp")
+flat = true
+
+[node name="InfoTop" type="Label" parent="."]
+layout_mode = 0
+offset_top = 309.0
+offset_right = 341.0
+offset_bottom = 373.0
+theme_override_colors/font_color = Color(0.0325861, 0.0790833, 0.136342, 1)
+theme_override_fonts/font = ExtResource("5_0vrox")
+theme_override_font_sizes/font_size = 30
+text = "Pick a side!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Items" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Item1" type="Label" parent="Items"]
+layout_mode = 0
+offset_top = 410.0
+offset_right = 340.0
+offset_bottom = 474.0
+theme_override_colors/font_color = Color(0.0325861, 0.0790833, 0.136342, 1)
+theme_override_fonts/font = ExtResource("5_0vrox")
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Item2" type="Label" parent="Items"]
+layout_mode = 0
+offset_top = 527.0
+offset_right = 340.0
+offset_bottom = 591.0
+theme_override_colors/font_color = Color(0.0325861, 0.0790833, 0.136342, 1)
+theme_override_fonts/font = ExtResource("5_0vrox")
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Item3" type="Label" parent="Items"]
+layout_mode = 0
+offset_top = 648.0
+offset_right = 340.0
+offset_bottom = 712.0
+theme_override_colors/font_color = Color(0.0325861, 0.0790833, 0.136342, 1)
+theme_override_fonts/font = ExtResource("5_0vrox")
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Infobox" type="Label" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 766.0
+offset_right = 331.0
+offset_bottom = 928.0
+theme_override_colors/font_color = Color(0.2, 0.6, 0.156863, 1)
+theme_override_fonts/font = ExtResource("5_0vrox")
+theme_override_font_sizes/font_size = 35
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="InfoButton" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 86.0
+offset_top = 766.0
+offset_right = 234.0
+offset_bottom = 906.0
+texture_normal = ExtResource("4_ur0b8")
+
+[node name="MenuButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 960.0
+offset_right = 306.0
+offset_bottom = 1066.0
+shortcut = SubResource("Shortcut_xcmc3")
+texture_normal = SubResource("AtlasTexture_dl7la")
+texture_pressed = SubResource("AtlasTexture_2uf7f")
+
+[node name="Popup" parent="." instance=ExtResource("15_nh0vi")]
+layout_mode = 1
+
+[connection signal="timeout" from="Timer/Timer" to="Timer" method="_on_timer_timeout"]
+[connection signal="button_down" from="HelpButton" to="HelpButton" method="_on_button_down"]
+[connection signal="mouse_entered" from="HelpButton" to="." method="_on_help_button_mouse_entered"]
+[connection signal="timeout" from="HelpButton/HintTimer" to="HelpButton" method="_on_hint_timer_timeout"]
+[connection signal="timeout" from="HelpButton/SkipTimer" to="HelpButton" method="_on_skip_timer_timeout"]
+[connection signal="button_down" from="DisabledButton" to="." method="_on_disabled_button_button_down"]
+[connection signal="button_down" from="InfoButton" to="." method="_on_info_button_button_down"]
+[connection signal="mouse_entered" from="InfoButton" to="." method="_on_info_button_mouse_entered"]
+[connection signal="mouse_entered" from="MenuButton" to="." method="_on_menu_button_mouse_entered"]
+[connection signal="pressed" from="MenuButton" to="." method="_on_menu_button_pressed"]

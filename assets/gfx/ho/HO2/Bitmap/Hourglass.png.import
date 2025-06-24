@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://fx2xrxqq8wrh"
+path="res://.godot/imported/Hourglass.png-7c54a831bbafa6e6ede435d405ee60c3.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Hourglass.png"
+dest_files=["res://.godot/imported/Hourglass.png-7c54a831bbafa6e6ede435d405ee60c3.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

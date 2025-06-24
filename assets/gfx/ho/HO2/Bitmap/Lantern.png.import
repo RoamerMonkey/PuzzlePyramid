@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://tkihq0c883tf"
+path="res://.godot/imported/Lantern.png-214843b347063cea5f5e93420315d77e.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Lantern.png"
+dest_files=["res://.godot/imported/Lantern.png-214843b347063cea5f5e93420315d77e.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://c4lrh01ue8pa8"
+path="res://.godot/imported/Plunger.png-6240ba43cbe034f13f21327914f32beb.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Plunger.png"
+dest_files=["res://.godot/imported/Plunger.png-6240ba43cbe034f13f21327914f32beb.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

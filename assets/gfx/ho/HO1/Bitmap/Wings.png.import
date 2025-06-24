@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://be1t2kg5v15h6"
+path="res://.godot/imported/Wings.png-8d4250a92ba7aab7dfa721aa587ef7a4.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO1/Bitmap/Wings.png"
+dest_files=["res://.godot/imported/Wings.png-8d4250a92ba7aab7dfa721aa587ef7a4.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

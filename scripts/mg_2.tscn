@@ -1,0 +1,723 @@
+[gd_scene load_steps=39 format=3 uid="uid://btgs0uf58tbrh"]
+
+[ext_resource type="Texture2D" uid="uid://npdltpm8aphb" path="res://assets/gfx/mg/BG.PNG" id="1_8qqet"]
+[ext_resource type="Script" uid="uid://cqgpn1elrv1ki" path="res://scripts/mg_2.gd" id="1_s06un"]
+[ext_resource type="AudioStream" uid="uid://tc73fm7k3j6s" path="res://assets/snd/mg/appear.wav" id="2_0bg38"]
+[ext_resource type="Texture2D" uid="uid://dakr0r0kkm5g7" path="res://assets/gfx/mg/puzzle2/InfoCircle.PNG" id="2_bp10k"]
+[ext_resource type="AudioStream" uid="uid://buio0i2sjysjf" path="res://assets/snd/mg/circlepickup.wav" id="3_t3465"]
+[ext_resource type="Texture2D" uid="uid://6b3dioor76hx" path="res://assets/gfx/mg/puzzle2/SliderBG.PNG" id="3_yt0hs"]
+[ext_resource type="AudioStream" uid="uid://br523vudawcgf" path="res://assets/snd/mg/circleputdown.wav" id="4_lsrj5"]
+[ext_resource type="Texture2D" uid="uid://dtlhwkltjpjui" path="res://assets/gfx/mg/puzzle2/Marks.PNG" id="4_oy1pl"]
+[ext_resource type="AudioStream" uid="uid://e31u37nehaa1" path="res://assets/snd/mg/lightup.wav" id="5_3jtxh"]
+[ext_resource type="AudioStream" uid="uid://bd3itqo0ksgre" path="res://assets/snd/mg/lightcollide.wav" id="5_tp4yn"]
+[ext_resource type="Texture2D" uid="uid://cg7y82841qrvf" path="res://assets/gfx/mg/puzzle2/CirclePieces.PNG" id="6_hnvqq"]
+[ext_resource type="AudioStream" uid="uid://iq7ewcbw7wu" path="res://assets/snd/mg/mgdone.wav" id="6_ypu86"]
+[ext_resource type="AudioStream" uid="uid://di0gyttjn7tg4" path="res://assets/snd/mg/pieceslide.wav" id="7_pq3pl"]
+[ext_resource type="PackedScene" uid="uid://c33lm8gnvbwru" path="res://scripts/UI/hud.tscn" id="8_e20h7"]
+[ext_resource type="FontFile" uid="uid://blyeiy3ofm7pb" path="res://assets/fonts/Montserrat-Bold.ttf" id="10_rebtq"]
+[ext_resource type="Script" uid="uid://bkparu14an1in" path="res://scripts/MG2/slider_box.gd" id="14_vuqc4"]
+[ext_resource type="Script" uid="uid://don8p803je4v6" path="res://scripts/MG2/blue_circle_1.gd" id="15_ndr1p"]
+[ext_resource type="Texture2D" uid="uid://dkxiixcr0vtoc" path="res://assets/gfx/mg/puzzle2/Tiles.PNG" id="15_p6tyb"]
+[ext_resource type="Script" uid="uid://jd1b4sy76anh" path="res://scripts/MG2/blue_circle_2.gd" id="16_pojt4"]
+[ext_resource type="Script" uid="uid://07w4vtsyjpnk" path="res://scripts/MG2/blue_circle_3.gd" id="17_o62ys"]
+[ext_resource type="Script" uid="uid://bcevu35jyhmtb" path="res://scripts/MG2/blue_circle_4.gd" id="18_hq1h7"]
+[ext_resource type="Script" uid="uid://ciqb1skgcu223" path="res://scripts/MG2/green_circle_1.gd" id="19_fbrpu"]
+[ext_resource type="Script" uid="uid://cbxn7da86vl35" path="res://scripts/MG2/green_circle_2.gd" id="20_3wjty"]
+[ext_resource type="Script" uid="uid://yd7ne5dyqqip" path="res://scripts/MG2/green_circle_3.gd" id="21_8vibb"]
+[ext_resource type="Script" uid="uid://cpincvudx7vie" path="res://scripts/MG2/green_circle_4.gd" id="22_tlton"]
+[ext_resource type="Script" uid="uid://bjr6btkmnt4l6" path="res://scripts/MG2/purple_circle_1.gd" id="23_uo2sw"]
+[ext_resource type="Script" uid="uid://coahbmknnmf5a" path="res://scripts/MG2/purple_circle_2.gd" id="24_mhr2j"]
+[ext_resource type="Script" uid="uid://ctw7qq624huiv" path="res://scripts/MG2/purple_circle_3.gd" id="25_gin3o"]
+[ext_resource type="Script" uid="uid://d270uclgeyki3" path="res://scripts/MG2/red_circle_1.gd" id="26_1brhj"]
+[ext_resource type="Script" uid="uid://d0otmm7v7lkf5" path="res://scripts/MG2/red_circle_2.gd" id="27_opn6u"]
+[ext_resource type="Script" uid="uid://l7hfrhoggewx" path="res://scripts/MG2/red_circle_3.gd" id="28_5deid"]
+[ext_resource type="Script" uid="uid://bf42qeto0ssnd" path="res://scripts/MG2/red_circle_4.gd" id="29_gnxqp"]
+[ext_resource type="Script" uid="uid://bg368bo6rg1jb" path="res://scripts/MG2/black_circle.gd" id="30_hwidl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rl3oo"]
+radius = 24.0832
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o1mm7"]
+size = Vector2(624, 624)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ww260"]
+size = Vector2(156, 156)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rogmt"]
+size = Vector2(317, 372)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_griuk"]
+radius = 77.0065
+
+[node name="mg2" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_s06un")
+
+[node name="Appear" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_0bg38")
+bus = &"SFX"
+
+[node name="Circlepickup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_t3465")
+bus = &"SFX"
+
+[node name="Circleputdown" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_lsrj5")
+bus = &"SFX"
+
+[node name="Lightcollide" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_tp4yn")
+bus = &"SFX"
+
+[node name="Lightup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_3jtxh")
+bus = &"SFX"
+
+[node name="Mgdone" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ypu86")
+bus = &"SFX"
+
+[node name="Pieceslide" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_pq3pl")
+volume_db = 10.0
+bus = &"SFX"
+
+[node name="BG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 360.0
+offset_right = 1440.0
+offset_bottom = 1080.0
+mouse_filter = 2
+texture = ExtResource("1_8qqet")
+
+[node name="Infobox" type="StaticBody2D" parent="." groups=["dropable"]]
+position = Vector2(600, 169)
+
+[node name="InfoText" type="TextureRect" parent="Infobox"]
+offset_left = -98.0
+offset_top = -94.0
+offset_right = 694.0
+offset_bottom = 98.0
+mouse_filter = 2
+texture = ExtResource("2_bp10k")
+
+[node name="InfoContainer" type="ScrollContainer" parent="Infobox"]
+offset_left = 98.0
+offset_top = -68.0
+offset_right = 682.0
+offset_bottom = 61.0
+vertical_scroll_mode = 2
+
+[node name="InfoLabel" type="Label" parent="Infobox/InfoContainer"]
+custom_minimum_size = Vector2(570, 129)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.341176, 0.286275, 1)
+theme_override_fonts/font = ExtResource("10_rebtq")
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 3
+autowrap_mode = 2
+
+[node name="InfoCollision" type="CollisionShape2D" parent="Infobox"]
+position = Vector2(2, -1)
+shape = SubResource("CircleShape2D_rl3oo")
+
+[node name="SliderBG" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 652.0
+offset_top = 386.0
+offset_right = 1276.0
+offset_bottom = 1010.0
+mouse_filter = 2
+texture = ExtResource("3_yt0hs")
+
+[node name="Marks" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 506.0
+offset_top = 280.0
+offset_right = 1282.0
+offset_bottom = 1002.0
+mouse_filter = 2
+texture = ExtResource("4_oy1pl")
+
+[node name="HUD" parent="." instance=ExtResource("8_e20h7")]
+layout_mode = 1
+
+[node name="SliderBox" type="Area2D" parent="."]
+position = Vector2(652, 386)
+script = ExtResource("14_vuqc4")
+
+[node name="SliderCollision" type="CollisionShape2D" parent="SliderBox"]
+position = Vector2(312, 312)
+shape = SubResource("RectangleShape2D_o1mm7")
+
+[node name="RedTile1" type="StaticBody2D" parent="SliderBox" groups=["dropable"]]
+position = Vector2(78, 78)
+
+[node name="RedTile1Sprite" type="Sprite2D" parent="SliderBox/RedTile1"]
+texture = ExtResource("15_p6tyb")
+hframes = 3
+vframes = 2
+frame = 4
+
+[node name="RedTileCollision" type="CollisionShape2D" parent="SliderBox/RedTile1"]
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_ww260")
+
+[node name="BlueTile1" type="StaticBody2D" parent="SliderBox" groups=["dropable"]]
+position = Vector2(234, 78)
+
+[node name="BlueTileSprite" type="Sprite2D" parent="SliderBox/BlueTile1"]
+texture = ExtResource("15_p6tyb")
+hframes = 3
+vframes = 2
+frame = 1
+
+[node name="BlueTileCollision" type="CollisionShape2D" parent="SliderBox/BlueTile1"]
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_ww260")
+
+[node name="GreenTile1" type="StaticBody2D" parent="SliderBox" groups=["dropable"]]
+position = Vector2(390, 78)
+
+[node name="GreenTileSprite" type="Sprite2D" parent="SliderBox/GreenTile1"]
+texture = ExtResource("15_p6tyb")
+hframes = 3
+vframes = 2
+frame = 2
+
+[node name="GreenTileCollision" type="CollisionShape2D" parent="SliderBox/GreenTile1"]
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_ww260")
+
+[node name="PurpleTile1" type="StaticBody2D" parent="SliderBox" groups=["dropable"]]
+position = Vector2(546, 78)
+
+[node name="PurpleTileSprite" type="Sprite2D" parent="SliderBox/PurpleTile1"]
+texture = ExtResource("15_p6tyb")
+hframes = 3
+vframes = 2
+frame = 3
+
+[node name="PurpleTileCollision" type="CollisionShape2D" parent="SliderBox/PurpleTile1"]
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_ww260")
+
+[node name="PurpleTile2" type="StaticBody2D" parent="SliderBox" groups=["dropable"]]
+position = Vector2(78, 234)
+
+[node name="PurpleTileSprite" type="Sprite2D" parent="SliderBox/PurpleTile2"]
+texture = ExtResource("15_p6tyb")
+hframes = 3
+vframes = 2
+frame = 3
+
+[node name="PurpleTileCollision" type="CollisionShape2D" parent="SliderBox/PurpleTile2"]
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_ww260")
+
+[node name="GreenTile2" type="StaticBody2D" parent="SliderBox" groups=["dropable"]]
+position = Vector2(234, 234)
+
+[node name="GreenTileSprite" type="Sprite2D" parent="SliderBox/GreenTile2"]
+texture = ExtResource("15_p6tyb")
+hframes = 3
+vframes = 2
+frame = 2
+
+[node name="GreenTileCollision" type="CollisionShape2D" parent="SliderBox/GreenTile2"]
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_ww260")
+
+[node name="RedTile2" type="StaticBody2D" parent="SliderBox" groups=["dropable"]]
+position = Vector2(390, 234)
+
+[node name="RedTileSprite" type="Sprite2D" parent="SliderBox/RedTile2"]
+texture = ExtResource("15_p6tyb")
+hframes = 3
+vframes = 2
+frame = 4
+
+[node name="RedTileCollision" type="CollisionShape2D" parent="SliderBox/RedTile2"]
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_ww260")
+
+[node name="BlueTile2" type="StaticBody2D" parent="SliderBox" groups=["dropable"]]
+position = Vector2(546, 234)
+
+[node name="BlueTileSprite" type="Sprite2D" parent="SliderBox/BlueTile2"]
+texture = ExtResource("15_p6tyb")
+hframes = 3
+vframes = 2
+frame = 1
+
+[node name="BlueTileCollision" type="CollisionShape2D" parent="SliderBox/BlueTile2"]
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_ww260")
+
+[node name="BlueTile3" type="StaticBody2D" parent="SliderBox" groups=["dropable"]]
+position = Vector2(78, 390)
+
+[node name="BlueTileSprite" type="Sprite2D" parent="SliderBox/BlueTile3"]
+texture = ExtResource("15_p6tyb")
+hframes = 3
+vframes = 2
+frame = 1
+
+[node name="BlueTileCollision" type="CollisionShape2D" parent="SliderBox/BlueTile3"]
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_ww260")
+
+[node name="RedTile3" type="StaticBody2D" parent="SliderBox" groups=["dropable"]]
+position = Vector2(234, 390)
+
+[node name="RedTileSprite" type="Sprite2D" parent="SliderBox/RedTile3"]
+texture = ExtResource("15_p6tyb")
+hframes = 3
+vframes = 2
+frame = 4
+
+[node name="RedTileCollision" type="CollisionShape2D" parent="SliderBox/RedTile3"]
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_ww260")
+
+[node name="EmptyTile" type="StaticBody2D" parent="SliderBox" groups=["dropable"]]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(390, 390)
+
+[node name="EmptyTileSprite" type="Sprite2D" parent="SliderBox/EmptyTile"]
+texture = ExtResource("15_p6tyb")
+hframes = 3
+vframes = 2
+
+[node name="EmptyTileCollision" type="CollisionShape2D" parent="SliderBox/EmptyTile"]
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_ww260")
+
+[node name="GreenTile3" type="StaticBody2D" parent="SliderBox" groups=["dropable"]]
+position = Vector2(546, 390)
+
+[node name="GreenTileSprite" type="Sprite2D" parent="SliderBox/GreenTile3"]
+texture = ExtResource("15_p6tyb")
+hframes = 3
+vframes = 2
+frame = 2
+
+[node name="GreenTileCollision" type="CollisionShape2D" parent="SliderBox/GreenTile3"]
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_ww260")
+
+[node name="GreenTile4" type="StaticBody2D" parent="SliderBox" groups=["dropable"]]
+position = Vector2(78, 546)
+
+[node name="GreenTileSprite" type="Sprite2D" parent="SliderBox/GreenTile4"]
+texture = ExtResource("15_p6tyb")
+hframes = 3
+vframes = 2
+frame = 2
+
+[node name="GreenTileCollision" type="CollisionShape2D" parent="SliderBox/GreenTile4"]
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_ww260")
+
+[node name="PurpleTile3" type="StaticBody2D" parent="SliderBox" groups=["dropable"]]
+position = Vector2(234, 546)
+
+[node name="PurpleTileSprite" type="Sprite2D" parent="SliderBox/PurpleTile3"]
+texture = ExtResource("15_p6tyb")
+hframes = 3
+vframes = 2
+frame = 3
+
+[node name="PurpleTileCollision" type="CollisionShape2D" parent="SliderBox/PurpleTile3"]
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_ww260")
+
+[node name="BlueTile4" type="StaticBody2D" parent="SliderBox" groups=["dropable"]]
+position = Vector2(390, 546)
+
+[node name="BlueTileSprite" type="Sprite2D" parent="SliderBox/BlueTile4"]
+texture = ExtResource("15_p6tyb")
+hframes = 3
+vframes = 2
+frame = 1
+
+[node name="BlueTileCollision" type="CollisionShape2D" parent="SliderBox/BlueTile4"]
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_ww260")
+
+[node name="RedTile4" type="StaticBody2D" parent="SliderBox" groups=["dropable"]]
+position = Vector2(546, 546)
+
+[node name="RedTileSprite" type="Sprite2D" parent="SliderBox/RedTile4"]
+texture = ExtResource("15_p6tyb")
+hframes = 3
+vframes = 2
+frame = 4
+
+[node name="RedTileCollision" type="CollisionShape2D" parent="SliderBox/RedTile4"]
+scale = Vector2(0.1, 0.1)
+shape = SubResource("RectangleShape2D_ww260")
+
+[node name="CircleHolder" type="StaticBody2D" parent="." groups=["dropable"]]
+position = Vector2(172, 554)
+
+[node name="CircleCollision" type="CollisionShape2D" parent="CircleHolder"]
+shape = SubResource("RectangleShape2D_rogmt")
+
+[node name="BlueCircle1" type="Node2D" parent="."]
+position = Vector2(172, 554)
+script = ExtResource("15_ndr1p")
+
+[node name="BlueCircle1Sprite" type="Sprite2D" parent="BlueCircle1"]
+texture = ExtResource("6_hnvqq")
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="BlueCircle1Area" type="Area2D" parent="BlueCircle1"]
+
+[node name="BlueCircle1Collision" type="CollisionShape2D" parent="BlueCircle1/BlueCircle1Area"]
+position = Vector2(-2, 1)
+shape = SubResource("CircleShape2D_griuk")
+debug_color = Color(0.825515, 0.359597, 0.457511, 0.517647)
+
+[node name="BlueCircle2" type="Node2D" parent="."]
+position = Vector2(172, 554)
+script = ExtResource("16_pojt4")
+
+[node name="BlueCircle2Sprite" type="Sprite2D" parent="BlueCircle2"]
+texture = ExtResource("6_hnvqq")
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="BlueCircle2Area" type="Area2D" parent="BlueCircle2"]
+
+[node name="BlueCircle2Collision" type="CollisionShape2D" parent="BlueCircle2/BlueCircle2Area"]
+position = Vector2(-2, 1)
+shape = SubResource("CircleShape2D_griuk")
+debug_color = Color(0.825515, 0.359597, 0.457511, 0.517647)
+
+[node name="BlueCircle3" type="Node2D" parent="."]
+position = Vector2(172, 554)
+script = ExtResource("17_o62ys")
+
+[node name="BlueCircle3Sprite" type="Sprite2D" parent="BlueCircle3"]
+texture = ExtResource("6_hnvqq")
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="BlueCircle3Area" type="Area2D" parent="BlueCircle3"]
+
+[node name="BlueCircle3Collision" type="CollisionShape2D" parent="BlueCircle3/BlueCircle3Area"]
+position = Vector2(-2, 1)
+shape = SubResource("CircleShape2D_griuk")
+debug_color = Color(0.825515, 0.359597, 0.457511, 0.517647)
+
+[node name="BlueCircle4" type="Node2D" parent="."]
+position = Vector2(172, 554)
+script = ExtResource("18_hq1h7")
+
+[node name="BlueCircle4Sprite" type="Sprite2D" parent="BlueCircle4"]
+texture = ExtResource("6_hnvqq")
+hframes = 4
+vframes = 3
+frame = 2
+
+[node name="BlueCircle4Area" type="Area2D" parent="BlueCircle4"]
+
+[node name="BlueCircle4Collision" type="CollisionShape2D" parent="BlueCircle4/BlueCircle4Area"]
+position = Vector2(-2, 1)
+shape = SubResource("CircleShape2D_griuk")
+debug_color = Color(0.825515, 0.359597, 0.457511, 0.517647)
+
+[node name="GreenCircle1" type="Node2D" parent="."]
+position = Vector2(172, 554)
+script = ExtResource("19_fbrpu")
+
+[node name="GreenCircle1Sprite" type="Sprite2D" parent="GreenCircle1"]
+texture = ExtResource("6_hnvqq")
+hframes = 4
+vframes = 3
+frame = 4
+
+[node name="GreenCircle1Area" type="Area2D" parent="GreenCircle1"]
+
+[node name="GreenCircle1Collision" type="CollisionShape2D" parent="GreenCircle1/GreenCircle1Area"]
+position = Vector2(-2, 1)
+shape = SubResource("CircleShape2D_griuk")
+debug_color = Color(0.825515, 0.359597, 0.457511, 0.517647)
+
+[node name="GreenCircle2" type="Node2D" parent="."]
+position = Vector2(172, 554)
+script = ExtResource("20_3wjty")
+
+[node name="GreenCircle2Sprite" type="Sprite2D" parent="GreenCircle2"]
+texture = ExtResource("6_hnvqq")
+hframes = 4
+vframes = 3
+frame = 4
+
+[node name="GreenCircle2Area" type="Area2D" parent="GreenCircle2"]
+
+[node name="GreenCircle2Collision" type="CollisionShape2D" parent="GreenCircle2/GreenCircle2Area"]
+position = Vector2(-2, 1)
+shape = SubResource("CircleShape2D_griuk")
+debug_color = Color(0.825515, 0.359597, 0.457511, 0.517647)
+
+[node name="GreenCircle3" type="Node2D" parent="."]
+position = Vector2(172, 554)
+script = ExtResource("21_8vibb")
+
+[node name="GreenCircle3Sprite" type="Sprite2D" parent="GreenCircle3"]
+texture = ExtResource("6_hnvqq")
+hframes = 4
+vframes = 3
+frame = 4
+
+[node name="GreenCircle3Area" type="Area2D" parent="GreenCircle3"]
+
+[node name="GreenCircle3Collision" type="CollisionShape2D" parent="GreenCircle3/GreenCircle3Area"]
+position = Vector2(-2, 1)
+shape = SubResource("CircleShape2D_griuk")
+debug_color = Color(0.825515, 0.359597, 0.457511, 0.517647)
+
+[node name="GreenCircle4" type="Node2D" parent="."]
+position = Vector2(172, 554)
+script = ExtResource("22_tlton")
+
+[node name="GreenCircle4Sprite" type="Sprite2D" parent="GreenCircle4"]
+texture = ExtResource("6_hnvqq")
+hframes = 4
+vframes = 3
+frame = 4
+
+[node name="GreenCircle4Area" type="Area2D" parent="GreenCircle4"]
+
+[node name="GreenCircle4Collision" type="CollisionShape2D" parent="GreenCircle4/GreenCircle4Area"]
+position = Vector2(-2, 1)
+shape = SubResource("CircleShape2D_griuk")
+debug_color = Color(0.825515, 0.359597, 0.457511, 0.517647)
+
+[node name="PurpleCircle1" type="Node2D" parent="."]
+position = Vector2(172, 554)
+script = ExtResource("23_uo2sw")
+
+[node name="PurpleCircle1Sprite" type="Sprite2D" parent="PurpleCircle1"]
+texture = ExtResource("6_hnvqq")
+hframes = 4
+vframes = 3
+frame = 6
+
+[node name="PurpleCircle1Area" type="Area2D" parent="PurpleCircle1"]
+
+[node name="PurpleCircle1Collision" type="CollisionShape2D" parent="PurpleCircle1/PurpleCircle1Area"]
+position = Vector2(-2, 1)
+shape = SubResource("CircleShape2D_griuk")
+debug_color = Color(0.825515, 0.359597, 0.457511, 0.517647)
+
+[node name="PurpleCircle2" type="Node2D" parent="."]
+position = Vector2(172, 554)
+script = ExtResource("24_mhr2j")
+
+[node name="PurpleCircle2Sprite" type="Sprite2D" parent="PurpleCircle2"]
+texture = ExtResource("6_hnvqq")
+hframes = 4
+vframes = 3
+frame = 6
+
+[node name="PurpleCircle2Area" type="Area2D" parent="PurpleCircle2"]
+
+[node name="PurpleCircle2Collision" type="CollisionShape2D" parent="PurpleCircle2/PurpleCircle2Area"]
+position = Vector2(-2, 1)
+shape = SubResource("CircleShape2D_griuk")
+debug_color = Color(0.825515, 0.359597, 0.457511, 0.517647)
+
+[node name="PurpleCircle3" type="Node2D" parent="."]
+position = Vector2(172, 554)
+script = ExtResource("25_gin3o")
+
+[node name="PurpleCircle3Sprite" type="Sprite2D" parent="PurpleCircle3"]
+texture = ExtResource("6_hnvqq")
+hframes = 4
+vframes = 3
+frame = 6
+
+[node name="PurpleCircle3Area" type="Area2D" parent="PurpleCircle3"]
+
+[node name="PurpleCircle3Collision" type="CollisionShape2D" parent="PurpleCircle3/PurpleCircle3Area"]
+position = Vector2(-2, 1)
+shape = SubResource("CircleShape2D_griuk")
+debug_color = Color(0.825515, 0.359597, 0.457511, 0.517647)
+
+[node name="RedCircle1" type="Node2D" parent="."]
+position = Vector2(172, 554)
+script = ExtResource("26_1brhj")
+
+[node name="RedCircle1Sprite" type="Sprite2D" parent="RedCircle1"]
+texture = ExtResource("6_hnvqq")
+hframes = 4
+vframes = 3
+frame = 8
+
+[node name="RedCircle1Area" type="Area2D" parent="RedCircle1"]
+
+[node name="RedCircle1Collision" type="CollisionShape2D" parent="RedCircle1/RedCircle1Area"]
+position = Vector2(-2, 1)
+shape = SubResource("CircleShape2D_griuk")
+debug_color = Color(0.825515, 0.359597, 0.457511, 0.517647)
+
+[node name="RedCircle2" type="Node2D" parent="."]
+position = Vector2(172, 554)
+script = ExtResource("27_opn6u")
+
+[node name="RedCircle2Sprite" type="Sprite2D" parent="RedCircle2"]
+texture = ExtResource("6_hnvqq")
+hframes = 4
+vframes = 3
+frame = 8
+
+[node name="RedCircle2Area" type="Area2D" parent="RedCircle2"]
+
+[node name="RedCircle2Collision" type="CollisionShape2D" parent="RedCircle2/RedCircle2Area"]
+position = Vector2(-2, 1)
+shape = SubResource("CircleShape2D_griuk")
+debug_color = Color(0.825515, 0.359597, 0.457511, 0.517647)
+
+[node name="RedCircle3" type="Node2D" parent="."]
+position = Vector2(172, 554)
+script = ExtResource("28_5deid")
+
+[node name="RedCircle3Sprite" type="Sprite2D" parent="RedCircle3"]
+texture = ExtResource("6_hnvqq")
+hframes = 4
+vframes = 3
+frame = 8
+
+[node name="RedCircle3Area" type="Area2D" parent="RedCircle3"]
+
+[node name="RedCircle3Collision" type="CollisionShape2D" parent="RedCircle3/RedCircle3Area"]
+position = Vector2(-2, 1)
+shape = SubResource("CircleShape2D_griuk")
+debug_color = Color(0.825515, 0.359597, 0.457511, 0.517647)
+
+[node name="RedCircle4" type="Node2D" parent="."]
+position = Vector2(172, 554)
+script = ExtResource("29_gnxqp")
+
+[node name="RedCircle4Sprite" type="Sprite2D" parent="RedCircle4"]
+texture = ExtResource("6_hnvqq")
+hframes = 4
+vframes = 3
+frame = 8
+
+[node name="RedCircle4Area" type="Area2D" parent="RedCircle4"]
+
+[node name="RedCircle4Collision" type="CollisionShape2D" parent="RedCircle4/RedCircle4Area"]
+position = Vector2(-2, 1)
+shape = SubResource("CircleShape2D_griuk")
+debug_color = Color(0.825515, 0.359597, 0.457511, 0.517647)
+
+[node name="BlackCircle" type="Node2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+position = Vector2(172, 554)
+script = ExtResource("30_hwidl")
+
+[node name="BlackCircleSprite" type="Sprite2D" parent="BlackCircle"]
+texture = ExtResource("6_hnvqq")
+hframes = 4
+vframes = 3
+
+[node name="BlackCircleArea" type="Area2D" parent="BlackCircle"]
+
+[node name="BlackCircleCollision" type="CollisionShape2D" parent="BlackCircle/BlackCircleArea"]
+position = Vector2(-2, 1)
+shape = SubResource("CircleShape2D_griuk")
+debug_color = Color(0.825515, 0.359597, 0.457511, 0.517647)
+
+[connection signal="mouse_entered" from="SliderBox" to="SliderBox" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="SliderBox" to="SliderBox" method="_on_mouse_exited"]
+[connection signal="body_entered" from="BlueCircle1/BlueCircle1Area" to="BlueCircle1" method="_on_blue_circle_1_area_body_entered"]
+[connection signal="body_exited" from="BlueCircle1/BlueCircle1Area" to="BlueCircle1" method="_on_blue_circle_1_area_body_exited"]
+[connection signal="input_event" from="BlueCircle1/BlueCircle1Area" to="BlueCircle1" method="_on_blue_circle_1_area_input_event"]
+[connection signal="mouse_entered" from="BlueCircle1/BlueCircle1Area" to="BlueCircle1" method="_on_blue_circle_1_area_mouse_entered"]
+[connection signal="mouse_exited" from="BlueCircle1/BlueCircle1Area" to="BlueCircle1" method="_on_blue_circle_1_area_mouse_exited"]
+[connection signal="body_entered" from="BlueCircle2/BlueCircle2Area" to="BlueCircle2" method="_on_blue_circle_2_area_body_entered"]
+[connection signal="body_exited" from="BlueCircle2/BlueCircle2Area" to="BlueCircle2" method="_on_blue_circle_2_area_body_exited"]
+[connection signal="input_event" from="BlueCircle2/BlueCircle2Area" to="BlueCircle2" method="_on_blue_circle_2_area_input_event"]
+[connection signal="mouse_entered" from="BlueCircle2/BlueCircle2Area" to="BlueCircle2" method="_on_blue_circle_2_area_mouse_entered"]
+[connection signal="mouse_exited" from="BlueCircle2/BlueCircle2Area" to="BlueCircle2" method="_on_blue_circle_2_area_mouse_exited"]
+[connection signal="body_entered" from="BlueCircle3/BlueCircle3Area" to="BlueCircle3" method="_on_blue_circle_3_area_body_entered"]
+[connection signal="body_exited" from="BlueCircle3/BlueCircle3Area" to="BlueCircle3" method="_on_blue_circle_3_area_body_exited"]
+[connection signal="input_event" from="BlueCircle3/BlueCircle3Area" to="BlueCircle3" method="_on_blue_circle_3_area_input_event"]
+[connection signal="mouse_entered" from="BlueCircle3/BlueCircle3Area" to="BlueCircle3" method="_on_blue_circle_3_area_mouse_entered"]
+[connection signal="mouse_exited" from="BlueCircle3/BlueCircle3Area" to="BlueCircle3" method="_on_blue_circle_3_area_mouse_exited"]
+[connection signal="body_entered" from="BlueCircle4/BlueCircle4Area" to="BlueCircle4" method="_on_blue_circle_4_area_body_entered"]
+[connection signal="body_exited" from="BlueCircle4/BlueCircle4Area" to="BlueCircle4" method="_on_blue_circle_4_area_body_exited"]
+[connection signal="input_event" from="BlueCircle4/BlueCircle4Area" to="BlueCircle4" method="_on_blue_circle_4_area_input_event"]
+[connection signal="mouse_entered" from="BlueCircle4/BlueCircle4Area" to="BlueCircle4" method="_on_blue_circle_4_area_mouse_entered"]
+[connection signal="mouse_exited" from="BlueCircle4/BlueCircle4Area" to="BlueCircle4" method="_on_blue_circle_4_area_mouse_exited"]
+[connection signal="body_entered" from="GreenCircle1/GreenCircle1Area" to="GreenCircle1" method="_on_green_circle_1_area_body_entered"]
+[connection signal="body_exited" from="GreenCircle1/GreenCircle1Area" to="GreenCircle1" method="_on_green_circle_1_area_body_exited"]
+[connection signal="input_event" from="GreenCircle1/GreenCircle1Area" to="GreenCircle1" method="_on_green_circle_1_area_input_event"]
+[connection signal="mouse_entered" from="GreenCircle1/GreenCircle1Area" to="GreenCircle1" method="_on_green_circle_1_area_mouse_entered"]
+[connection signal="mouse_exited" from="GreenCircle1/GreenCircle1Area" to="GreenCircle1" method="_on_green_circle_1_area_mouse_exited"]
+[connection signal="body_entered" from="GreenCircle2/GreenCircle2Area" to="GreenCircle2" method="_on_green_circle_2_area_body_entered"]
+[connection signal="body_exited" from="GreenCircle2/GreenCircle2Area" to="GreenCircle2" method="_on_green_circle_2_area_body_exited"]
+[connection signal="input_event" from="GreenCircle2/GreenCircle2Area" to="GreenCircle2" method="_on_green_circle_2_area_input_event"]
+[connection signal="mouse_entered" from="GreenCircle2/GreenCircle2Area" to="GreenCircle2" method="_on_green_circle_2_area_mouse_entered"]
+[connection signal="mouse_exited" from="GreenCircle2/GreenCircle2Area" to="GreenCircle2" method="_on_green_circle_2_area_mouse_exited"]
+[connection signal="body_entered" from="GreenCircle3/GreenCircle3Area" to="GreenCircle3" method="_on_green_circle_3_area_body_entered"]
+[connection signal="body_exited" from="GreenCircle3/GreenCircle3Area" to="GreenCircle3" method="_on_green_circle_3_area_body_exited"]
+[connection signal="input_event" from="GreenCircle3/GreenCircle3Area" to="GreenCircle3" method="_on_green_circle_3_area_input_event"]
+[connection signal="mouse_entered" from="GreenCircle3/GreenCircle3Area" to="GreenCircle3" method="_on_green_circle_3_area_mouse_entered"]
+[connection signal="mouse_exited" from="GreenCircle3/GreenCircle3Area" to="GreenCircle3" method="_on_green_circle_3_area_mouse_exited"]
+[connection signal="body_entered" from="GreenCircle4/GreenCircle4Area" to="GreenCircle4" method="_on_green_circle_4_area_body_entered"]
+[connection signal="body_exited" from="GreenCircle4/GreenCircle4Area" to="GreenCircle4" method="_on_green_circle_4_area_body_exited"]
+[connection signal="input_event" from="GreenCircle4/GreenCircle4Area" to="GreenCircle4" method="_on_green_circle_4_area_input_event"]
+[connection signal="mouse_entered" from="GreenCircle4/GreenCircle4Area" to="GreenCircle4" method="_on_green_circle_4_area_mouse_entered"]
+[connection signal="mouse_exited" from="GreenCircle4/GreenCircle4Area" to="GreenCircle4" method="_on_green_circle_4_area_mouse_exited"]
+[connection signal="body_entered" from="PurpleCircle1/PurpleCircle1Area" to="PurpleCircle1" method="_on_purple_circle_1_area_body_entered"]
+[connection signal="body_exited" from="PurpleCircle1/PurpleCircle1Area" to="PurpleCircle1" method="_on_purple_circle_1_area_body_exited"]
+[connection signal="input_event" from="PurpleCircle1/PurpleCircle1Area" to="PurpleCircle1" method="_on_purple_circle_1_area_input_event"]
+[connection signal="mouse_entered" from="PurpleCircle1/PurpleCircle1Area" to="PurpleCircle1" method="_on_purple_circle_1_area_mouse_entered"]
+[connection signal="mouse_exited" from="PurpleCircle1/PurpleCircle1Area" to="PurpleCircle1" method="_on_purple_circle_1_area_mouse_exited"]
+[connection signal="body_entered" from="PurpleCircle2/PurpleCircle2Area" to="PurpleCircle2" method="_on_purple_circle_2_area_body_entered"]
+[connection signal="body_exited" from="PurpleCircle2/PurpleCircle2Area" to="PurpleCircle2" method="_on_purple_circle_2_area_body_exited"]
+[connection signal="input_event" from="PurpleCircle2/PurpleCircle2Area" to="PurpleCircle2" method="_on_purple_circle_2_area_input_event"]
+[connection signal="mouse_entered" from="PurpleCircle2/PurpleCircle2Area" to="PurpleCircle2" method="_on_purple_circle_2_area_mouse_entered"]
+[connection signal="mouse_exited" from="PurpleCircle2/PurpleCircle2Area" to="PurpleCircle2" method="_on_purple_circle_2_area_mouse_exited"]
+[connection signal="body_entered" from="PurpleCircle3/PurpleCircle3Area" to="PurpleCircle3" method="_on_purple_circle_3_area_body_entered"]
+[connection signal="body_exited" from="PurpleCircle3/PurpleCircle3Area" to="PurpleCircle3" method="_on_purple_circle_3_area_body_exited"]
+[connection signal="input_event" from="PurpleCircle3/PurpleCircle3Area" to="PurpleCircle3" method="_on_purple_circle_3_area_input_event"]
+[connection signal="mouse_entered" from="PurpleCircle3/PurpleCircle3Area" to="PurpleCircle3" method="_on_purple_circle_3_area_mouse_entered"]
+[connection signal="mouse_exited" from="PurpleCircle3/PurpleCircle3Area" to="PurpleCircle3" method="_on_purple_circle_3_area_mouse_exited"]
+[connection signal="body_entered" from="RedCircle1/RedCircle1Area" to="RedCircle1" method="_on_red_circle_1_area_body_entered"]
+[connection signal="body_exited" from="RedCircle1/RedCircle1Area" to="RedCircle1" method="_on_red_circle_1_area_body_exited"]
+[connection signal="input_event" from="RedCircle1/RedCircle1Area" to="RedCircle1" method="_on_red_circle_1_area_input_event"]
+[connection signal="mouse_entered" from="RedCircle1/RedCircle1Area" to="RedCircle1" method="_on_red_circle_1_area_mouse_entered"]
+[connection signal="mouse_exited" from="RedCircle1/RedCircle1Area" to="RedCircle1" method="_on_red_circle_1_area_mouse_exited"]
+[connection signal="body_entered" from="RedCircle2/RedCircle2Area" to="RedCircle2" method="_on_red_circle_2_area_body_entered"]
+[connection signal="body_exited" from="RedCircle2/RedCircle2Area" to="RedCircle2" method="_on_red_circle_2_area_body_exited"]
+[connection signal="input_event" from="RedCircle2/RedCircle2Area" to="RedCircle2" method="_on_red_circle_2_area_input_event"]
+[connection signal="mouse_entered" from="RedCircle2/RedCircle2Area" to="RedCircle2" method="_on_red_circle_2_area_mouse_entered"]
+[connection signal="mouse_exited" from="RedCircle2/RedCircle2Area" to="RedCircle2" method="_on_red_circle_2_area_mouse_exited"]
+[connection signal="body_entered" from="RedCircle3/RedCircle3Area" to="RedCircle3" method="_on_red_circle_3_area_body_entered"]
+[connection signal="body_exited" from="RedCircle3/RedCircle3Area" to="RedCircle3" method="_on_red_circle_3_area_body_exited"]
+[connection signal="input_event" from="RedCircle3/RedCircle3Area" to="RedCircle3" method="_on_red_circle_3_area_input_event"]
+[connection signal="mouse_entered" from="RedCircle3/RedCircle3Area" to="RedCircle3" method="_on_red_circle_3_area_mouse_entered"]
+[connection signal="mouse_exited" from="RedCircle3/RedCircle3Area" to="RedCircle3" method="_on_red_circle_3_area_mouse_exited"]
+[connection signal="body_entered" from="RedCircle4/RedCircle4Area" to="RedCircle4" method="_on_red_circle_4_area_body_entered"]
+[connection signal="body_exited" from="RedCircle4/RedCircle4Area" to="RedCircle4" method="_on_red_circle_4_area_body_exited"]
+[connection signal="input_event" from="RedCircle4/RedCircle4Area" to="RedCircle4" method="_on_red_circle_4_area_input_event"]
+[connection signal="mouse_entered" from="RedCircle4/RedCircle4Area" to="RedCircle4" method="_on_red_circle_4_area_mouse_entered"]
+[connection signal="mouse_exited" from="RedCircle4/RedCircle4Area" to="RedCircle4" method="_on_red_circle_4_area_mouse_exited"]
+[connection signal="frame_changed" from="BlackCircle/BlackCircleSprite" to="BlackCircle" method="_on_black_circle_sprite_frame_changed"]
+[connection signal="body_entered" from="BlackCircle/BlackCircleArea" to="BlackCircle" method="_on_black_circle_area_body_entered"]
+[connection signal="body_exited" from="BlackCircle/BlackCircleArea" to="BlackCircle" method="_on_black_circle_area_body_exited"]
+[connection signal="input_event" from="BlackCircle/BlackCircleArea" to="BlackCircle" method="_on_black_circle_area_input_event"]
+[connection signal="mouse_entered" from="BlackCircle/BlackCircleArea" to="BlackCircle" method="_on_black_circle_area_mouse_entered"]
+[connection signal="mouse_exited" from="BlackCircle/BlackCircleArea" to="BlackCircle" method="_on_black_circle_area_mouse_exited"]

@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dnrupq4e085nd"
+path="res://.godot/imported/Moon.png-646a9f79b16a500c1f6e903e3b242da7.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO1/Bitmap/Moon.png"
+dest_files=["res://.godot/imported/Moon.png-646a9f79b16a500c1f6e903e3b242da7.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

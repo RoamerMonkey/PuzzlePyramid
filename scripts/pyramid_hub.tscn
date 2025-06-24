@@ -1,0 +1,115 @@
+[gd_scene load_steps=16 format=3 uid="uid://cpfglun87ihxj"]
+
+[ext_resource type="Shader" uid="uid://cv3c5nreevpcc" path="res://scripts/scroll.gdshader" id="1_2lvct"]
+[ext_resource type="Script" uid="uid://b8y28ysbmt3nj" path="res://scripts/pyramid_hub.gd" id="1_5luy0"]
+[ext_resource type="AudioStream" uid="uid://bd6prdkn3hw7i" path="res://assets/snd/ui/buttonclick.mp3" id="2_binwd"]
+[ext_resource type="Texture2D" uid="uid://bo0axjv7pn6u6" path="res://assets/gfx/pyramid/BG.png" id="2_jfcad"]
+[ext_resource type="AudioStream" uid="uid://cu2ddppdklsyy" path="res://assets/snd/ui/buttonhover.wav" id="3_hrvrk"]
+[ext_resource type="Texture2D" uid="uid://ccnlq0evorju8" path="res://assets/gfx/pyramid/PyramidSpritesheet.png" id="4_6e1uj"]
+[ext_resource type="Texture2D" uid="uid://disckortbdor" path="res://assets/gfx/pyramid/StartButton.png" id="5_4y0cd"]
+[ext_resource type="Texture2D" uid="uid://dfucruli33rhi" path="res://assets/gfx/ui/ArrowButton.png" id="5_8vril"]
+[ext_resource type="Texture2D" uid="uid://dpjgbb0gmvuqu" path="res://assets/gfx/pyramid/CompletedButton.png" id="6_pj4fm"]
+[ext_resource type="PackedScene" uid="uid://c33lm8gnvbwru" path="res://scripts/UI/hud.tscn" id="10_buc6m"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sqncu"]
+shader = ExtResource("1_2lvct")
+shader_parameter/speed = 0.025
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aofim"]
+atlas = ExtResource("5_8vril")
+region = Rect2(25, 14, 88, 154)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_whooq"]
+atlas = ExtResource("5_8vril")
+region = Rect2(180, 14, 88, 154)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhgn6"]
+atlas = ExtResource("5_4y0cd")
+region = Rect2(28, 18, 675, 154)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ud64"]
+atlas = ExtResource("5_4y0cd")
+region = Rect2(775, 18, 675, 154)
+
+[node name="PyramidHub" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_5luy0")
+
+[node name="Buttonclick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_binwd")
+bus = &"SFX"
+
+[node name="Buttonhover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_hrvrk")
+bus = &"SFX"
+
+[node name="BGColor" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1440.0
+offset_bottom = 1080.0
+color = Color(0.00784314, 0.0588235, 0.14902, 1)
+
+[node name="BGStars" type="TextureRect" parent="."]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_sqncu")
+layout_mode = 0
+offset_right = 1440.0
+offset_bottom = 1080.0
+texture = ExtResource("2_jfcad")
+stretch_mode = 1
+
+[node name="LeftArrow" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 343.0
+offset_right = 542.0
+offset_bottom = 497.0
+texture_normal = SubResource("AtlasTexture_aofim")
+texture_pressed = SubResource("AtlasTexture_whooq")
+
+[node name="RightArrow" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1290.0
+offset_top = 343.0
+offset_right = 1378.0
+offset_bottom = 497.0
+texture_normal = SubResource("AtlasTexture_aofim")
+texture_pressed = SubResource("AtlasTexture_whooq")
+flip_h = true
+
+[node name="Pyramid" type="Sprite2D" parent="."]
+position = Vector2(911, 415)
+scale = Vector2(0.736979, 0.736979)
+texture = ExtResource("4_6e1uj")
+hframes = 3
+vframes = 3
+frame = 3
+
+[node name="PlayButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 582.0
+offset_top = 869.0
+offset_right = 1257.0
+offset_bottom = 1023.0
+texture_normal = SubResource("AtlasTexture_qhgn6")
+texture_pressed = SubResource("AtlasTexture_7ud64")
+
+[node name="Completed" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 536.0
+offset_top = 845.0
+offset_right = 1283.0
+offset_bottom = 1051.0
+texture = ExtResource("6_pj4fm")
+
+[node name="HUD" parent="." instance=ExtResource("10_buc6m")]
+layout_mode = 1
+
+[connection signal="button_down" from="LeftArrow" to="." method="_on_left_arrow_button_down"]
+[connection signal="mouse_entered" from="LeftArrow" to="." method="_on_left_arrow_mouse_entered"]
+[connection signal="button_down" from="RightArrow" to="." method="_on_right_arrow_button_down"]
+[connection signal="mouse_entered" from="RightArrow" to="." method="_on_right_arrow_mouse_entered"]
+[connection signal="button_down" from="PlayButton" to="." method="_on_play_button_button_down"]
+[connection signal="mouse_entered" from="PlayButton" to="." method="_on_play_button_mouse_entered"]

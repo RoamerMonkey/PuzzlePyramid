@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cuej1rxqai0t7"
+path="res://.godot/imported/Diamond.png-2278108208331e3cce94a6d0ac16f39c.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO1/Bitmap/Diamond.png"
+dest_files=["res://.godot/imported/Diamond.png-2278108208331e3cce94a6d0ac16f39c.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

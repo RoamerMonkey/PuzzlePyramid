@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://ccdnguvdtxjel"
+path="res://.godot/imported/Thirteen.png-7e39bc58627946902dae72f4128d6dbb.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Thirteen.png"
+dest_files=["res://.godot/imported/Thirteen.png-7e39bc58627946902dae72f4128d6dbb.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

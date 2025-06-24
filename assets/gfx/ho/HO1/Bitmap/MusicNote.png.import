@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://b24a1b1ft64bj"
+path="res://.godot/imported/MusicNote.png-19d75b69869b0ba5a5c671212176c129.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO1/Bitmap/MusicNote.png"
+dest_files=["res://.godot/imported/MusicNote.png-19d75b69869b0ba5a5c671212176c129.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cnmrmeodcx2xp"
+path="res://.godot/imported/Quill.png-78fcd462c19cc78bf815f54e98367650.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Quill.png"
+dest_files=["res://.godot/imported/Quill.png-78fcd462c19cc78bf815f54e98367650.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

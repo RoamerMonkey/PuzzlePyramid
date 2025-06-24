@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dgqc85u7f6ckp"
+path="res://.godot/imported/Camera.png-4fd4a3818fd5116a4324dd583c452306.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Camera.png"
+dest_files=["res://.godot/imported/Camera.png-4fd4a3818fd5116a4324dd583c452306.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

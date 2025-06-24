@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bl547vgojn5ln"
+path="res://.godot/imported/Gem.png-14b68aba9381cb128e512131fb5efc0f.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Gem.png"
+dest_files=["res://.godot/imported/Gem.png-14b68aba9381cb128e512131fb5efc0f.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

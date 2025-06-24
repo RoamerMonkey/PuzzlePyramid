@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://8itibpql6geg"
+path="res://.godot/imported/Fire.png-37116a9f92f9757564d12482f73e3e98.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO1/Bitmap/Fire.png"
+dest_files=["res://.godot/imported/Fire.png-37116a9f92f9757564d12482f73e3e98.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

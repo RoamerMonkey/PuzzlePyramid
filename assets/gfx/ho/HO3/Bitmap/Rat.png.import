@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://b7oed8hciqem5"
+path="res://.godot/imported/Rat.png-0cab246080df6faccc53cb2f57f28a07.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Rat.png"
+dest_files=["res://.godot/imported/Rat.png-0cab246080df6faccc53cb2f57f28a07.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://da03ivonvevfo"
+path="res://.godot/imported/Tablet.png-1dedd42ae21b89023312a23f6625551d.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Tablet.png"
+dest_files=["res://.godot/imported/Tablet.png-1dedd42ae21b89023312a23f6625551d.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

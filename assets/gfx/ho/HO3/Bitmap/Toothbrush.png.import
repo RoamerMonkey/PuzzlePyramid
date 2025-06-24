@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dtp17n6o6qo7f"
+path="res://.godot/imported/Toothbrush.png-920d531267fe7692fecfade6a91604fb.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Toothbrush.png"
+dest_files=["res://.godot/imported/Toothbrush.png-920d531267fe7692fecfade6a91604fb.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

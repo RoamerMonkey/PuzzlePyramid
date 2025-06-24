@@ -1,0 +1,39 @@
+[gd_scene load_steps=6 format=3 uid="uid://xo6pxrgkpteo"]
+
+[ext_resource type="AudioStream" uid="uid://ceaf17nr587td" path="res://assets/bgm/awakening_purpleplanetmusic.mp3" id="1_2waj5"]
+[ext_resource type="AudioStream" uid="uid://c7kg2bpsklhd5" path="res://assets/bgm/etheraleternity_purpleplanetmusic.mp3" id="2_2g3qb"]
+[ext_resource type="AudioStream" uid="uid://728ro2pcmu2n" path="res://assets/bgm/masquerade_purpleplanetmusic.mp3" id="3_ytmxy"]
+[ext_resource type="AudioStream" uid="uid://4lrm6hw3d53r" path="res://assets/bgm/Silence.mp3" id="4_vneac"]
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_18kcr"]
+clip_count = 4
+clip_0/name = &"Main"
+clip_0/stream = ExtResource("1_2waj5")
+clip_0/auto_advance = 0
+clip_1/name = &"MG"
+clip_1/stream = ExtResource("2_2g3qb")
+clip_1/auto_advance = 0
+clip_2/name = &"HO"
+clip_2/stream = ExtResource("3_ytmxy")
+clip_2/auto_advance = 0
+clip_3/name = &"Silence"
+clip_3/stream = ExtResource("4_vneac")
+clip_3/auto_advance = 0
+_transitions = {
+Vector2i(-1, -1): {
+"fade_beats": 3.0,
+"fade_mode": 3,
+"from_time": 0,
+"to_time": 2
+},
+Vector2i(0, 0): {
+"fade_beats": 1.0,
+"fade_mode": 0,
+"from_time": 0,
+"to_time": 0
+}
+}
+
+[node name="BGM" type="AudioStreamPlayer"]
+stream = SubResource("AudioStreamInteractive_18kcr")
+bus = &"BGM"

@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://drn0j665iotto"
+path="res://.godot/imported/Glasses.png-87a4a1a7ebbd3dd30c3fe950724d1ec2.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Glasses.png"
+dest_files=["res://.godot/imported/Glasses.png-87a4a1a7ebbd3dd30c3fe950724d1ec2.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

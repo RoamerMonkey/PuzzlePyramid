@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://wjq8vfrygere"
+path="res://.godot/imported/Strawberry.png-d744819ce3751d3eccc49ba7f7d25fdb.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO1/Bitmap/Strawberry.png"
+dest_files=["res://.godot/imported/Strawberry.png-d744819ce3751d3eccc49ba7f7d25fdb.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

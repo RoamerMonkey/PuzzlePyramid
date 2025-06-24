@@ -1,0 +1,450 @@
+[gd_scene load_steps=26 format=3 uid="uid://dl2caqa4pptjj"]
+
+[ext_resource type="Script" path="res://BTS/mg_3.gd" id="1_7fm53"]
+[ext_resource type="Texture2D" uid="uid://npdltpm8aphb" path="res://PuzzlePyramid/gfx/mg/BG.PNG" id="1_7rerk"]
+[ext_resource type="Texture2D" uid="uid://bcedd23nyoscr" path="res://PuzzlePyramid/gfx/mg/puzzle3/RoundLight.PNG" id="2_fp1oc"]
+[ext_resource type="AudioStream" uid="uid://buio0i2sjysjf" path="res://PuzzlePyramid/snd/mg/circlepickup.wav" id="2_j57iy"]
+[ext_resource type="Texture2D" uid="uid://d1017kb6nvhxm" path="res://PuzzlePyramid/gfx/mg/puzzle3/PlusSign.PNG" id="3_j1sb7"]
+[ext_resource type="AudioStream" uid="uid://br523vudawcgf" path="res://PuzzlePyramid/snd/mg/circleputdown.wav" id="3_p5o6x"]
+[ext_resource type="AudioStream" uid="uid://bd3itqo0ksgre" path="res://PuzzlePyramid/snd/mg/lightcollide.wav" id="4_6hl3g"]
+[ext_resource type="Texture2D" uid="uid://e47adqnmby74" path="res://PuzzlePyramid/gfx/mg/puzzle3/EqualSign.PNG" id="4_hb68c"]
+[ext_resource type="AudioStream" uid="uid://b4y1apkh35rc3" path="res://PuzzlePyramid/snd/mg/lightcorrect.wav" id="5_4oa7c"]
+[ext_resource type="Texture2D" uid="uid://dttvt33msdix1" path="res://PuzzlePyramid/gfx/mg/puzzle3/DiamondGoal.PNG" id="5_onq0p"]
+[ext_resource type="AudioStream" uid="uid://e31u37nehaa1" path="res://PuzzlePyramid/snd/mg/lightup.wav" id="6_ay80c"]
+[ext_resource type="Texture2D" uid="uid://ci0iqfi8qp6s8" path="res://PuzzlePyramid/gfx/mg/puzzle3/NumberPad.PNG" id="6_iigdo"]
+[ext_resource type="AudioStream" uid="uid://btb800p16d8ln" path="res://PuzzlePyramid/snd/mg/lightwrong.wav" id="7_5so5t"]
+[ext_resource type="Texture2D" uid="uid://d1taq1q0kvmcy" path="res://PuzzlePyramid/gfx/mg/puzzle3/CircleMathPieces.PNG" id="7_edto6"]
+[ext_resource type="FontFile" uid="uid://dqpw83t7vsg6d" path="res://PuzzlePyramid/fonts/Ramona-Bold.ttf" id="8_bddsm"]
+[ext_resource type="AudioStream" uid="uid://iq7ewcbw7wu" path="res://PuzzlePyramid/snd/mg/mgdone.wav" id="8_s7pnn"]
+[ext_resource type="Script" path="res://BTS/MG3/circle_1.gd" id="9_m82n3"]
+[ext_resource type="PackedScene" uid="uid://c33lm8gnvbwru" path="res://BTS/UI/hud.tscn" id="11_eji7x"]
+[ext_resource type="Script" path="res://BTS/MG3/circle_2.gd" id="19_f2gom"]
+[ext_resource type="Script" path="res://BTS/MG3/circle_3.gd" id="20_g7ypk"]
+[ext_resource type="Script" path="res://BTS/MG3/circle_4.gd" id="21_c07re"]
+[ext_resource type="Script" path="res://BTS/MG3/circle_5.gd" id="22_uor4i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xt21k"]
+size = Vector2(136, 136)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evapy"]
+size = Vector2(317, 372)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_416n7"]
+radius = 39.0
+height = 92.0
+
+[node name="mg3" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_7fm53")
+
+[node name="Circlepickup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_j57iy")
+bus = &"SFX"
+
+[node name="Circleputdown" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_p5o6x")
+bus = &"SFX"
+
+[node name="Lightcollide" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_6hl3g")
+bus = &"SFX"
+
+[node name="Lightcorrect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_4oa7c")
+volume_db = 5.0
+bus = &"SFX"
+
+[node name="Lightup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ay80c")
+bus = &"SFX"
+
+[node name="Lightwrong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_5so5t")
+volume_db = 5.0
+bus = &"SFX"
+
+[node name="Mgdone" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_s7pnn")
+bus = &"SFX"
+
+[node name="BGTexture" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 360.0
+offset_right = 1440.0
+offset_bottom = 1080.0
+mouse_filter = 2
+texture = ExtResource("1_7rerk")
+
+[node name="RoundLight1" type="Sprite2D" parent="."]
+position = Vector2(692.5, 191)
+texture = ExtResource("2_fp1oc")
+hframes = 2
+
+[node name="RoundLight2" type="Sprite2D" parent="."]
+position = Vector2(790.5, 191)
+texture = ExtResource("2_fp1oc")
+hframes = 2
+
+[node name="RoundLight3" type="Sprite2D" parent="."]
+position = Vector2(892.5, 191)
+texture = ExtResource("2_fp1oc")
+hframes = 2
+
+[node name="RoundLight4" type="Sprite2D" parent="."]
+position = Vector2(992.5, 191)
+texture = ExtResource("2_fp1oc")
+hframes = 2
+
+[node name="RoundLight5" type="Sprite2D" parent="."]
+position = Vector2(1092.5, 191)
+texture = ExtResource("2_fp1oc")
+hframes = 2
+
+[node name="PlusSign" type="Sprite2D" parent="."]
+position = Vector2(623, 509)
+texture = ExtResource("3_j1sb7")
+hframes = 2
+
+[node name="EqualSign" type="Sprite2D" parent="."]
+position = Vector2(874, 505)
+texture = ExtResource("4_hb68c")
+hframes = 2
+vframes = 2
+
+[node name="DiamondGoal" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1015.0
+offset_top = 303.0
+offset_right = 1269.0
+offset_bottom = 677.0
+texture = ExtResource("5_onq0p")
+
+[node name="DiamondLabel" type="Label" parent="DiamondGoal"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.503937
+anchor_top = 0.516043
+anchor_right = 0.503937
+anchor_bottom = 0.516043
+offset_left = -67.0
+offset_top = -68.0
+offset_right = 68.0
+offset_bottom = 68.0
+theme_override_colors/font_color = Color(0.312538, 0.0237986, 0.132087, 1)
+theme_override_fonts/font = ExtResource("8_bddsm")
+theme_override_font_sizes/font_size = 80
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="NumberPad1" type="StaticBody2D" parent="." groups=["dropable"]]
+position = Vector2(523, 834)
+
+[node name="Pad1Texture" type="TextureRect" parent="NumberPad1"]
+offset_left = -68.0
+offset_top = -68.0
+offset_right = 68.0
+offset_bottom = 68.0
+mouse_filter = 2
+texture = ExtResource("6_iigdo")
+metadata/_edit_use_anchors_ = true
+
+[node name="Pad1Label" type="Label" parent="NumberPad1"]
+offset_left = -67.0
+offset_top = -68.0
+offset_right = 68.0
+offset_bottom = 68.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_bddsm")
+theme_override_font_sizes/font_size = 50
+text = "-1"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Pad1Collision" type="CollisionShape2D" parent="NumberPad1"]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_xt21k")
+debug_color = Color(0, 0.6, 0.701961, 0.423529)
+
+[node name="NumberPad2" type="StaticBody2D" parent="." groups=["dropable"]]
+position = Vector2(709, 834)
+
+[node name="Pad2Texture" type="TextureRect" parent="NumberPad2"]
+offset_left = -68.0
+offset_top = -68.0
+offset_right = 68.0
+offset_bottom = 68.0
+mouse_filter = 2
+texture = ExtResource("6_iigdo")
+metadata/_edit_use_anchors_ = true
+
+[node name="Pad2Label" type="Label" parent="NumberPad2"]
+offset_left = -67.0
+offset_top = -68.0
+offset_right = 68.0
+offset_bottom = 68.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_bddsm")
+theme_override_font_sizes/font_size = 50
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Pad2Collision" type="CollisionShape2D" parent="NumberPad2"]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_xt21k")
+debug_color = Color(0, 0.6, 0.701961, 0.423529)
+
+[node name="NumberPad3" type="StaticBody2D" parent="." groups=["dropable"]]
+position = Vector2(895, 834)
+
+[node name="Pad3Texture" type="TextureRect" parent="NumberPad3"]
+offset_left = -68.0
+offset_top = -68.0
+offset_right = 68.0
+offset_bottom = 68.0
+mouse_filter = 2
+texture = ExtResource("6_iigdo")
+metadata/_edit_use_anchors_ = true
+
+[node name="Pad3Label" type="Label" parent="NumberPad3"]
+offset_left = -67.0
+offset_top = -68.0
+offset_right = 68.0
+offset_bottom = 68.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_bddsm")
+theme_override_font_sizes/font_size = 50
+text = "-2"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Pad3Collision" type="CollisionShape2D" parent="NumberPad3"]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_xt21k")
+debug_color = Color(0, 0.6, 0.701961, 0.423529)
+
+[node name="NumberPad4" type="StaticBody2D" parent="." groups=["dropable"]]
+position = Vector2(1081, 834)
+
+[node name="Pad4Texture" type="TextureRect" parent="NumberPad4"]
+offset_left = -68.0
+offset_top = -68.0
+offset_right = 68.0
+offset_bottom = 68.0
+mouse_filter = 2
+texture = ExtResource("6_iigdo")
+metadata/_edit_use_anchors_ = true
+
+[node name="Pad4Label" type="Label" parent="NumberPad4"]
+offset_left = -67.0
+offset_top = -68.0
+offset_right = 68.0
+offset_bottom = 68.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_bddsm")
+theme_override_font_sizes/font_size = 50
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Pad4Collision" type="CollisionShape2D" parent="NumberPad4"]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_xt21k")
+debug_color = Color(0, 0.6, 0.701961, 0.423529)
+
+[node name="NumberPad5" type="StaticBody2D" parent="." groups=["dropable"]]
+position = Vector2(1267, 834)
+
+[node name="Pad5Texture" type="TextureRect" parent="NumberPad5"]
+offset_left = -68.0
+offset_top = -68.0
+offset_right = 68.0
+offset_bottom = 68.0
+mouse_filter = 2
+texture = ExtResource("6_iigdo")
+metadata/_edit_use_anchors_ = true
+
+[node name="Pad5Label" type="Label" parent="NumberPad5"]
+offset_left = -67.0
+offset_top = -68.0
+offset_right = 68.0
+offset_bottom = 68.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_bddsm")
+theme_override_font_sizes/font_size = 50
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Pad5Collision" type="CollisionShape2D" parent="NumberPad5"]
+scale = Vector2(0.7, 0.7)
+shape = SubResource("RectangleShape2D_xt21k")
+debug_color = Color(0, 0.6, 0.701961, 0.423529)
+
+[node name="HUD" parent="." instance=ExtResource("11_eji7x")]
+layout_mode = 1
+
+[node name="CircleHolder" type="StaticBody2D" parent="." groups=["dropable"]]
+position = Vector2(174, 551)
+
+[node name="CircleCollision" type="CollisionShape2D" parent="CircleHolder"]
+shape = SubResource("RectangleShape2D_evapy")
+
+[node name="Circle1" type="Node2D" parent="."]
+position = Vector2(166, 433)
+script = ExtResource("9_m82n3")
+
+[node name="Circle1Sprite" type="Sprite2D" parent="Circle1"]
+texture = ExtResource("7_edto6")
+hframes = 2
+vframes = 2
+
+[node name="Circle1Area" type="Area2D" parent="Circle1"]
+
+[node name="Circle1Collision" type="CollisionShape2D" parent="Circle1/Circle1Area"]
+shape = SubResource("CapsuleShape2D_416n7")
+debug_color = Color(0.825515, 0.359597, 0.457511, 0.517647)
+
+[node name="Circle2" type="Node2D" parent="."]
+visible = false
+position = Vector2(87, 527)
+script = ExtResource("19_f2gom")
+
+[node name="Circle2Sprite" type="Sprite2D" parent="Circle2"]
+texture = ExtResource("7_edto6")
+hframes = 2
+vframes = 2
+
+[node name="Circle2Area" type="Area2D" parent="Circle2"]
+
+[node name="Circle2Collision" type="CollisionShape2D" parent="Circle2/Circle2Area"]
+shape = SubResource("CapsuleShape2D_416n7")
+debug_color = Color(0.825515, 0.359597, 0.457511, 0.517647)
+
+[node name="Circle3" type="Node2D" parent="."]
+visible = false
+position = Vector2(248, 527)
+script = ExtResource("20_g7ypk")
+
+[node name="Circle3Sprite" type="Sprite2D" parent="Circle3"]
+texture = ExtResource("7_edto6")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Circle3Area" type="Area2D" parent="Circle3"]
+
+[node name="Circle3Collision" type="CollisionShape2D" parent="Circle3/Circle3Area"]
+shape = SubResource("CapsuleShape2D_416n7")
+debug_color = Color(0.825515, 0.359597, 0.457511, 0.517647)
+
+[node name="Circle3Label" type="Label" parent="Circle3"]
+offset_left = -20.0
+offset_top = -33.0
+offset_right = 20.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0.513678, 1, 0.48175, 1)
+theme_override_fonts/font = ExtResource("8_bddsm")
+theme_override_font_sizes/font_size = 50
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Circle4" type="Node2D" parent="."]
+visible = false
+position = Vector2(107, 648)
+script = ExtResource("21_c07re")
+
+[node name="Circle4Sprite" type="Sprite2D" parent="Circle4"]
+texture = ExtResource("7_edto6")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Circle4Area" type="Area2D" parent="Circle4"]
+
+[node name="Circle4Collision" type="CollisionShape2D" parent="Circle4/Circle4Area"]
+shape = SubResource("CapsuleShape2D_416n7")
+debug_color = Color(0.825515, 0.359597, 0.457511, 0.517647)
+
+[node name="Circle4Label" type="Label" parent="Circle4"]
+offset_left = -20.0
+offset_top = -33.0
+offset_right = 20.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0.513678, 1, 0.48175, 1)
+theme_override_fonts/font = ExtResource("8_bddsm")
+theme_override_font_sizes/font_size = 50
+text = "-1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Circle5" type="Node2D" parent="."]
+visible = false
+position = Vector2(219, 648)
+script = ExtResource("22_uor4i")
+
+[node name="Circle5Sprite" type="Sprite2D" parent="Circle5"]
+texture = ExtResource("7_edto6")
+hframes = 2
+vframes = 2
+frame = 2
+
+[node name="Circle5Area" type="Area2D" parent="Circle5"]
+
+[node name="Circle5Collision" type="CollisionShape2D" parent="Circle5/Circle5Area"]
+shape = SubResource("CapsuleShape2D_416n7")
+debug_color = Color(0.825515, 0.359597, 0.457511, 0.517647)
+
+[node name="Circle5Label" type="Label" parent="Circle5"]
+offset_left = -20.0
+offset_top = -33.0
+offset_right = 20.0
+offset_bottom = 34.0
+theme_override_colors/font_color = Color(0.513678, 1, 0.48175, 1)
+theme_override_fonts/font = ExtResource("8_bddsm")
+theme_override_font_sizes/font_size = 50
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Block" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 1440.0
+offset_bottom = 1080.0
+
+[connection signal="frame_changed" from="EqualSign" to="." method="_on_equal_sign_frame_changed"]
+[connection signal="body_entered" from="Circle1/Circle1Area" to="Circle1" method="_on_circle_1_area_body_entered"]
+[connection signal="body_exited" from="Circle1/Circle1Area" to="Circle1" method="_on_circle_1_area_body_exited"]
+[connection signal="input_event" from="Circle1/Circle1Area" to="Circle1" method="_on_circle_1_area_input_event"]
+[connection signal="mouse_entered" from="Circle1/Circle1Area" to="Circle1" method="_on_circle_1_area_mouse_entered"]
+[connection signal="mouse_exited" from="Circle1/Circle1Area" to="Circle1" method="_on_circle_1_area_mouse_exited"]
+[connection signal="body_entered" from="Circle2/Circle2Area" to="Circle2" method="_on_circle_2_area_body_entered"]
+[connection signal="body_exited" from="Circle2/Circle2Area" to="Circle2" method="_on_circle_2_area_body_exited"]
+[connection signal="input_event" from="Circle2/Circle2Area" to="Circle2" method="_on_circle_2_area_input_event"]
+[connection signal="mouse_entered" from="Circle2/Circle2Area" to="Circle2" method="_on_circle_2_area_mouse_entered"]
+[connection signal="mouse_exited" from="Circle2/Circle2Area" to="Circle2" method="_on_circle_2_area_mouse_exited"]
+[connection signal="body_entered" from="Circle3/Circle3Area" to="Circle3" method="_on_circle_3_area_body_entered"]
+[connection signal="body_exited" from="Circle3/Circle3Area" to="Circle3" method="_on_circle_3_area_body_exited"]
+[connection signal="input_event" from="Circle3/Circle3Area" to="Circle3" method="_on_circle_3_area_input_event"]
+[connection signal="mouse_entered" from="Circle3/Circle3Area" to="Circle3" method="_on_circle_3_area_mouse_entered"]
+[connection signal="mouse_exited" from="Circle3/Circle3Area" to="Circle3" method="_on_circle_3_area_mouse_exited"]
+[connection signal="body_entered" from="Circle4/Circle4Area" to="Circle4" method="_on_circle_4_area_body_entered"]
+[connection signal="body_exited" from="Circle4/Circle4Area" to="Circle4" method="_on_circle_4_area_body_exited"]
+[connection signal="input_event" from="Circle4/Circle4Area" to="Circle4" method="_on_circle_4_area_input_event"]
+[connection signal="mouse_entered" from="Circle4/Circle4Area" to="Circle4" method="_on_circle_4_area_mouse_entered"]
+[connection signal="mouse_exited" from="Circle4/Circle4Area" to="Circle4" method="_on_circle_4_area_mouse_exited"]
+[connection signal="body_entered" from="Circle5/Circle5Area" to="Circle5" method="_on_circle_5_area_body_entered"]
+[connection signal="body_exited" from="Circle5/Circle5Area" to="Circle5" method="_on_circle_5_area_body_exited"]
+[connection signal="input_event" from="Circle5/Circle5Area" to="Circle5" method="_on_circle_5_area_input_event"]
+[connection signal="mouse_entered" from="Circle5/Circle5Area" to="Circle5" method="_on_circle_5_area_mouse_entered"]
+[connection signal="mouse_exited" from="Circle5/Circle5Area" to="Circle5" method="_on_circle_5_area_mouse_exited"]

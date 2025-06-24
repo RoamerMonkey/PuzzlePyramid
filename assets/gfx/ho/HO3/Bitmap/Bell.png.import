@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://b627ayan4072a"
+path="res://.godot/imported/Bell.png-fcf0dcf030294865b740ec918e68226d.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Bell.png"
+dest_files=["res://.godot/imported/Bell.png-fcf0dcf030294865b740ec918e68226d.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

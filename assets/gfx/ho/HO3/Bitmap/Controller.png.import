@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://cs6k4xo6k7jep"
+path="res://.godot/imported/Controller.png-3dac648969ed049d1af503d65de33689.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Controller.png"
+dest_files=["res://.godot/imported/Controller.png-3dac648969ed049d1af503d65de33689.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

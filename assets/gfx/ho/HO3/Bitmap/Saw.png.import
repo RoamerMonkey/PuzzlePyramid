@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://crfrlujtbjnc4"
+path="res://.godot/imported/Saw.png-0aaa30d4282b242f6adb0f0b3062b13a.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO3/Bitmap/Saw.png"
+dest_files=["res://.godot/imported/Saw.png-0aaa30d4282b242f6adb0f0b3062b13a.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://deqy4vx0b8ri0"
+path="res://.godot/imported/Smile.png-390b5a2f978bf566ce70ef5501199278.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO1/Bitmap/Smile.png"
+dest_files=["res://.godot/imported/Smile.png-390b5a2f978bf566ce70ef5501199278.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

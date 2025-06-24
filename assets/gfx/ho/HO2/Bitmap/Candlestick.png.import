@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://dtemtxlobbko6"
+path="res://.godot/imported/Candlestick.png-2848c3c3ce02ccd621a8121e2d9c235f.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO2/Bitmap/Candlestick.png"
+dest_files=["res://.godot/imported/Candlestick.png-2848c3c3ce02ccd621a8121e2d9c235f.res"]
+
+[params]
+
+create_from=0
+threshold=0.5

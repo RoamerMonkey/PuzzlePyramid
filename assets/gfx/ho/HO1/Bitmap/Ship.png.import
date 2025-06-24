@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://bn1kt2o10vblg"
+path="res://.godot/imported/Ship.png-1df91ea6d2f93472a59ff290291bfae5.res"
+
+[deps]
+
+source_file="res://assets/gfx/ho/HO1/Bitmap/Ship.png"
+dest_files=["res://.godot/imported/Ship.png-1df91ea6d2f93472a59ff290291bfae5.res"]
+
+[params]
+
+create_from=0
+threshold=0.5
