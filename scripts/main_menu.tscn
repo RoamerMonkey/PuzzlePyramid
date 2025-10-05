@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://hsilxb5ldajn"]
+[gd_scene load_steps=13 format=3 uid="uid://hsilxb5ldajn"]
 
 [ext_resource type="Texture2D" uid="uid://dk5xrp2jhr7vl" path="res://assets/gfx/ui/GameLogo.png" id="1_j8icg"]
 [ext_resource type="Script" uid="uid://bn8tllawxs5wh" path="res://scripts/main_menu.gd" id="1_snv5s"]
@@ -16,8 +16,6 @@ shader = ExtResource("2_kpi6m")
 shader_parameter/speed = 0.025
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xtuy4"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pxe2p"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -74,9 +72,9 @@ texture = ExtResource("2_6jofb")
 
 [node name="WelcomeText" type="Label" parent="."]
 layout_mode = 0
-offset_left = 66.0
+offset_left = 195.0
 offset_top = 974.0
-offset_right = 720.0
+offset_right = 1272.0
 offset_bottom = 1022.0
 theme_override_fonts/font = ExtResource("4_kw46n")
 theme_override_font_sizes/font_size = 40
@@ -85,9 +83,9 @@ vertical_alignment = 1
 
 [node name="PlayButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 621.0
+offset_left = 195.0
 offset_top = 835.0
-offset_right = 822.0
+offset_right = 396.0
 offset_bottom = 931.0
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_hover_color = Color(0.252547, 0.760022, 0.463246, 1)
@@ -100,9 +98,9 @@ text = "PLAY"
 
 [node name="OptionsButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 346.0
+offset_left = 475.0
 offset_top = 835.0
-offset_right = 559.0
+offset_right = 688.0
 offset_bottom = 931.0
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_hover_color = Color(0.120377, 0.740277, 0.740395, 1)
@@ -115,9 +113,9 @@ text = "Options"
 
 [node name="CreditsButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 66.0
+offset_left = 750.0
 offset_top = 835.0
-offset_right = 279.0
+offset_right = 963.0
 offset_bottom = 931.0
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_hover_color = Color(0.120377, 0.740277, 0.740395, 1)
@@ -130,9 +128,9 @@ text = "Credits"
 
 [node name="ProgressButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 885.0
+offset_left = 1014.0
 offset_top = 835.0
-offset_right = 1098.0
+offset_right = 1256.0
 offset_bottom = 931.0
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_hover_color = Color(0.120377, 0.740277, 0.740395, 1)
@@ -142,21 +140,6 @@ theme_override_fonts/font = ExtResource("4_kw46n")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xtuy4")
 text = "Progress"
-
-[node name="ExitButton" type="Button" parent="."]
-layout_mode = 0
-offset_left = 1168.0
-offset_top = 835.0
-offset_right = 1381.0
-offset_bottom = 931.0
-theme_type_variation = &"FlatButton"
-theme_override_colors/font_hover_color = Color(0.789629, 0.14947, 0.348303, 1)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(0.393086, 0.393086, 0.393085, 1)
-theme_override_fonts/font = ExtResource("4_kw46n")
-theme_override_font_sizes/font_size = 50
-theme_override_styles/focus = SubResource("StyleBoxEmpty_pxe2p")
-text = "Exit"
 
 [node name="Popup" parent="." instance=ExtResource("8_bg07a")]
 layout_mode = 1
@@ -169,5 +152,3 @@ layout_mode = 1
 [connection signal="mouse_entered" from="CreditsButton" to="." method="_on_credits_button_mouse_entered"]
 [connection signal="button_down" from="ProgressButton" to="." method="_on_progress_button_button_down"]
 [connection signal="mouse_entered" from="ProgressButton" to="." method="_on_progress_button_mouse_entered"]
-[connection signal="button_down" from="ExitButton" to="." method="_on_exit_button_button_down"]
-[connection signal="mouse_entered" from="ExitButton" to="." method="_on_exit_button_mouse_entered"]

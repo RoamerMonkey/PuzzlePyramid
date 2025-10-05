@@ -138,12 +138,12 @@ texture = ExtResource("6_wy4j6")
 [node name="PauseResume" type="Button" parent="Pause"]
 layout_mode = 0
 offset_left = 383.0
-offset_top = 193.0
+offset_top = 295.0
 offset_right = 636.0
-offset_bottom = 294.0
+offset_bottom = 396.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "RESUME"
@@ -151,12 +151,12 @@ text = "RESUME"
 [node name="PauseOption" type="Button" parent="Pause"]
 layout_mode = 0
 offset_left = 383.0
-offset_top = 389.0
+offset_top = 491.0
 offset_right = 636.0
-offset_bottom = 490.0
+offset_bottom = 592.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "OPTIONS"
@@ -164,28 +164,15 @@ text = "OPTIONS"
 [node name="PauseMenu" type="Button" parent="Pause"]
 layout_mode = 0
 offset_left = 383.0
-offset_top = 599.0
+offset_top = 701.0
 offset_right = 636.0
-offset_bottom = 700.0
+offset_bottom = 802.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "MENU"
-
-[node name="PauseExit" type="Button" parent="Pause"]
-layout_mode = 0
-offset_left = 383.0
-offset_top = 801.0
-offset_right = 636.0
-offset_bottom = 902.0
-theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
-theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
-theme_override_fonts/font = ExtResource("4_ght4d")
-theme_override_font_sizes/font_size = 50
-text = "EXIT"
 
 [node name="PauseSave" type="Button" parent="Pause"]
 layout_mode = 0
@@ -194,8 +181,8 @@ offset_top = 507.0
 offset_right = 1068.0
 offset_bottom = 608.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_colors/font_color = Color(0.86858, 0.801287, 0.337613, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "SAVE"
@@ -550,34 +537,11 @@ scrollable = false
 script = ExtResource("15_laapd")
 bus_name = "SFX"
 
-[node name="Windowed" type="Label" parent="Options"]
-layout_mode = 0
-offset_left = 452.0
-offset_top = 733.0
-offset_right = 679.0
-offset_bottom = 832.0
-theme_override_colors/font_color = Color(0.714536, 0.801045, 0.91416, 1)
-theme_override_fonts/font = ExtResource("4_ght4d")
-theme_override_font_sizes/font_size = 40
-text = "Windowed"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="WindowButton" type="TextureButton" parent="Options/Windowed"]
-layout_mode = 0
-offset_left = -126.0
-offset_top = -12.0
-offset_right = -6.0
-offset_bottom = 101.0
-toggle_mode = true
-texture_normal = SubResource("AtlasTexture_3v37d")
-texture_pressed = SubResource("AtlasTexture_0oic6")
-
 [node name="CustomCursor" type="Label" parent="Options"]
 layout_mode = 0
-offset_left = 870.0
+offset_left = 668.0
 offset_top = 733.0
-offset_right = 1097.0
+offset_right = 895.0
 offset_bottom = 832.0
 theme_override_colors/font_color = Color(0.714536, 0.801045, 0.91416, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
@@ -793,8 +757,8 @@ offset_top = 865.0
 offset_right = 1274.0
 offset_bottom = 951.0
 theme_override_colors/font_hover_color = Color(0.866501, 0.585976, 0.117902, 1)
-theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_colors/font_color = Color(0.371903, 0.925527, 0.420976, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "Proceed?"
@@ -840,8 +804,8 @@ offset_top = 347.0
 offset_right = 819.0
 offset_bottom = 448.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "Load"
@@ -853,8 +817,8 @@ offset_top = 632.0
 offset_right = 819.0
 offset_bottom = 733.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "Reset"
@@ -888,8 +852,8 @@ offset_top = 801.0
 offset_right = 623.0
 offset_bottom = 902.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "Yes"
@@ -901,8 +865,8 @@ offset_top = 801.0
 offset_right = 1015.0
 offset_bottom = 902.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "No"
@@ -978,8 +942,8 @@ offset_top = 632.0
 offset_right = 623.0
 offset_bottom = 733.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "Yes"
@@ -991,8 +955,8 @@ offset_top = 632.0
 offset_right = 1011.0
 offset_bottom = 733.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "No"
@@ -1055,8 +1019,8 @@ offset_top = 632.0
 offset_right = 623.0
 offset_bottom = 733.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "Yes"
@@ -1068,8 +1032,8 @@ offset_top = 632.0
 offset_right = 1011.0
 offset_bottom = 733.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "No"
@@ -1182,8 +1146,8 @@ offset_top = 632.0
 offset_right = 623.0
 offset_bottom = 733.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "Yes"
@@ -1195,8 +1159,8 @@ offset_top = 632.0
 offset_right = 1011.0
 offset_bottom = 733.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "No"
@@ -1242,8 +1206,8 @@ offset_top = 666.0
 offset_right = 819.0
 offset_bottom = 767.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
+theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "Yup"
@@ -1251,7 +1215,6 @@ text = "Yup"
 [connection signal="button_down" from="Pause/PauseResume" to="." method="_on_pause_resume_button_down"]
 [connection signal="button_down" from="Pause/PauseOption" to="." method="_on_pause_option_button_down"]
 [connection signal="button_down" from="Pause/PauseMenu" to="." method="_on_pause_menu_button_down"]
-[connection signal="button_down" from="Pause/PauseExit" to="." method="_on_pause_exit_button_down"]
 [connection signal="button_down" from="Pause/PauseSave" to="SaveData" method="_on_pause_save_button_down"]
 [connection signal="button_down" from="Credits/CreditsX" to="." method="_on_credits_x_button_down"]
 [connection signal="button_down" from="Credits/Page1/RightArrow" to="." method="_on_right_arrow_button_down"]
@@ -1261,7 +1224,6 @@ text = "Yup"
 [connection signal="drag_started" from="Options/BGMLabel/BGM" to="." method="_on_bgm_slider_drag_started"]
 [connection signal="drag_ended" from="Options/SFXLabel/SFX" to="." method="_on_sfx_drag_ended"]
 [connection signal="drag_started" from="Options/SFXLabel/SFX" to="." method="_on_sfx_slider_drag_started"]
-[connection signal="toggled" from="Options/Windowed/WindowButton" to="." method="_on_window_button_toggled"]
 [connection signal="toggled" from="Options/CustomCursor/CursorButton" to="." method="_on_cursor_button_toggled"]
 [connection signal="button_down" from="Difficulty/DifficultyX" to="." method="_on_difficulty_x_button_down"]
 [connection signal="drag_ended" from="Difficulty/ItemTitle/ItemScale" to="." method="_on_item_scale_drag_ended"]

@@ -22,7 +22,7 @@ func _on_exit_button_button_down() -> void:
 func _on_options_button_button_down() -> void:
 	get_node("Popup").visible = true
 	get_node("Popup/Options").visible = true
-	get_node("Popup/Options/Windowed/WindowButton").button_pressed = GlobalStats.window
+	#get_node("Popup/Options/Windowed/WindowButton").button_pressed = GlobalStats.window
 	get_node("Popup/Options/CustomCursor/CursorButton").button_pressed = GlobalStats.cursor
 	$SFXButton.play()
 
