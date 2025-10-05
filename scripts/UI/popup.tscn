@@ -138,9 +138,9 @@ texture = ExtResource("6_wy4j6")
 [node name="PauseResume" type="Button" parent="Pause"]
 layout_mode = 0
 offset_left = 383.0
-offset_top = 295.0
+offset_top = 311.0
 offset_right = 636.0
-offset_bottom = 396.0
+offset_bottom = 412.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
 theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
@@ -151,9 +151,9 @@ text = "RESUME"
 [node name="PauseOption" type="Button" parent="Pause"]
 layout_mode = 0
 offset_left = 383.0
-offset_top = 491.0
+offset_top = 507.0
 offset_right = 636.0
-offset_bottom = 592.0
+offset_bottom = 608.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
 theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
@@ -164,9 +164,9 @@ text = "OPTIONS"
 [node name="PauseMenu" type="Button" parent="Pause"]
 layout_mode = 0
 offset_left = 383.0
-offset_top = 701.0
+offset_top = 717.0
 offset_right = 636.0
-offset_bottom = 802.0
+offset_bottom = 818.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
 theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
