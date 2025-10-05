@@ -36,8 +36,8 @@ directories/dtl_directory={
 "Outro": "res://scripts/Dialogic/Outro.dtl"
 }
 glossary/default_case_sensitive=true
-layout/style_list=[]
-layout/default_style="res://BTS/Dialogic/PyramidStyle.tres"
+layout/style_list=["res://scripts/Dialogic/PyramidStyle.tres"]
+layout/default_style="res://scripts/Dialogic/PyramidStyle.tres"
 variables={}
 extensions_folder="res://addons/dialogic_additions"
 text/letter_speed=0.01
