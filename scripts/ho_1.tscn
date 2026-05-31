@@ -1,7 +1,7 @@
 [gd_scene load_steps=70 format=3 uid="uid://bfss5u7hk3pmw"]
 
 [ext_resource type="Texture2D" uid="uid://h36ft00d6gpk" path="res://assets/gfx/ho/HO1/DeskBG.PNG" id="1_5ktvv"]
-[ext_resource type="Script" uid="uid://c4q4uj6v6ni40" path="res://scripts/ho_1.gd" id="1_oe7sr"]
+[ext_resource type="Script" path="res://scripts/ho_1.gd" id="1_oe7sr"]
 [ext_resource type="AudioStream" uid="uid://beke84l5myprk" path="res://assets/snd/ho/hodone.wav" id="2_avaxj"]
 [ext_resource type="Texture2D" uid="uid://cigetu1haq2oi" path="res://assets/gfx/ho/HO1/Aster.PNG" id="2_ficrn"]
 [ext_resource type="AudioStream" uid="uid://wcvad4u6amd5" path="res://assets/snd/ho/itemget1.mp3" id="3_0q4lm"]

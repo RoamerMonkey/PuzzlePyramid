@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://bunuwcv6a47d7"]
 
-[ext_resource type="Script" uid="uid://dhgmt47nowbus" path="res://scripts/UI/popup.gd" id="1_5gb68"]
+[ext_resource type="Script" path="res://scripts/UI/popup.gd" id="1_5gb68"]
 [ext_resource type="Texture2D" uid="uid://cocy5ae0ibgic" path="res://assets/gfx/ui/UIRectBox.png" id="2_7g2ig"]
 [ext_resource type="AudioStream" uid="uid://dbi7bdwigvyr5" path="res://assets/snd/ui/buttonplay.wav" id="3_72f1v"]
 [ext_resource type="Texture2D" uid="uid://r5b3m83fwubi" path="res://assets/gfx/ui/XButton.png" id="3_bxnk1"]
@@ -13,11 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://2omi4vi6au12" path="res://assets/gfx/ui/CheckBox.png" id="7_cis7w"]
 [ext_resource type="Texture2D" uid="uid://cuabkityx0gx" path="res://assets/gfx/ui/SliderClick.png" id="7_wi4bb"]
 [ext_resource type="Texture2D" uid="uid://dorouiks3ps4w" path="res://assets/gfx/ui/SliderBG.png" id="8_cptfi"]
-[ext_resource type="Script" uid="uid://b6fa5hpdo20h0" path="res://scripts/UI/bgm_slider.gd" id="9_spqsp"]
+[ext_resource type="Script" path="res://scripts/UI/bgm_slider.gd" id="9_spqsp"]
 [ext_resource type="Texture2D" uid="uid://d0tlenhwpt7jf" path="res://assets/gfx/ui/SliderClick.2png.png" id="12_a4iwo"]
 [ext_resource type="PackedScene" uid="uid://ishuyag8m3w" path="res://scripts/UI/save_data.tscn" id="13_6xbyw"]
 [ext_resource type="AudioStream" uid="uid://bkhyjqm7olxkk" path="res://assets/snd/ui/slidedrop.ogg" id="13_g52yk"]
-[ext_resource type="Script" uid="uid://xbp4v52dligi" path="res://scripts/UI/sfx_slider.gd" id="15_laapd"]
+[ext_resource type="Script" path="res://scripts/UI/sfx_slider.gd" id="15_laapd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b88xv"]
 atlas = ExtResource("3_bxnk1")
@@ -142,8 +142,8 @@ offset_top = 311.0
 offset_right = 636.0
 offset_bottom = 412.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "RESUME"
@@ -155,8 +155,8 @@ offset_top = 507.0
 offset_right = 636.0
 offset_bottom = 608.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "OPTIONS"
@@ -168,8 +168,8 @@ offset_top = 717.0
 offset_right = 636.0
 offset_bottom = 818.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "MENU"
@@ -181,8 +181,8 @@ offset_top = 507.0
 offset_right = 1068.0
 offset_bottom = 608.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_color = Color(0.86858, 0.801287, 0.337613, 1)
 theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.86858, 0.801287, 0.337613, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "SAVE"
@@ -757,8 +757,8 @@ offset_top = 865.0
 offset_right = 1274.0
 offset_bottom = 951.0
 theme_override_colors/font_hover_color = Color(0.866501, 0.585976, 0.117902, 1)
-theme_override_colors/font_color = Color(0.371903, 0.925527, 0.420976, 1)
 theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.371903, 0.925527, 0.420976, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "Proceed?"
@@ -804,8 +804,8 @@ offset_top = 347.0
 offset_right = 819.0
 offset_bottom = 448.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "Load"
@@ -817,8 +817,8 @@ offset_top = 632.0
 offset_right = 819.0
 offset_bottom = 733.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "Reset"
@@ -852,8 +852,8 @@ offset_top = 801.0
 offset_right = 623.0
 offset_bottom = 902.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "Yes"
@@ -865,8 +865,8 @@ offset_top = 801.0
 offset_right = 1015.0
 offset_bottom = 902.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "No"
@@ -942,8 +942,8 @@ offset_top = 632.0
 offset_right = 623.0
 offset_bottom = 733.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "Yes"
@@ -955,8 +955,8 @@ offset_top = 632.0
 offset_right = 1011.0
 offset_bottom = 733.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "No"
@@ -1019,8 +1019,8 @@ offset_top = 632.0
 offset_right = 623.0
 offset_bottom = 733.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "Yes"
@@ -1032,8 +1032,8 @@ offset_top = 632.0
 offset_right = 1011.0
 offset_bottom = 733.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "No"
@@ -1146,8 +1146,8 @@ offset_top = 632.0
 offset_right = 623.0
 offset_bottom = 733.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "Yes"
@@ -1159,8 +1159,8 @@ offset_top = 632.0
 offset_right = 1011.0
 offset_bottom = 733.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "No"
@@ -1206,8 +1206,8 @@ offset_top = 666.0
 offset_right = 819.0
 offset_bottom = 767.0
 theme_override_colors/font_hover_color = Color(0.121569, 0.741176, 0.741176, 1)
-theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_colors/font_pressed_color = Color(0.392157, 0.392157, 0.392157, 1)
+theme_override_colors/font_color = Color(0.713726, 0.8, 0.913725, 1)
 theme_override_fonts/font = ExtResource("4_ght4d")
 theme_override_font_sizes/font_size = 50
 text = "Yup"

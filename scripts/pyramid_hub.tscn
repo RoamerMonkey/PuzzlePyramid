@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://cpfglun87ihxj"]
 
-[ext_resource type="Shader" uid="uid://cv3c5nreevpcc" path="res://scripts/scroll.gdshader" id="1_2lvct"]
-[ext_resource type="Script" uid="uid://b8y28ysbmt3nj" path="res://scripts/pyramid_hub.gd" id="1_5luy0"]
+[ext_resource type="Shader" path="res://scripts/scroll.gdshader" id="1_2lvct"]
+[ext_resource type="Script" path="res://scripts/pyramid_hub.gd" id="1_5luy0"]
 [ext_resource type="AudioStream" uid="uid://bd6prdkn3hw7i" path="res://assets/snd/ui/buttonclick.mp3" id="2_binwd"]
 [ext_resource type="Texture2D" uid="uid://bo0axjv7pn6u6" path="res://assets/gfx/pyramid/BG.png" id="2_jfcad"]
 [ext_resource type="AudioStream" uid="uid://cu2ddppdklsyy" path="res://assets/snd/ui/buttonhover.wav" id="3_hrvrk"]

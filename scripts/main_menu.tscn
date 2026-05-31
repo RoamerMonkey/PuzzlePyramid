@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=3 uid="uid://hsilxb5ldajn"]
 
 [ext_resource type="Texture2D" uid="uid://dk5xrp2jhr7vl" path="res://assets/gfx/ui/GameLogo.png" id="1_j8icg"]
-[ext_resource type="Script" uid="uid://bn8tllawxs5wh" path="res://scripts/main_menu.gd" id="1_snv5s"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_snv5s"]
 [ext_resource type="Texture2D" uid="uid://4dy14o5milo6" path="res://assets/gfx/pyramid/MenuBottom.png" id="2_6jofb"]
-[ext_resource type="Shader" uid="uid://cv3c5nreevpcc" path="res://scripts/scroll.gdshader" id="2_kpi6m"]
+[ext_resource type="Shader" path="res://scripts/scroll.gdshader" id="2_kpi6m"]
 [ext_resource type="Texture2D" uid="uid://bo0axjv7pn6u6" path="res://assets/gfx/pyramid/BG.png" id="3_3ejt2"]
 [ext_resource type="FontFile" uid="uid://cd8ioofmybjqo" path="res://assets/fonts/CascadiaMono-Bold.otf" id="4_kw46n"]
 [ext_resource type="PackedScene" uid="uid://bunuwcv6a47d7" path="res://scripts/UI/popup.tscn" id="8_bg07a"]
@@ -89,8 +89,8 @@ offset_right = 396.0
 offset_bottom = 931.0
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_hover_color = Color(0.252547, 0.760022, 0.463246, 1)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.393086, 0.393086, 0.393085, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_kw46n")
 theme_override_font_sizes/font_size = 75
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xtuy4")
@@ -104,8 +104,8 @@ offset_right = 688.0
 offset_bottom = 931.0
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_hover_color = Color(0.120377, 0.740277, 0.740395, 1)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.393086, 0.393086, 0.393085, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_kw46n")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xtuy4")
@@ -119,8 +119,8 @@ offset_right = 963.0
 offset_bottom = 931.0
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_hover_color = Color(0.120377, 0.740277, 0.740395, 1)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.393086, 0.393086, 0.393085, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_kw46n")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xtuy4")
@@ -134,8 +134,8 @@ offset_right = 1256.0
 offset_bottom = 931.0
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_hover_color = Color(0.120377, 0.740277, 0.740395, 1)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.393086, 0.393086, 0.393085, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("4_kw46n")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/focus = SubResource("StyleBoxEmpty_xtuy4")

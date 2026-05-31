@@ -12,7 +12,7 @@ config_version=5
 
 config/name="The Puzzle Pyramid"
 run/main_scene="res://scripts/main_menu.tscn"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.3", "Forward Plus")
 run/max_fps=30
 boot_splash/image="res://assets/gfx/misc/Roamer Monkey Splash Logo.png"
 config/icon="res://assets/gfx/misc/PyramidIcon.png"

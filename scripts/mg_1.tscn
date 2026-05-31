@@ -1,7 +1,7 @@
 [gd_scene load_steps=32 format=3 uid="uid://bea8hv8ji7q5r"]
 
 [ext_resource type="Texture2D" uid="uid://npdltpm8aphb" path="res://assets/gfx/mg/BG.PNG" id="1_e57af"]
-[ext_resource type="Script" uid="uid://hv4vj341c24q" path="res://scripts/mg_1.gd" id="1_njonw"]
+[ext_resource type="Script" path="res://scripts/mg_1.gd" id="1_njonw"]
 [ext_resource type="Texture2D" uid="uid://cuybahnhslwlw" path="res://assets/gfx/mg/puzzle1/MazeBG.PNG" id="2_50r7r"]
 [ext_resource type="AudioStream" uid="uid://b6vmis24qt8qh" path="res://assets/snd/mg/buttonrelease.wav" id="2_c6si7"]
 [ext_resource type="AudioStream" uid="uid://dxe5ca22rlxyr" path="res://assets/snd/mg/lightcheckpoint.wav" id="3_1ova4"]
