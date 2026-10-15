@@ -1,6 +1,6 @@
 The MIT License for any MIT-licensed code I used.
 
-Copyright (c) 2024 jontopielski
+Copyright (c) 2025 Roamer Monkey
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
